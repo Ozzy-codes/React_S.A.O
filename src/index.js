@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import ErrorPage from "./pages/ErrorPage"
-import App from "./routes/App-copy"
-import Location from "./routes/Location"
+import App from "./App"
+import Location from "./pages/Location"
 
 // import Root from "./routes/root"
 
