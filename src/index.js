@@ -8,6 +8,7 @@ import LocationPage from "./pages/LocationPage"
 import PhotoPage from "./pages/PhotoPage"
 import AvailabilityPage from "./pages/AvailabilityPage"
 import ReviewPage from "./pages/ReviewPage"
+import HomePage from "./pages/HomePage"
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        index: true,
+        element: <HomePage />
+      },
       {
         path: "location",
         element: <LocationPage />
