@@ -7,7 +7,7 @@ import App from "./App"
 import LocationPage from "./pages/LocationPage"
 import PhotoPage from "./pages/PhotoPage"
 import AvailabilityPage from "./pages/AvailabilityPage"
-import ReviewPage from "./pages/Reviews"
+import ReviewPage from "./pages/ReviewPage"
 
 const router = createBrowserRouter([
   {
