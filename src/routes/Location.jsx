@@ -1,3 +1,3 @@
 export default function Location() {
-  return <div>Location</div>
+  return <div>Location Page</div>
 }
