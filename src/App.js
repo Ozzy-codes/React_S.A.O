@@ -23,13 +23,28 @@ function App() {
           </Link>
           <Link
             onClick={handleClick}
-            to={`location/1`}
+            to={`location`}
             className="py-2 border-b-2">
             LOCATION
           </Link>
-          <Link className="py-2 border-b-2">PHOTOS</Link>
-          <Link className="py-2 border-b-2">AVAILABILITY</Link>
-          <Link className="py-2 border-b-2">REVIEWS</Link>
+          <Link
+            onClick={handleClick}
+            to={`photos`}
+            className="py-2 border-b-2">
+            PHOTOS
+          </Link>
+          <Link
+            onClick={handleClick}
+            to={`availability`}
+            className="py-2 border-b-2">
+            AVAILABILITY
+          </Link>
+          <Link
+            onClick={handleClick}
+            to={`reviews`}
+            className="py-2 border-b-2">
+            REVIEWS
+          </Link>
         </div>
       )}
       <div>

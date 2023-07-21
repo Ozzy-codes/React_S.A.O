@@ -4,9 +4,10 @@ import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import ErrorPage from "./pages/ErrorPage"
 import App from "./App"
-import Location from "./pages/Location"
-
-// import Root from "./routes/root"
+import LocationPage from "./pages/LocationPage"
+import PhotoPage from "./pages/PhotoPage"
+import AvailabilityPage from "./pages/AvailabilityPage"
+import ReviewPage from "./pages/Reviews"
 
 const router = createBrowserRouter([
   {
@@ -15,8 +16,20 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "location/:locationId",
-        element: <Location />
+        path: "location",
+        element: <LocationPage />
+      },
+      {
+        path: "photos",
+        element: <PhotoPage />
+      },
+      {
+        path: "availability",
+        element: <AvailabilityPage />
+      },
+      {
+        path: "reviews",
+        element: <ReviewPage />
       }
     ]
   }
