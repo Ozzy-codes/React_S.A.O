@@ -1,52 +1,16 @@
-import { Outlet, Link } from "react-router-dom"
-import { useState } from "react"
+import { Outlet } from "react-router-dom"
+import MobileHeader from "./components/MobileHeader"
+
+const pages = ["Home", "Location", "Photos", "Availability", "Reviews"]
+const header = "Sage and Oak"
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
   return (
     <div>
-      <div className="flex justify-between p-4 border-b-2">
-        <h1 className="text-2xl">Sage and Oak</h1>
-        <button onClick={handleClick}>Open drawer</button>
-      </div>
-      {isOpen && (
-        <div className="px-4 flex flex-col">
-          <Link
-            onClick={handleClick}
-            to={`/`}
-            className="py-2 border-b-2">
-            HOME
-          </Link>
-          <Link
-            onClick={handleClick}
-            to={`location`}
-            className="py-2 border-b-2">
-            LOCATION
-          </Link>
-          <Link
-            onClick={handleClick}
-            to={`photos`}
-            className="py-2 border-b-2">
-            PHOTOS
-          </Link>
-          <Link
-            onClick={handleClick}
-            to={`availability`}
-            className="py-2 border-b-2">
-            AVAILABILITY
-          </Link>
-          <Link
-            onClick={handleClick}
-            to={`reviews`}
-            className="py-2 border-b-2">
-            REVIEWS
-          </Link>
-        </div>
-      )}
+      <MobileHeader
+        header={header}
+        navLinks={pages}
+      />
       <div>
         <Outlet />
       </div>
