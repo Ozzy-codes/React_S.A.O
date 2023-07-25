@@ -4,19 +4,28 @@ import { useState, useEffect } from "react"
 import { FiMenu } from "react-icons/fi"
 
 function MobileHeader({ header, navLinks }) {
-  useEffect(() => {
-    document.addEventListener("scroll", (event) => {
-      console.dir(event.target.scrollingElement.scrollTop)
-    })
-
-    return () => document.removeEventListener("scroll")
-  }, [])
-
   const [isOpen, setIsOpen] = useState(false)
 
   const handleClick = () => {
     setIsOpen(!isOpen)
   }
+
+  useEffect(() => {
+    const handler = (event) => {
+      if (event.target.scrollingElement.scrollTop > 25) {
+        document
+          .querySelector("#top_header_div")
+          .classList.add("transition-opacity", "duration-1000", "opacity-0")
+      } else {
+        document
+          .querySelector("#top_header_div")
+          .classList.remove("transition-opacity", "duration-1000", "opacity-0")
+      }
+    }
+    document.addEventListener("scroll", handler)
+
+    return () => document.removeEventListener("scroll", handler)
+  }, [])
 
   const default_Nav_styles =
     "py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500"
@@ -46,7 +55,9 @@ function MobileHeader({ header, navLinks }) {
   })
 
   return (
-    <div className="fixed w-full bg-gray-500 hover:bg-black hover:text-zinc-400">
+    <div
+      id="top_header_div"
+      className="fixed w-full bg-gray-300 hover:opacity-100">
       <div className="flex justify-between p-4 border-b-2">
         <h1 className="text-2xl">{header}</h1>
         <button
