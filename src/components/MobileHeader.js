@@ -1,9 +1,17 @@
 // optimized for 375 px width screen
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { FiMenu } from "react-icons/fi"
 
 function MobileHeader({ header, navLinks }) {
+  useEffect(() => {
+    document.addEventListener("scroll", (event) => {
+      console.dir(event.target.scrollingElement.scrollTop)
+    })
+
+    return () => document.removeEventListener("scroll")
+  }, [])
+
   const [isOpen, setIsOpen] = useState(false)
 
   const handleClick = () => {
@@ -38,7 +46,7 @@ function MobileHeader({ header, navLinks }) {
   })
 
   return (
-    <div className="fixed w-full hover:bg-black hover:text-zinc-400">
+    <div className="fixed w-full bg-gray-500 hover:bg-black hover:text-zinc-400">
       <div className="flex justify-between p-4 border-b-2">
         <h1 className="text-2xl">{header}</h1>
         <button
