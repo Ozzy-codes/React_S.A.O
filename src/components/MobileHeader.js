@@ -38,7 +38,7 @@ function MobileHeader({ header, navLinks }) {
   })
 
   return (
-    <div>
+    <div className="fixed w-full hover:bg-black hover:text-zinc-400">
       <div className="flex justify-between p-4 border-b-2">
         <h1 className="text-2xl">{header}</h1>
         <button
