@@ -5,6 +5,7 @@ import { FiMenu } from "react-icons/fi"
 
 function MobileHeader({ header, navLinks }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [previousPageHeight, setPreviousPageHeight] = useState(0)
 
   const handleClick = () => {
     setIsOpen(!isOpen)
@@ -12,20 +13,28 @@ function MobileHeader({ header, navLinks }) {
 
   useEffect(() => {
     const handler = (event) => {
-      if (event.target.scrollingElement.scrollTop > 25) {
-        document
-          .querySelector("#top_header_div")
-          .classList.add("transition-opacity", "duration-1000", "opacity-0")
+      const top_header_div = document.querySelector("#top_header_div")
+      const scrollHeight = event.target.scrollingElement.scrollTop
+
+      if (scrollHeight - previousPageHeight > 0) {
+        top_header_div.classList.add(
+          "transition-opacity",
+          "duration-1000",
+          "opacity-0"
+        )
       } else {
-        document
-          .querySelector("#top_header_div")
-          .classList.remove("transition-opacity", "duration-1000", "opacity-0")
+        top_header_div.classList.remove(
+          "transition-opacity",
+          "duration-1000",
+          "opacity-0"
+        )
       }
+      setPreviousPageHeight(scrollHeight)
     }
     document.addEventListener("scroll", handler)
 
     return () => document.removeEventListener("scroll", handler)
-  }, [])
+  }, [previousPageHeight])
 
   const default_Nav_styles =
     "py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500"
