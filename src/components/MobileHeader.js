@@ -37,7 +37,11 @@ function MobileHeader({ header, navLinks }) {
   }, [previousPageHeight])
 
   const default_Nav_styles =
-    "py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500"
+    "my-4 py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-2xl"
+
+  const openStyle = isOpen
+    ? "fixed w-screen h-screen flex flex-col bg-gray-300 hover:opacity-100"
+    : "fixed w-screen flex flex-col bg-gray-300 hover:opacity-100"
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
@@ -66,7 +70,7 @@ function MobileHeader({ header, navLinks }) {
   return (
     <div
       id="top_header_div"
-      className="fixed w-full bg-gray-300 hover:opacity-100">
+      className={openStyle}>
       <div className="flex justify-between p-4 border-b-2">
         <h1 className="text-2xl">{header}</h1>
         <button
@@ -75,7 +79,11 @@ function MobileHeader({ header, navLinks }) {
           <FiMenu />
         </button>
       </div>
-      {isOpen && <div className="px-4 flex flex-col">{renderedLinks}</div>}
+      {isOpen && (
+        <div className="px-4 h-full flex flex-col justify-center text-center">
+          {renderedLinks}
+        </div>
+      )}
     </div>
   )
 }
