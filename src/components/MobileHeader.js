@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { FiMenu } from "react-icons/fi"
+import Button from "./Button"
 
 function MobileHeader({ header, navLinks }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -40,8 +41,8 @@ function MobileHeader({ header, navLinks }) {
     "my-4 py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-2xl"
 
   const openStyle = isOpen
-    ? "fixed w-screen h-screen flex flex-col bg-gray-300 hover:opacity-100"
-    : "fixed w-screen flex flex-col bg-gray-300 hover:opacity-100"
+    ? "fixed w-screen h-screen flex flex-col bg-gray-100 hover:opacity-100"
+    : "fixed w-screen flex flex-col bg-gray-100 hover:opacity-100"
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
@@ -82,6 +83,11 @@ function MobileHeader({ header, navLinks }) {
       {isOpen && (
         <div className="px-4 h-full flex flex-col justify-center text-center">
           {renderedLinks}
+          <Button
+            rounded
+            className="text-2xl border-4 my-4">
+            Book Now
+          </Button>
         </div>
       )}
     </div>
