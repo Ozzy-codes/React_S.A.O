@@ -25,6 +25,9 @@ export default function HomePage() {
         src="https://picsum.photos/200"
         alt="random img"
       />
+      <h2 className="mx-4 mt-4 text-3xl">
+        Luxury Cabin With Breath Taking Views
+      </h2>
       <p className="m-4">
         Welcome to Sage and Oak Cabin, your very own secluded oasis with
         breathtaking views! This beautiful, custom-built 3000 sq foot cabin is
