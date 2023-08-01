@@ -72,11 +72,11 @@ function MobileHeader({ header, navLinks }) {
     <div
       id="top_header_div"
       className={openStyle}>
-      <div className="flex justify-between p-4 border-b-2">
-        <h1 className="text-2xl">{header}</h1>
+      <div className="flex justify-between p-8 border-b-2">
+        <h1 className="text-4xl">{header}</h1>
         <button
           onClick={handleClick}
-          className="text-2xl">
+          className="text-4xl">
           <FiMenu />
         </button>
       </div>
