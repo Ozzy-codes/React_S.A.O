@@ -1,5 +1,6 @@
 // import { useEffect } from "react"
 import FeatureAccordion from "../components/FeatureAccordion"
+import Button from "../components/Button"
 
 export default function HomePage() {
   // useEffect(() => {
@@ -18,7 +19,7 @@ export default function HomePage() {
   // }, [])
 
   return (
-    <div>
+    <div className="flex flex-col">
       <img
         className="w-full"
         src="https://picsum.photos/200"
@@ -31,6 +32,12 @@ export default function HomePage() {
         surrounded by the woods, giving you all of the privacy you will need for
         a relaxing retreat.
       </p>
+      <Button
+        soft_corners
+        className="mx-10 text-2xl py-4">
+        Book Now
+      </Button>
+      <FeatureAccordion />
       <p className="m-4">
         Blending rustic and modern elements, you will surely feel that you have
         escaped from your everyday life. Clean and crisp sheets, cozy throw
@@ -38,7 +45,6 @@ export default function HomePage() {
         decor will stimulate all of your senses. Most importantly, enjoy the
         spectacular view!
       </p>
-      <FeatureAccordion />
     </div>
   )
 }

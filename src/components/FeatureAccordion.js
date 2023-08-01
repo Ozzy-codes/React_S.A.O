@@ -52,6 +52,6 @@ function FeatureAccordion() {
     )
   })
 
-  return <div className="border-x border-t rounded">{renderedItems}</div>
+  return <div className="border-x border-t rounded mt-6">{renderedItems}</div>
 }
 export default FeatureAccordion
