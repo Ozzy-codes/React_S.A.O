@@ -5,6 +5,7 @@ export default function Button({
   primary,
   outline,
   rounded,
+  soft_corners,
   ...rest
 }) {
   const classes = ClassNames(
@@ -13,6 +14,7 @@ export default function Button({
     {
       "border-blue-500 bg-blue-500 text-white": primary,
       "rounded-full": rounded,
+      "rounded-lg": soft_corners,
       "bg-white": outline
     }
   )

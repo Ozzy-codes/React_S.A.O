@@ -84,7 +84,7 @@ function MobileHeader({ header, navLinks }) {
         <div className="px-4 h-full flex flex-col justify-center text-center">
           {renderedLinks}
           <Button
-            rounded
+            soft_corners
             className="text-2xl border-4 my-4">
             Book Now
           </Button>
