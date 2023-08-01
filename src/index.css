@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --stone-100: rgb(245, 245, 244);
+}
+
 body {
   color: rgb(5, 46, 22);
+  background-color: var(--stone-100);
 }
 
 .list_spacing > * + * {
