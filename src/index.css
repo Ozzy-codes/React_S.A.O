@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  color: rgb(5, 46, 22);
+}
+
 .list_spacing > * + * {
   margin-top: 1rem;
 }

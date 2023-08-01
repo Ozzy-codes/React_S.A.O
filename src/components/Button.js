@@ -9,7 +9,7 @@ export default function Button({
 }) {
   const classes = ClassNames(
     rest.className,
-    "flex justify-center px-3 py-3 border",
+    "flex justify-center px-3 py-3 border bg-green-900 text-white",
     {
       "border-blue-500 bg-blue-500 text-white": primary,
       "rounded-full": rounded,
