@@ -1,12 +1,13 @@
 // optimized for 375 px width screen
 import { Link } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { FiMenu } from "react-icons/fi"
 import Button from "./Button"
 
 function MobileHeader({ header, navLinks }) {
   const [isOpen, setIsOpen] = useState(false)
   const [previousPageHeight, setPreviousPageHeight] = useState(0)
+  const hiddenTimer = useRef()
 
   const handleClick = () => {
     setIsOpen(!isOpen)
@@ -16,17 +17,16 @@ function MobileHeader({ header, navLinks }) {
     const handler = (event) => {
       const top_header_div = document.querySelector("#top_header_div")
       const scrollHeight = event.target.scrollingElement.scrollTop
-      let hiddenTimer
 
       if (scrollHeight - previousPageHeight > 0) {
         if (!top_header_div.classList.contains("opacity-0")) {
-          hiddenTimer = setTimeout(() => {
+          hiddenTimer.current = setTimeout(() => {
             top_header_div.classList.add("hidden")
           }, 1000)
         }
         top_header_div.classList.add("opacity-0")
       } else {
-        clearTimeout(hiddenTimer)
+        clearTimeout(hiddenTimer.current)
         top_header_div.classList.remove("hidden")
         setTimeout(() => {
           top_header_div.classList.remove("opacity-0")
