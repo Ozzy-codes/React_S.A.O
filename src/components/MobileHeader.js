@@ -16,19 +16,21 @@ function MobileHeader({ header, navLinks }) {
     const handler = (event) => {
       const top_header_div = document.querySelector("#top_header_div")
       const scrollHeight = event.target.scrollingElement.scrollTop
+      let hiddenTimer
 
       if (scrollHeight - previousPageHeight > 0) {
         if (!top_header_div.classList.contains("opacity-0")) {
-          setTimeout(() => {
+          hiddenTimer = setTimeout(() => {
             top_header_div.classList.add("hidden")
           }, 1000)
         }
         top_header_div.classList.add("opacity-0")
       } else {
+        clearTimeout(hiddenTimer)
+        top_header_div.classList.remove("hidden")
         setTimeout(() => {
           top_header_div.classList.remove("opacity-0")
         }, 200)
-        top_header_div.classList.remove("hidden")
       }
       setPreviousPageHeight(scrollHeight)
     }
