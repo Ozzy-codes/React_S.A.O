@@ -18,17 +18,9 @@ function MobileHeader({ header, navLinks }) {
       const scrollHeight = event.target.scrollingElement.scrollTop
 
       if (scrollHeight - previousPageHeight > 0) {
-        top_header_div.classList.add(
-          "transition-opacity",
-          "duration-1000",
-          "opacity-0"
-        )
+        top_header_div.classList.add("opacity-0")
       } else {
-        top_header_div.classList.remove(
-          "transition-opacity",
-          "duration-1000",
-          "opacity-0"
-        )
+        top_header_div.classList.remove("opacity-0")
       }
       setPreviousPageHeight(scrollHeight)
     }
@@ -41,8 +33,8 @@ function MobileHeader({ header, navLinks }) {
     "my-4 py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-2xl"
 
   const openStyle = isOpen
-    ? "fixed w-screen h-screen flex flex-col bg-gray-100 hover:opacity-100"
-    : "fixed w-screen flex flex-col bg-gray-100 hover:opacity-100"
+    ? "fixed w-screen h-screen flex flex-col bg-gray-100 transition-opacity duration-1000 hover:opacity-100"
+    : "fixed w-screen flex flex-col bg-gray-100 transition-opacity duration-1000 hover:opacity-100"
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
