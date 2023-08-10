@@ -42,10 +42,6 @@ function MobileHeader({ header, navLinks }) {
   const default_Nav_styles =
     "my-4 py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-2xl"
 
-  const openStyle = isOpen
-    ? "fixed w-screen h-screen flex flex-col bg-gray-100 transition-opacity duration-1000"
-    : "fixed w-screen flex flex-col bg-gray-100 transition-opacity duration-1000"
-
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
       return (
@@ -73,7 +69,10 @@ function MobileHeader({ header, navLinks }) {
   return (
     <div
       id="top_header_div"
-      className={openStyle}>
+      className={
+        "fixed w-screen flex flex-col bg-gray-100 transition-opacity duration-1000 " +
+        (isOpen ? "h-screen" : "")
+      }>
       <div className="flex justify-between p-8 border-b-2">
         <h1 className="text-4xl">{header}</h1>
         <button
