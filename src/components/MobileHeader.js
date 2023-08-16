@@ -66,6 +66,31 @@ function MobileHeader({ header, navLinks }) {
     }
   })
 
+  // const drawer_div = document.querySelector("#drawer_div")
+
+  // if (drawer_div.classList.contains("opacity-100")) {
+  //   drawer_div.classList.toggle("opacity-100")
+  //   setTimeout(() => {
+  //     drawer_div.classList.toggle("opacity-0")
+  //   }, 200)
+  // } else {
+  // }
+
+  // const show_drawer = () => {
+  //   setTimeout(() => {
+  //     drawer_div.classList.add("opacity-100")
+  //     drawer_div.classList.remove("opacity-0")
+  //   }, 300)
+  //   return "opacity-0"
+  // }
+  // const hide_drawer = () => {
+  //   setTimeout(() => {
+  //     drawer_div.classList.remove("opacity-100")
+  //     drawer_div.classList.add("opacity-0")
+  //   }, 300)
+  //   return "opacity-100"
+  // }
+
   return (
     <div
       id="top_header_div"
@@ -82,7 +107,9 @@ function MobileHeader({ header, navLinks }) {
         </button>
       </div>
       {isOpen && (
-        <div className="px-4 h-full flex flex-col justify-center text-center">
+        <div
+          id="drawer_div"
+          className="px-4 h-full flex flex-col justify-center text-center transition duration-1000 ">
           {renderedLinks}
           <Button
             soft_corners
