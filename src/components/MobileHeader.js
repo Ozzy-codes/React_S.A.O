@@ -66,31 +66,6 @@ function MobileHeader({ header, navLinks }) {
     }
   })
 
-  // const drawer_div = document.querySelector("#drawer_div")
-
-  // if (drawer_div.classList.contains("opacity-100")) {
-  //   drawer_div.classList.toggle("opacity-100")
-  //   setTimeout(() => {
-  //     drawer_div.classList.toggle("opacity-0")
-  //   }, 200)
-  // } else {
-  // }
-
-  // const show_drawer = () => {
-  //   setTimeout(() => {
-  //     drawer_div.classList.add("opacity-100")
-  //     drawer_div.classList.remove("opacity-0")
-  //   }, 300)
-  //   return "opacity-0"
-  // }
-  // const hide_drawer = () => {
-  //   setTimeout(() => {
-  //     drawer_div.classList.remove("opacity-100")
-  //     drawer_div.classList.add("opacity-0")
-  //   }, 300)
-  //   return "opacity-100"
-  // }
-
   return (
     <div
       id="top_header_div"
@@ -98,7 +73,7 @@ function MobileHeader({ header, navLinks }) {
         "fixed w-screen flex flex-col bg-gray-100 transition-opacity duration-1000 " +
         (isOpen ? "h-screen" : "")
       }>
-      <div className="flex justify-between p-8 border-b-2">
+      <div className="flex z-10 bg-black justify-between p-8 border-b-2">
         <h1 className="text-4xl">{header}</h1>
         <button
           onClick={handleClick}
@@ -106,16 +81,28 @@ function MobileHeader({ header, navLinks }) {
           <FiMenu />
         </button>
       </div>
+
       {isOpen && (
-        <div
-          id="drawer_div"
-          className="px-4 h-full flex flex-col justify-center text-center transition duration-1000 ">
-          {renderedLinks}
-          <Button
-            soft_corners
-            className="text-2xl border-4 my-4">
-            Book Now
-          </Button>
+        <div className="z-0 w-screen absolute animate-translateDown">
+          <div className="flex justify-between p-8 border-b-2">
+            <h1 className="text-4xl">{header}</h1>
+            <button
+              onClick={handleClick}
+              className="text-4xl">
+              <FiMenu />
+            </button>
+          </div>
+
+          <div
+            id="drawer_div"
+            className="px-4 h-full flex flex-col justify-center text-center transition duration-1000 ">
+            {renderedLinks}
+            <Button
+              soft_corners
+              className="text-2xl border-4 my-4">
+              Book Now
+            </Button>
+          </div>
         </div>
       )}
     </div>
