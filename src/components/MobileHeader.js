@@ -70,10 +70,9 @@ function MobileHeader({ header, navLinks }) {
     <div
       id="top_header_div"
       className={
-        "fixed w-screen flex flex-col bg-gray-100 transition-opacity duration-1000 " +
-        (isOpen ? "h-screen" : "")
+        "absolute w-screen flex flex-col transition-opacity duration-1000 "
       }>
-      <div className="flex z-10 bg-black justify-between p-8 border-b-2">
+      <div className="flex z-10 justify-between p-8">
         <h1 className="text-4xl">{header}</h1>
         <button
           onClick={handleClick}
@@ -83,8 +82,8 @@ function MobileHeader({ header, navLinks }) {
       </div>
 
       {isOpen && (
-        <div className="z-0 w-screen absolute animate-translateDown">
-          <div className="flex justify-between p-8 border-b-2">
+        <div className="z-0 w-screen absolute animate-translateLeft">
+          <div className="bg-gray-100">
             <h1 className="text-4xl">{header}</h1>
             <button
               onClick={handleClick}
@@ -95,11 +94,11 @@ function MobileHeader({ header, navLinks }) {
 
           <div
             id="drawer_div"
-            className="px-4 h-full flex flex-col justify-center text-center transition duration-1000 ">
+            className="px-4 h-full bg-gray-100 flex flex-col justify-center text-center transition duration-1000 ">
             {renderedLinks}
             <Button
               soft_corners
-              className="text-2xl border-4 my-4">
+              className="text-2xl border-4 mb-4">
               Book Now
             </Button>
           </div>
