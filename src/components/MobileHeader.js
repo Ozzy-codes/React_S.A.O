@@ -70,7 +70,7 @@ function MobileHeader({ header, navLinks }) {
     <div
       id="top_header_div"
       className={
-        "absolute w-screen flex flex-col transition-opacity duration-1000 "
+        "absolute w-screen flex flex-col transition-all duration-1000 "
       }>
       <div className="flex z-10 justify-between p-8">
         <h1 className="text-4xl">{header}</h1>
@@ -81,29 +81,22 @@ function MobileHeader({ header, navLinks }) {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="z-0 w-screen absolute animate-translateLeft">
-          <div className="bg-gray-100">
-            <h1 className="text-4xl">{header}</h1>
-            <button
-              onClick={handleClick}
-              className="text-4xl">
-              <FiMenu />
-            </button>
-          </div>
-
-          <div
-            id="drawer_div"
-            className="px-4 h-full bg-gray-100 flex flex-col justify-center text-center transition duration-1000 ">
-            {renderedLinks}
-            <Button
-              soft_corners
-              className="text-2xl border-4 mb-4">
-              Book Now
-            </Button>
-          </div>
+      <div
+        className={
+          "w-screen relative transition-all duration-1000 " +
+          (isOpen ? "left-0 opacity-100" : "left-full opacity-0")
+        }>
+        <div
+          id="drawer_div"
+          className="px-4 h-full bg-gray-100 flex flex-col justify-center text-center transition duration-1000 ">
+          {renderedLinks}
+          <Button
+            soft_corners
+            className="text-2xl border-4 mb-4">
+            Book Now
+          </Button>
         </div>
-      )}
+      </div>
     </div>
   )
 }
