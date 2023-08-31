@@ -1,7 +1,7 @@
 // optimized for 375 px width screen
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import { FiMenu } from "react-icons/fi"
+import HamburgerMenu from "./HamburgerMenu"
 import Button from "./Button"
 
 function MobileHeader({ header, navLinks }) {
@@ -50,7 +50,7 @@ function MobileHeader({ header, navLinks }) {
         <button
           onClick={handleClick}
           className="text-4xl">
-          <FiMenu />
+          <HamburgerMenu handleClick={isOpen} />
         </button>
       </div>
 
