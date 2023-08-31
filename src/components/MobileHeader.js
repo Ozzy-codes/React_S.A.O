@@ -1,43 +1,16 @@
 // optimized for 375 px width screen
 import { Link } from "react-router-dom"
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { FiMenu } from "react-icons/fi"
 import Button from "./Button"
 
 function MobileHeader({ header, navLinks }) {
   const [isOpen, setIsOpen] = useState(false)
-  // const [previousPageHeight, setPreviousPageHeight] = useState(0)
-  // const hiddenTimer = useRef()
 
   const handleClick = () => {
+    document.body.classList.toggle("overflow-hidden")
     setIsOpen(!isOpen)
   }
-
-  // useEffect(() => {
-  //   const handler = (event) => {
-  //     const top_header_div = document.querySelector("#top_header_div")
-  //     const scrollHeight = event.target.scrollingElement.scrollTop
-
-  //     if (scrollHeight - previousPageHeight > 0) {
-  //       if (!top_header_div.classList.contains("opacity-0")) {
-  //         hiddenTimer.current = setTimeout(() => {
-  //           top_header_div.classList.add("hidden")
-  //         }, 1000)
-  //       }
-  //       top_header_div.classList.add("opacity-0")
-  //     } else {
-  //       clearTimeout(hiddenTimer.current)
-  //       top_header_div.classList.remove("hidden")
-  //       setTimeout(() => {
-  //         top_header_div.classList.remove("opacity-0")
-  //       }, 200)
-  //     }
-  //     setPreviousPageHeight(scrollHeight)
-  //   }
-  //   document.addEventListener("scroll", handler)
-
-  //   return () => document.removeEventListener("scroll", handler)
-  // }, [previousPageHeight])
 
   const default_Nav_styles =
     "my-4 py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-2xl"
