@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       <img
-        className="w-screen"
+        className="w-full"
         src="https://picsum.photos/200"
         alt="random img"
       />

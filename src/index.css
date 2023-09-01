@@ -9,7 +9,7 @@
 body {
   color: rgb(5, 46, 22);
   background-color: var(--stone-100);
-  overflow-x: hidden;
+  overflow: hidden auto;
 }
 
 .list_spacing > * + * {

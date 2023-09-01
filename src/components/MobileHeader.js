@@ -56,8 +56,10 @@ function MobileHeader({ header, navLinks }) {
 
       <div
         className={
-          "w-screen h-screen absolute transition-all duration-1000 " +
-          (isOpen ? "left-0 opacity-100" : "left-full opacity-0")
+          "w-screen h-screen fixed transition-all duration-1000 " +
+          (isOpen
+            ? "left-0 opacity-100 visible"
+            : "left-full opacity-0 invisible")
         }>
         <div
           id="drawer_div"
