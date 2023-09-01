@@ -13,7 +13,7 @@ function MobileHeader({ header, navLinks }) {
   }
 
   const default_Nav_styles =
-    "my-4 py-2 border-b-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-2xl"
+    "my-4 py-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-3xl"
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
@@ -67,7 +67,7 @@ function MobileHeader({ header, navLinks }) {
           {renderedLinks}
           <Button
             soft_corners
-            className="text-2xl border-4 mb-4">
+            className="text-3xl border-4 mb-4">
             Book Now
           </Button>
         </div>
