@@ -28,6 +28,9 @@ export default function HomePage() {
       <h2 className="mx-4 mt-4 text-3xl">
         Luxury Cabin With Breath Taking Views
       </h2>
+      <h3 className="mx-4 mt-4 text-xl">
+        3 Bedrooms &#xB7; 3 Baths &#xB7; Sleeps 5-10
+      </h3>
       <p className="m-4">
         Welcome to Sage and Oak Cabin, your very own secluded oasis
         with breathtaking views! This beautiful, custom-built 3000 sq
