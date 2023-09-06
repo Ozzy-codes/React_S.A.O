@@ -9,6 +9,7 @@ import PhotoPage from "./pages/PhotoPage"
 import AvailabilityPage from "./pages/AvailabilityPage"
 import ReviewPage from "./pages/ReviewPage"
 import HomePage from "./pages/HomePage"
+import BookingPage from "./pages/BookingPage"
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "reviews",
         element: <ReviewPage />
+      },
+      {
+        path: "booking",
+        element: <BookingPage />
       }
     ]
   }
