@@ -23,13 +23,18 @@ function FeatureAccordion() {
 
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex
-    const content = isExpanded && (
-      <div className="border-b p-5 list_spacing">
-        {item.content.map((subSection) => (
-          <div key={subSection.title}>
-            <b>{subSection.title}:</b> {subSection.description}
-          </div>
-        ))}
+
+    const content = (
+      <div
+        style={{ maxHeight: 0 }}
+        className="border-b px-5 overflow-hidden [transition:max-height_0.5s_ease-out]">
+        <p className="my-5 list_spacing">
+          {item.content.map((subSection) => (
+            <div key={subSection.title}>
+              <b>{subSection.title}:</b> {subSection.description}
+            </div>
+          ))}
+        </p>
       </div>
     )
 
@@ -52,6 +57,10 @@ function FeatureAccordion() {
     )
   })
 
-  return <div className="border-x border-t rounded mt-6">{renderedItems}</div>
+  return (
+    <div className="border-x border-t rounded mt-6">
+      {renderedItems}
+    </div>
+  )
 }
 export default FeatureAccordion
