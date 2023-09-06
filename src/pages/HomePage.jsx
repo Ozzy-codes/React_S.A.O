@@ -1,6 +1,7 @@
 // import { useEffect } from "react"
 import FeatureAccordion from "../components/FeatureAccordion"
 import Button from "../components/Button"
+import { Link } from "react-router-dom"
 
 export default function HomePage() {
   // useEffect(() => {
@@ -38,11 +39,15 @@ export default function HomePage() {
         of the Smokies, surrounded by the woods, giving you all of the
         privacy you will need for a relaxing retreat.
       </p>
-      <Button
-        soft_corners
-        className="mx-10 text-2xl py-4">
-        Book Now
-      </Button>
+      <Link
+        to={"booking"}
+        className="mx-4">
+        <Button
+          soft_corners
+          className="w-full text-3xl py-4">
+          Book Now
+        </Button>
+      </Link>
       <FeatureAccordion />
       <p className="m-4">
         Blending rustic and modern elements, you will surely feel that

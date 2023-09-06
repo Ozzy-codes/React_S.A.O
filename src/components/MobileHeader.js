@@ -71,11 +71,16 @@ function MobileHeader({ header, navLinks }) {
           id="drawer_div"
           className="px-4 h-[100dvh] pt-[8rem] bg-gray-100 flex flex-col justify-evenly text-center transition duration-1000 ">
           {renderedLinks}
-          <Button
-            soft_corners
-            className="text-3xl border-4 mb-4">
-            Book Now
-          </Button>
+          <Link
+            to={"booking"}
+            className="mx-4"
+            onClick={handleClick}>
+            <Button
+              soft_corners
+              className="w-full text-3xl py-4">
+              Book Now
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
