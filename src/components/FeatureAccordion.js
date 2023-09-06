@@ -6,14 +6,7 @@ function FeatureAccordion() {
   const [expandedIndex, setExpandedIndex] = useState(-1)
   const subjectRef = useRef([])
 
-  const handleClick = (nextIndex, reference) => {
-    const drawer = reference.nextSibling
-    if (drawer.style.maxHeight !== "0px") {
-      drawer.style.maxHeight = "0px"
-    } else {
-      drawer.style.maxHeight = drawer.scrollHeight + "px"
-    }
-
+  const handleClick = (nextIndex) => {
     setExpandedIndex((currentExpandedIndex) => {
       if (currentExpandedIndex === nextIndex) {
         return -1
@@ -31,18 +24,26 @@ function FeatureAccordion() {
 
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex
+    const refDrawer = subjectRef.current[index]
+
+    if (isExpanded) {
+      refDrawer.nextSibling.style.maxHeight =
+        refDrawer.nextSibling.scrollHeight + "px"
+    } else if (refDrawer) {
+      refDrawer.nextSibling.style.maxHeight = "0px"
+    }
 
     const content = (
       <div
-        style={{ maxHeight: 0 }}
+        style={{ maxHeight: "0px" }}
         className="border-b px-5 overflow-hidden [transition:max-height_0.5s_ease-out]">
-        <p className="my-5 list_spacing">
+        <div className="my-5 list_spacing">
           {item.content.map((subSection) => (
             <div key={subSection.title}>
               <b>{subSection.title}:</b> {subSection.description}
             </div>
           ))}
-        </p>
+        </div>
       </div>
     )
 
@@ -57,9 +58,7 @@ function FeatureAccordion() {
         <div
           ref={(element) => (subjectRef.current[index] = element)}
           className="flex justify-between p-3 bg-gray-50 border-b items-center cursor-pointer"
-          onClick={() =>
-            handleClick(index, subjectRef.current[index])
-          }>
+          onClick={() => handleClick(index)}>
           {item.label}
           {icon}
         </div>
