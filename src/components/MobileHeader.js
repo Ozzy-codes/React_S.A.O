@@ -13,7 +13,7 @@ function MobileHeader({ header, navLinks }) {
   }
 
   const default_Nav_styles =
-    "my-4 py-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-3xl"
+    "my-4 py-2 hover:underline active:decoration-sky-500 active:text-sky-500 text-4xl"
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
@@ -64,12 +64,12 @@ function MobileHeader({ header, navLinks }) {
         className={
           "w-screen h-screen fixed transition-all duration-1000 " +
           (isOpen
-            ? "left-0 opacity-100 visible"
+            ? "inset-0 opacity-100 visible"
             : "left-full opacity-0 invisible")
         }>
         <div
           id="drawer_div"
-          className="px-4 h-full pt-[4.25rem] bg-gray-100 flex flex-col justify-center text-center transition duration-1000 ">
+          className="px-4 h-[100dvh] pt-[8rem] bg-gray-100 flex flex-col justify-evenly text-center transition duration-1000 ">
           {renderedLinks}
           <Button
             soft_corners
