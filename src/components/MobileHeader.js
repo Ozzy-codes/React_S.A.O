@@ -50,7 +50,7 @@ function MobileHeader({ header, navLinks }) {
           <img
             src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
             alt="Sage and Oak"
-            className="w-20"
+            className="w-20 rounded-lg"
           />
         </h1>
         <button
