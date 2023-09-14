@@ -1,11 +1,18 @@
-import "../components/testWidget"
+// import "../components/testWidget"
+import { useRef, useEffect } from "react"
 
 export default function BookingPage() {
+  // const widgetDiv = useRef(null)
   // const data_widget_id = "afd5ae158721478f8a231d1f1bf4124d"
   // const data_property_id = "ad27789d5c644113b84e38dea08436de"
 
-  const iframe = document.querySelector(".ownerrez-widget-iframe")
-  console.log("iframe object", iframe)
+  useEffect(() => {
+    import("../components/testWidget")
+    // console.log("fired again")
+  })
+
+  // const iframe = document.querySelector(".ownerrez-widget-iframe")
+  // console.log("iframe object", iframe)
 
   return (
     <div>
@@ -15,7 +22,9 @@ export default function BookingPage() {
         alt="random img"
       />
       <div className="p-4">
+        <h2 className="text-3xl py-4 mb-4">Booking and Inquiry</h2>
         <div
+          // ref={widgetDiv}
           className="ownerrez-widget"
           data-property-id="ad27789d5c644113b84e38dea08436de"
           data-widget-type="Booking/Inquiry"
