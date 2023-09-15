@@ -1,5 +1,5 @@
-//import "../components/widgetScript"
 import { useRef, useEffect } from "react"
+import "../components/widgetScript"
 
 export default function BookingPage() {
   // const widgetDiv = useRef(null)
