@@ -1,4 +1,4 @@
-// import "../components/testWidget"
+//import "../components/widgetScript"
 import { useRef, useEffect } from "react"
 
 export default function BookingPage() {
@@ -7,8 +7,8 @@ export default function BookingPage() {
   // const data_property_id = "ad27789d5c644113b84e38dea08436de"
 
   useEffect(() => {
-    import("../components/testWidget")
-    // console.log("fired again")
+    import("../components/widgetScript")
+    console.log("bookingPage rendered ")
   })
 
   // const iframe = document.querySelector(".ownerrez-widget-iframe")
