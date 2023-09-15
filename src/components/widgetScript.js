@@ -603,8 +603,8 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
 
           loadWidget(
             el,
-            el.getAttribute("data-widgetId"),
-            el.getAttribute("data-propertyId") ?? or_propertyKey,
+            el.getAttribute("data-widget-id"),
+            el.getAttribute("data-property-id") ?? or_propertyKey,
             tracker
           )
 
