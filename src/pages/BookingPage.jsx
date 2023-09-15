@@ -1,5 +1,5 @@
-import { useRef, useEffect } from "react"
 import "../components/widgetScript"
+import { useEffect } from "react"
 
 export default function BookingPage() {
   // const widgetDiv = useRef(null)
@@ -9,6 +9,7 @@ export default function BookingPage() {
   useEffect(() => {
     import("../components/widgetScript")
     console.log("bookingPage rendered ")
+    window.OwnerRez.loadDefaultWidgets()
   })
 
   // const iframe = document.querySelector(".ownerrez-widget-iframe")
