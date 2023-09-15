@@ -2,18 +2,9 @@ import "../components/widgetScript"
 import { useEffect } from "react"
 
 export default function BookingPage() {
-  // const widgetDiv = useRef(null)
-  // const data_widget_id = "afd5ae158721478f8a231d1f1bf4124d"
-  // const data_property_id = "ad27789d5c644113b84e38dea08436de"
-
   useEffect(() => {
-    import("../components/widgetScript")
-    console.log("bookingPage rendered ")
     window.OwnerRez.loadDefaultWidgets()
   })
-
-  // const iframe = document.querySelector(".ownerrez-widget-iframe")
-  // console.log("iframe object", iframe)
 
   return (
     <div>
@@ -25,7 +16,6 @@ export default function BookingPage() {
       <div className="p-4">
         <h2 className="text-3xl py-4 mb-4">Booking and Inquiry</h2>
         <div
-          // ref={widgetDiv}
           className="ownerrez-widget"
           data-property-id="ad27789d5c644113b84e38dea08436de"
           data-widget-type="Booking/Inquiry"
@@ -33,7 +23,4 @@ export default function BookingPage() {
       </div>
     </div>
   )
-}
-{
-  /* <iframe src="https://secure.ownerreservations.com/widgets/afd5ae158721478f8a231d1f1bf4124d?seq=0&amp;propertykey=ad27789d5c644113b84e38dea08436de&amp;referrer=http%3a%2f%2flocalhost%3a3000%2fbooking#http%3a%2f%2flocalhost%3a3000%2fbooking" frameborder="0" scrolling="no" seamless="seamless" allowtransparency="true" class="ownerrez-widget-iframe" title="booking/inquiry widget" style="width: 100%; border: 0px; overflow: hidden; height: 518px;"></iframe> */
 }
