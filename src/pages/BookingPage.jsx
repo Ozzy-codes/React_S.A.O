@@ -1,4 +1,4 @@
-import "../components/bWidgetScript"
+import "../components/widgetScript"
 import { useEffect } from "react"
 
 export default function BookingPage() {

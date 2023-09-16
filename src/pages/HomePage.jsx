@@ -56,6 +56,19 @@ export default function HomePage() {
         hot tub, and carefully curated decor will stimulate all of
         your senses. Most importantly, enjoy the spectacular view!
       </p>
+      <h2 className="text-3xl m-4">Map</h2>
+      <div className="p-4 bg-white">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.274167456993!2d-83.6046403246361!3d35.74406547256694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885eab89d3aaece9%3A0xc272ce6478e3f4dc!2sSage%20%2B%20Oak%20Cabin!5e0!3m2!1sen!2sid!4v1694040788912!5m2!1sen!2sid"
+          title="map"
+          width="600"
+          height="450"
+          style={{ border: "0" }}
+          allowfullscreen=""
+          loading="lazy"
+          className="w-full"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   )
 }
