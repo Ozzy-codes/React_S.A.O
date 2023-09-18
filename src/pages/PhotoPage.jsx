@@ -1,14 +1,32 @@
 export default function PhotoPage() {
+  const imgArray = []
   const imgList1 = []
   const imgList2 = []
   for (let index = 0; index < 11; index++) {
-    imgList1.push(
-      <div className="bg-sky-400 border-2 w-auto">item {index}</div>
-    )
-    imgList2.push(
-      <div className="bg-sky-400 border-2 w-auto">item {index}</div>
-    )
+    imgArray.push(`Array item ${index}`)
   }
+  console.log("imgArray", imgArray)
+
+  for (let index = 0; index < imgArray.length; index++) {
+    if (index % 2 === 0) {
+      imgList1.push(
+        <div
+          key={index}
+          className="bg-sky-400 border-2 w-auto">
+          {imgArray[index]}
+        </div>
+      )
+    } else {
+      imgList2.push(
+        <div
+          key={index}
+          className="bg-sky-400 border-2 w-auto">
+          {imgArray[index]}
+        </div>
+      )
+    }
+  }
+
   return (
     <div>
       <img
