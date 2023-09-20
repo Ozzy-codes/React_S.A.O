@@ -1,11 +1,15 @@
-export default function PhotoLists() {
-  const imgArray = []
+export const imgArray = []
+for (let index = 0; index < 11; index++) {
+  imgArray.push(`Array item ${index}`)
+}
+console.log("imgArray", imgArray)
+
+export default function PhotoLists({ findImgIndex }) {
   const imgList1 = []
   const imgList2 = []
   for (let index = 0; index < 11; index++) {
     imgArray.push(`Array item ${index}`)
   }
-  console.log("imgArray", imgArray)
 
   for (let index = 0; index < imgArray.length; index++) {
     if (index % 2 === 0) {
