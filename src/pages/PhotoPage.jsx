@@ -1,6 +1,9 @@
 import PhotoLists from "../components/PhotoLists"
 
 export default function PhotoPage() {
+  const findImgIndex = (index) => {
+    console.log("PhotoPage has received index", index)
+  }
   return (
     <div>
       <img
@@ -10,7 +13,7 @@ export default function PhotoPage() {
       />
       <div className="p-4">
         <h2 className="text-3xl py-4 mb-4">Gallery</h2>
-        <PhotoLists />
+        <PhotoLists findImgIndex={findImgIndex} />
       </div>
     </div>
   )

@@ -7,14 +7,17 @@ console.log("imgArray", imgArray)
 export default function PhotoLists({ findImgIndex }) {
   const imgList1 = []
   const imgList2 = []
-  for (let index = 0; index < 11; index++) {
-    imgArray.push(`Array item ${index}`)
+
+  const handleClick = (index) => {
+    console.log("photoLists cmpnt is sending index up")
+    findImgIndex(index)
   }
 
   for (let index = 0; index < imgArray.length; index++) {
     if (index % 2 === 0) {
       imgList1.push(
         <div
+          onClick={() => handleClick(index)}
           key={index}
           className="bg-sky-400 border-2">
           {imgArray[index]}
@@ -23,6 +26,7 @@ export default function PhotoLists({ findImgIndex }) {
     } else {
       imgList2.push(
         <div
+          onClick={() => handleClick(index)}
           key={index}
           className="bg-sky-400 border-2">
           {imgArray[index]}
