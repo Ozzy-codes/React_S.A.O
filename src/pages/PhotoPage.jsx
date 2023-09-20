@@ -1,8 +1,18 @@
 import PhotoLists from "../components/PhotoLists"
+import { useState } from "react"
 
 export default function PhotoPage() {
+  const [imgIndex, setImgIndex] = useState("")
+
   const findImgIndex = (index) => {
     console.log("PhotoPage has received index", index)
+    setImgIndex(index)
+  }
+  const incrementIndex = () => {
+    setImgIndex(imgIndex + 1)
+  }
+  const decrementIndex = () => {
+    setImgIndex(imgIndex - 1)
   }
   return (
     <div>
