@@ -11,6 +11,10 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
 
   console.log("imgIndex passed into Modal component", imgIndex)
 
+  const disablePreviousBtn = imgIndex < 1 ? true : false
+  const disableNextBtn =
+    imgIndex === imgArray.length - 1 ? true : false
+
   return ReactDOM.createPortal(
     <div>
       <div
@@ -20,9 +24,21 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
         <div className="flex flex-col justify-between h-full">
           {/* //TODO must disable buttons when the length of the array is
           // reached */}
-          <button onClick={previousImg}>Previous</button>
+          <button
+            disabled={disablePreviousBtn}
+            onClick={previousImg}
+            className={
+              disablePreviousBtn ? "opacity-50" : "opacity-100"
+            }>
+            Previous
+          </button>
           {imgArray[imgIndex]}
-          <button onClick={nextImg}>Next</button>
+          <button
+            disabled={disableNextBtn}
+            onClick={nextImg}
+            className={disableNextBtn ? "opacity-50" : "opacity-100"}>
+            Next
+          </button>
         </div>
       </div>
     </div>,
