@@ -15,7 +15,10 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
   console.log("imgIndex passed into Modal component", imgIndex)
 
   const btnStyle =
-    "z-40 text-4xl text-gray-300 opacity-70 fixed top-1/2 -translate-y-2/4 py-[1rem] "
+    "z-40 text-4xl text-gray-300 fixed top-1/2 -translate-y-2/4 py-[1rem] "
+  const disablePreviousBtn = imgIndex < 1 ? true : false
+  const disableNextBtn =
+    imgIndex === imgArray.length - 1 ? true : false
 
   return ReactDOM.createPortal(
     <div>
@@ -23,7 +26,12 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
         onClick={onClose}
         className="z-20 fixed inset-0 bg-black opacity-80 cursor-zoom-out"></div>
       <button
-        className={btnStyle + " left-[.5rem] pr-[1rem]"}
+        disabled={disablePreviousBtn}
+        className={
+          btnStyle +
+          " left-[.5rem] pr-[1rem] " +
+          (disablePreviousBtn ? "opacity-20" : "opacity-70")
+        }
         onClick={previousImg}>
         <FaChevronLeft />
       </button>
@@ -35,17 +43,23 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
           onClick={onClose}>
           <IoClose />
         </button>
-        <div
+        <button
+          disabled={disableNextBtn}
           onClick={nextImg}
-          className="cursor-pointer">
+          className={disableNextBtn ? "" : "cursor-pointer"}>
           {imgArray[imgIndex]}
-        </div>
+        </button>
         <div className="fixed z-40 right-0 bottom-0 text-gray-300 translate-y-full">
           {imgIndex + 1} of {imgArray.length}
         </div>
       </div>
       <button
-        className={btnStyle + " right-[.5rem] pl-[1rem]"}
+        disabled={disableNextBtn}
+        className={
+          btnStyle +
+          " right-[.5rem] pl-[1rem] " +
+          (disableNextBtn ? "opacity-20" : "opacity-70")
+        }
         onClick={nextImg}>
         <FaChevronRight />
       </button>
