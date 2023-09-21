@@ -18,7 +18,7 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
     <div>
       <div
         onClick={onClose}
-        className="z-20 fixed inset-0 bg-gray-300 opacity-80 cursor-zoom-out"></div>
+        className="z-20 fixed inset-0 bg-black opacity-80 cursor-zoom-out"></div>
       <button
         className="z-40 text-4xl text-gray-500 fixed left-[.5rem] top-1/2 -translate-y-2/4 py-[1rem] pr-[1rem]"
         onClick={previousImg}>
