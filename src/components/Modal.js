@@ -14,13 +14,16 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
 
   console.log("imgIndex passed into Modal component", imgIndex)
 
+  const btnStyle =
+    "z-40 text-4xl text-gray-300 opacity-70 fixed top-1/2 -translate-y-2/4 py-[1rem] "
+
   return ReactDOM.createPortal(
     <div>
       <div
         onClick={onClose}
         className="z-20 fixed inset-0 bg-black opacity-80 cursor-zoom-out"></div>
       <button
-        className="z-40 text-4xl text-gray-500 fixed left-[.5rem] top-1/2 -translate-y-2/4 py-[1rem] pr-[1rem]"
+        className={btnStyle + " left-[.5rem] pr-[1rem]"}
         onClick={previousImg}>
         <FaCircleChevronLeft />
       </button>
@@ -35,7 +38,7 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
         </div>
       </div>
       <button
-        className="z-40 text-4xl text-gray-500 fixed right-[.5rem] top-1/2 -translate-y-2/4 py-[1rem] pl-[1rem]"
+        className={btnStyle + " right-[.5rem] pl-[1rem]"}
         onClick={nextImg}>
         <FaCircleChevronRight />
       </button>
