@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom"
 import { imgArray } from "./PhotoLists"
-import { FaCircleChevronLeft } from "react-icons/fa6"
-import { FaCircleChevronRight } from "react-icons/fa6"
+import { FaChevronLeft } from "react-icons/fa6"
+import { FaChevronRight } from "react-icons/fa6"
+import { IoClose } from "react-icons/io5"
 import { useEffect } from "react"
-import CloseButton from "./CloseButton"
 
 function Modal({ onClose, imgIndex, nextImg, previousImg }) {
   useEffect(() => {
@@ -25,12 +25,16 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
       <button
         className={btnStyle + " left-[.5rem] pr-[1rem]"}
         onClick={previousImg}>
-        <FaCircleChevronLeft />
+        <FaChevronLeft />
       </button>
       <div className="z-30 fixed inset-2/4 -translate-x-2/4 -translate-y-2/4 bg-white w-fit h-fit max-w-[95%] max-h-[85%]">
         {/* //TODO must disable buttons when the length of the array is
           // reached */}
-        <CloseButton />
+        <button
+          className="fixed right-0 -translate-y-full text-gray-300 text-4xl"
+          onClick={onClose}>
+          <IoClose />
+        </button>
         <div
           onClick={nextImg}
           className="cursor-pointer">
@@ -40,7 +44,7 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
       <button
         className={btnStyle + " right-[.5rem] pl-[1rem]"}
         onClick={nextImg}>
-        <FaCircleChevronRight />
+        <FaChevronRight />
       </button>
     </div>,
     document.querySelector(".modal-container")
