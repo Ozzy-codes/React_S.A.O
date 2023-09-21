@@ -26,6 +26,9 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
       <div className="z-30 fixed inset-2/4 -translate-x-2/4 -translate-y-2/4 bg-white w-fit h-fit max-w-[95%] max-h-[85%]">
         {/* //TODO must disable buttons when the length of the array is
           // reached */}
+        <div
+          onClick={nextImg}
+          className="cursor-pointer">
           {imgArray[imgIndex]}
         </div>
       </div>
