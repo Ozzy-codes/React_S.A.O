@@ -15,10 +15,9 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
     <div>
       <div
         onClick={onClose}
-      <div className="z-30 fixed inset-40 p-10 bg-white">
-        <div className="flex flex-col justify-between h-full">
-          {/* //TODO must disable buttons when the length of the array is
         className="z-20 fixed inset-0 bg-gray-300 opacity-80 cursor-zoom-out"></div>
+      <div className="z-30 fixed inset-2/4 -translate-x-2/4 -translate-y-2/4 bg-white w-fit h-fit max-w-[95%] max-h-[85%]">
+        {/* //TODO must disable buttons when the length of the array is
           // reached */}
           <button onClick={previousImg}>Previous</button>
           {imgArray[imgIndex]}
