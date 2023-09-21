@@ -3,6 +3,7 @@ import { imgArray } from "./PhotoLists"
 import { FaCircleChevronLeft } from "react-icons/fa6"
 import { FaCircleChevronRight } from "react-icons/fa6"
 import { useEffect } from "react"
+import CloseButton from "./CloseButton"
 
 function Modal({ onClose, imgIndex, nextImg, previousImg }) {
   useEffect(() => {
@@ -26,6 +27,7 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
       <div className="z-30 fixed inset-2/4 -translate-x-2/4 -translate-y-2/4 bg-white w-fit h-fit max-w-[95%] max-h-[85%]">
         {/* //TODO must disable buttons when the length of the array is
           // reached */}
+        <CloseButton />
         <div
           onClick={nextImg}
           className="cursor-pointer">
