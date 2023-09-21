@@ -40,6 +40,9 @@ function Modal({ onClose, imgIndex, nextImg, previousImg }) {
           className="cursor-pointer">
           {imgArray[imgIndex]}
         </div>
+        <div className="fixed z-40 right-0 bottom-0 text-gray-300 translate-y-full">
+          {imgIndex + 1} of {imgArray.length}
+        </div>
       </div>
       <button
         className={btnStyle + " right-[.5rem] pl-[1rem]"}
