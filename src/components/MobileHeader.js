@@ -21,7 +21,7 @@ function MobileHeader({ header, navLinks }) {
         <Link
           key={index}
           onClick={handleClick}
-          to={`/`}
+          to={"/"}
           className={default_Nav_styles}>
           {page}
         </Link>
@@ -46,13 +46,15 @@ function MobileHeader({ header, navLinks }) {
         "absolute w-screen flex flex-col transition-all duration-1000 "
       }>
       <div className="flex z-10 justify-between p-8">
-        <h1 className="text-4xl">
-          <img
-            src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
-            alt="Sage and Oak"
-            className="w-20 rounded-lg"
-          />
-        </h1>
+        <Link to={"/"}>
+          <h1 className="text-4xl">
+            <img
+              src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
+              alt="Sage and Oak"
+              className="w-20 rounded-lg"
+            />
+          </h1>
+        </Link>
         <button
           onClick={handleClick}
           className="text-4xl">

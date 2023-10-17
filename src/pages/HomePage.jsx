@@ -23,7 +23,7 @@ export default function HomePage() {
     <div className="flex flex-col">
       <img
         className="w-full"
-        src="https://picsum.photos/200"
+        src="https://picsum.photos/200/?blur=1"
         alt="random img"
       />
       <h2 className="mx-4 mt-4 text-3xl">

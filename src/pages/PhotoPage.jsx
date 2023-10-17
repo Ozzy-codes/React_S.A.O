@@ -34,7 +34,7 @@ export default function PhotoPage() {
     <div>
       <img
         className="w-full"
-        src="https://picsum.photos/200"
+        src="https://picsum.photos/200/?blur=1"
         alt="random img"
       />
       <div className="p-4">
