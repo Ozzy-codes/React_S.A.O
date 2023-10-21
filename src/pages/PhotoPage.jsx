@@ -1,5 +1,6 @@
 import Modal from "../components/Modal"
 import PhotoLists from "../components/PhotoLists"
+import "../api/getImgs"
 import { useState } from "react"
 
 export default function PhotoPage() {
