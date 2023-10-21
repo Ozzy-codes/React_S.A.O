@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import ErrorPage from "./pages/ErrorPage"
 import App from "./App"
 import LocationPage from "./pages/LocationPage"
-import PhotoPage from "./pages/PhotoPage"
+import PhotoPage, { loader as photoLoader } from "./pages/PhotoPage"
 import AvailabilityPage from "./pages/AvailabilityPage"
 import ReviewPage from "./pages/ReviewPage"
 import HomePage from "./pages/HomePage"
@@ -27,7 +27,8 @@ const router = createBrowserRouter([
       },
       {
         path: "photos",
-        element: <PhotoPage />
+        element: <PhotoPage />,
+        loader: photoLoader
       },
       {
         path: "availability",
