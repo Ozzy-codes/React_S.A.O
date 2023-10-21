@@ -1,7 +1,12 @@
 import Modal from "../components/Modal"
 import PhotoLists from "../components/PhotoLists"
-import "../api/getImgs"
+import { getImgs } from "../api/getImgs"
 import { useState } from "react"
+
+export async function loader() {
+  const testImgs = await getImgs()
+  return testImgs
+}
 
 export default function PhotoPage() {
   const [showModal, setShowModal] = useState(false)
