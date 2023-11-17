@@ -1,5 +1,6 @@
 import Modal from "../components/Modal"
 import PhotoLists from "../components/PhotoLists"
+import { useLoaderData } from "react-router-dom"
 import { getImgs } from "../api/getImgs"
 import { useState } from "react"
 
@@ -9,6 +10,9 @@ export async function loader() {
 }
 
 export default function PhotoPage() {
+  const testImgs = useLoaderData()
+  console.log("testImgs in component: ", testImgs)
+
   const [showModal, setShowModal] = useState(false)
   const [imgIndex, setImgIndex] = useState("")
 
