@@ -4,7 +4,9 @@ for (let index = 0; index < 11; index++) {
 }
 console.log("imgArray", imgArray)
 
-export default function PhotoLists({ findImgIndex }) {
+export default function PhotoLists({ findImgIndex, listOfImgs }) {
+  console.log(listOfImgs)
+  const imgArray = listOfImgs
   const imgList1 = []
   const imgList2 = []
 
@@ -16,21 +18,21 @@ export default function PhotoLists({ findImgIndex }) {
   for (let index = 0; index < imgArray.length; index++) {
     if (index % 2 === 0) {
       imgList1.push(
-        <div
+        <img
           onClick={() => handleClick(index)}
           key={index}
-          className="bg-sky-400 border-2">
-          {imgArray[index]}
-        </div>
+          src={imgArray[index]}
+          alt="picsum test img"
+        />
       )
     } else {
       imgList2.push(
-        <div
+        <img
           onClick={() => handleClick(index)}
           key={index}
-          className="bg-sky-400 border-2">
-          {imgArray[index]}
-        </div>
+          src={imgArray[index]}
+          alt="picsum test img"
+        />
       )
     }
   }

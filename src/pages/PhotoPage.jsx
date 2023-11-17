@@ -49,7 +49,10 @@ export default function PhotoPage() {
       />
       <div className="p-4">
         <h2 className="text-3xl py-4 mb-4">Gallery</h2>
-        <PhotoLists findImgIndex={findImgIndex} />
+        <PhotoLists
+          listOfImgs={testImgs}
+          findImgIndex={findImgIndex}
+        />
       </div>
       {showModal && modal}
     </div>
