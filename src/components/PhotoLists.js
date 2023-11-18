@@ -1,9 +1,3 @@
-export const imgArray = []
-for (let index = 0; index < 11; index++) {
-  imgArray.push(`Array item ${index}`)
-}
-console.log("imgArray", imgArray)
-
 export default function PhotoLists({ findImgIndex, listOfImgs }) {
   console.log(listOfImgs)
   const imgArray = listOfImgs
