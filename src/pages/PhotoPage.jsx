@@ -38,6 +38,7 @@ export default function PhotoPage() {
       nextImg={incrementIndex}
       previousImg={decrementIndex}
       onClose={handleClose}
+      listOfImgs={testImgs}
     />
   )
   return (
