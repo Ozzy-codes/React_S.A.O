@@ -32,11 +32,11 @@ export default function PhotoLists({ findImgIndex, listOfImgs }) {
   }
 
   return (
-    <div className="flex justify-between">
-      <div className="gallery_items flex flex-col w-full ">
+    <div className="flex gap-1.5 justify-between">
+      <div className="gallery_items flex gap-1.5 flex-col w-full ">
         {imgList1}
       </div>
-      <div className="gallery_items flex flex-col w-full ">
+      <div className="gallery_items flex gap-1.5 flex-col w-full ">
         {imgList2}
       </div>
     </div>
