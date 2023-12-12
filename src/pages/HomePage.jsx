@@ -1,4 +1,4 @@
-// import { useEffect } from "react"
+import { useState } from "react"
 import FeatureAccordion from "../components/FeatureAccordion"
 import Button from "../components/Button"
 import { Link } from "react-router-dom"
@@ -18,14 +18,32 @@ export default function HomePage() {
   //     clearInterval(timer)
   //   }
   // }, [])
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  function handleLoad() {
+    console.log("img is loaded")
+    setIsLoaded(true)
+  }
+  const headerContent = isLoaded ? (
+    ""
+  ) : (
+    <div className="flex justify-center items-center absolute inset-0">
+      Currently Loading...
+    </div>
+  )
 
   return (
     <div className="flex flex-col">
-      <img
-        className="w-full"
-        src="https://picsum.photos/200/?blur=1"
-        alt="random img"
-      />
+      <div
+        className={"relative " + (isLoaded ? "" : "h-[65vh] w-full")}>
+        <img
+          className="w-full"
+          src="https://picsum.photos/200/?blur=1"
+          alt="random img"
+          onLoad={handleLoad}
+        />
+        {headerContent}
+      </div>
       <h2 className="mx-4 mt-4 text-3xl">
         Luxury Cabin With Breath Taking Views
       </h2>
