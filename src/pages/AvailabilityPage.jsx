@@ -1,18 +1,26 @@
 import "../components/widgetScript"
+import useTopImgLoader from "../hooks/use-TopImgLoader"
 import { useEffect } from "react"
 
 export default function AvailabilityPage() {
+  const { isLoaded, setLoadTrue, loadingContent } = useTopImgLoader()
+
   useEffect(() => {
     window.OwnerRez.loadDefaultWidgets()
   })
 
   return (
     <div>
-      <img
-        className="w-full"
-        src="https://picsum.photos/200/?blur=1"
-        alt="random img"
-      />
+      <div
+        className={"relative " + (isLoaded ? "" : "h-[65vh] w-full")}>
+        <img
+          className="w-full"
+          src="https://picsum.photos/200/?blur=1"
+          alt="random img"
+          onLoad={setLoadTrue}
+        />
+        {loadingContent}
+      </div>
       <div className="p-4">
         <h2 className="text-3xl py-4 mb-4">Availability</h2>
         <div
