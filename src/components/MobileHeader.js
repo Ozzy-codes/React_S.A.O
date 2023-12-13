@@ -51,7 +51,7 @@ function MobileHeader({ header, navLinks }) {
       className={
         "absolute w-screen flex flex-col transition-all duration-1000 "
       }>
-      <div className="flex z-10 justify-between p-8">
+      <div className="flex z-20 justify-between p-8">
         <Link
           to={"/"}
           onClick={handleBannerClick}>
@@ -72,7 +72,7 @@ function MobileHeader({ header, navLinks }) {
 
       <div
         className={
-          "w-screen h-screen fixed transition-all duration-1000 " +
+          "w-screen h-screen fixed z-10 transition-all duration-1000 " +
           (isOpen
             ? "inset-0 opacity-100 visible"
             : "left-full opacity-0 invisible")

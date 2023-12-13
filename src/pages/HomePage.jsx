@@ -1,36 +1,10 @@
-import { useState } from "react"
 import FeatureAccordion from "../components/FeatureAccordion"
 import Button from "../components/Button"
+import useTopImgLoader from "../hooks/use-TopImgLoader"
 import { Link } from "react-router-dom"
 
 export default function HomePage() {
-  // useEffect(() => {
-  //   let timer
-  //   const rotateTimer = () => {
-  //     console.log("display first photo")
-  //     timer = setInterval(() => {
-  //       console.log("Rotate new photo in")
-  //     }, 3000)
-  //   }
-  //   rotateTimer()
-
-  //   return () => {
-  //     clearInterval(timer)
-  //   }
-  // }, [])
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  function handleLoad() {
-    console.log("img is loaded")
-    setIsLoaded(true)
-  }
-  const headerContent = isLoaded ? (
-    ""
-  ) : (
-    <div className="flex justify-center items-center absolute inset-0">
-      Currently Loading...
-    </div>
-  )
+  const { isLoaded, setLoadTrue, loadingContent } = useTopImgLoader()
 
   return (
     <div className="flex flex-col">
@@ -40,9 +14,9 @@ export default function HomePage() {
           className="w-full"
           src="https://picsum.photos/200/?blur=1"
           alt="random img"
-          onLoad={handleLoad}
+          onLoad={setLoadTrue}
         />
-        {headerContent}
+        {loadingContent}
       </div>
       <h2 className="mx-4 mt-4 text-3xl">
         Luxury Cabin With Breath Taking Views
