@@ -1,9 +1,10 @@
 import "../components/widgetScript"
 import useTopImgLoader from "../hooks/use-TopImgLoader"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function BookingPage() {
   const { isLoaded, setLoadTrue, loadingContent } = useTopImgLoader()
+  const [widgetLoaded, setWidgetLoaded] = useState(false)
 
   const targetRef = useRef(null)
 
@@ -22,6 +23,7 @@ export default function BookingPage() {
               node.onload = () => {
                 // we can perform actions here.
                 console.log("iframe content is loaded")
+                setWidgetLoadTrue()
               }
             }
           })
@@ -36,6 +38,19 @@ export default function BookingPage() {
     window.OwnerRez.loadDefaultWidgets()
     return () => observer.disconnect()
   }, [])
+
+  function setWidgetLoadTrue() {
+    console.log("handle widget load triggered")
+    setWidgetLoaded(true)
+  }
+
+  const widgetLoadingContent = widgetLoaded ? (
+    ""
+  ) : (
+    <div className="flex justify-center items-center absolute inset-0">
+      Currently Loading...
+    </div>
+  )
 
   return (
     <div>
@@ -52,11 +67,17 @@ export default function BookingPage() {
       <div className="p-4">
         <h2 className="text-3xl py-4 mb-4">Booking and Inquiry</h2>
         <div
-          className="ownerrez-widget"
-          data-property-id="ad27789d5c644113b84e38dea08436de"
-          data-widget-type="Booking/Inquiry"
-          data-widget-id="afd5ae158721478f8a231d1f1bf4124d"
-          ref={targetRef}></div>
+          className={
+            "relative " + (widgetLoaded ? "" : "h-[65vh] w-full")
+          }>
+          <div
+            className="ownerrez-widget"
+            data-property-id="ad27789d5c644113b84e38dea08436de"
+            data-widget-type="Booking/Inquiry"
+            data-widget-id="afd5ae158721478f8a231d1f1bf4124d"
+            ref={targetRef}></div>
+          {widgetLoadingContent}
+        </div>
       </div>
     </div>
   )
