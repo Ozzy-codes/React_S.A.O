@@ -1,5 +1,6 @@
 import "../components/widgetScript"
 import useTopImgLoader from "../hooks/use-TopImgLoader"
+import Skeleton from "../components/Skeleton"
 import { useEffect, useRef, useState } from "react"
 
 export default function BookingPage() {
@@ -47,9 +48,10 @@ export default function BookingPage() {
   const widgetLoadingContent = widgetLoaded ? (
     ""
   ) : (
-    <div className="flex justify-center items-center absolute inset-0">
-      Currently Loading...
-    </div>
+    <Skeleton
+      times={1}
+      className={"absolute inset-0"}
+    />
   )
 
   return (
@@ -68,7 +70,7 @@ export default function BookingPage() {
         <h2 className="text-3xl py-4 mb-4">Booking and Inquiry</h2>
         <div
           className={
-            "relative " + (widgetLoaded ? "" : "h-[65vh] w-full")
+            "relative " + (widgetLoaded ? "" : "h-[90vh] w-full")
           }>
           <div
             className="ownerrez-widget"
