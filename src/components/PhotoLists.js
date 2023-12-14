@@ -1,5 +1,4 @@
 export default function PhotoLists({ findImgIndex, listOfImgs }) {
-  console.log(listOfImgs)
   const imgArray = listOfImgs
   const imgList1 = []
   const imgList2 = []

@@ -52,7 +52,8 @@ function useWidgetLoader() {
   return {
     widgetLoaded,
     widgetRef,
-    widgetLoadingContent
+    widgetLoadingContent,
+    setWidgetLoadTrue
   }
 }
 export default useWidgetLoader
