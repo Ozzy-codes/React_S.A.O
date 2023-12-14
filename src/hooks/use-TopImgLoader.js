@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Skeleton from "../components/Skeleton"
 
 function useTopImgLoader() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -10,9 +11,10 @@ function useTopImgLoader() {
   const loadingContent = isLoaded ? (
     ""
   ) : (
-    <div className="flex justify-center items-center absolute inset-0">
-      Currently Loading...
-    </div>
+    <Skeleton
+      times={1}
+      className={"absolute inset-0"}
+    />
   )
   return {
     isLoaded,
