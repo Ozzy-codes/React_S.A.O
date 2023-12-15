@@ -18,10 +18,10 @@ export default function PhotoLists({ findImgIndex, listOfImgs }) {
         <div
           className={
             "relative " + (isLoaded ? "" : "h-[20vh] w-full")
-          }>
+          }
+          key={index}>
           <img
             onClick={() => handleClick(index)}
-            key={index}
             src={imgArray[index]}
             alt="picsum test img"
             onLoad={setLoadTrue}
@@ -34,10 +34,10 @@ export default function PhotoLists({ findImgIndex, listOfImgs }) {
         <div
           className={
             "relative " + (isLoaded ? "" : "h-[20vh] w-full")
-          }>
+          }
+          key={index}>
           <img
             onClick={() => handleClick(index)}
-            key={index}
             src={imgArray[index]}
             alt="picsum test img"
             onLoad={setLoadTrue}
