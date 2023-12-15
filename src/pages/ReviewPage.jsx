@@ -9,8 +9,8 @@ export default function ReviewPage() {
     useWidgetLoader()
 
   useEffect(() => {
-    window.OwnerRez.loadDefaultWidgets()
-  })
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div>

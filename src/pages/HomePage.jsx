@@ -3,11 +3,16 @@ import Button from "../components/Button"
 import useTopImgLoader from "../hooks/use-TopImgLoader"
 import useWidgetLoader from "../hooks/use-WidgetLoader"
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 export default function HomePage() {
   const { isLoaded, setLoadTrue, loadingContent } = useTopImgLoader()
   const { widgetLoaded, setWidgetLoadTrue, widgetLoadingContent } =
     useWidgetLoader()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="flex flex-col">

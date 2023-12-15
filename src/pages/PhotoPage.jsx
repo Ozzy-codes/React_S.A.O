@@ -3,7 +3,7 @@ import PhotoLists from "../components/PhotoLists"
 import useTopImgLoader from "../hooks/use-TopImgLoader"
 import { useLoaderData } from "react-router-dom"
 import { getImgs } from "../api/getImgs"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export async function loader() {
   const testImgs = await getImgs()
@@ -18,6 +18,10 @@ export default function PhotoPage() {
 
   const [showModal, setShowModal] = useState(false)
   const [imgIndex, setImgIndex] = useState("")
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const findImgIndex = (index) => {
     console.log("PhotoPage has received index", index)

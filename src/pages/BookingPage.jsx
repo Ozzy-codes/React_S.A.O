@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import "../components/widgetScript"
 import useTopImgLoader from "../hooks/use-TopImgLoader"
 import useWidgetLoader from "../hooks/use-WidgetLoader"
@@ -6,6 +7,10 @@ export default function BookingPage() {
   const { isLoaded, setLoadTrue, loadingContent } = useTopImgLoader()
   const { widgetLoaded, widgetRef, widgetLoadingContent } =
     useWidgetLoader()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div>
