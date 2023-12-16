@@ -51,11 +51,11 @@ function MobileHeader({ header, navLinks }) {
       className={
         "absolute w-screen flex flex-col transition-all duration-1000 "
       }>
-      <div className="flex z-20 justify-between p-8">
+      <div className="flex z-20 justify-between p-8 md:px-[4rem]">
         <Link
           to={"/"}
           onClick={handleBannerClick}>
-          <h1 className="text-5xl font-['Whisper'] text-black">
+          <h1 className="text-5xl md:text-[15vh] font-['Whisper'] text-black">
             Sage + Oak
             {/* <img
               src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
