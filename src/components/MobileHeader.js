@@ -55,18 +55,22 @@ function MobileHeader({ header, navLinks }) {
         <Link
           to={"/"}
           onClick={handleBannerClick}>
-          <h1 className="text-4xl">
-            <img
+          <h1 className="text-5xl font-['Whisper'] text-black">
+            Sage + Oak
+            {/* <img
               src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
               alt="Sage and Oak"
               className="w-20 rounded-lg"
-            />
+            /> */}
           </h1>
         </Link>
         <button
           onClick={handleClick}
           className="text-4xl">
-          <HamburgerMenu handleClick={isOpen} />
+          <HamburgerMenu
+            handleClick={isOpen}
+            menuColor={"black"}
+          />
         </button>
       </div>
 

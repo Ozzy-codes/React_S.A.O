@@ -1,6 +1,6 @@
-export default function HamburgerMenu({ handleClick }) {
+export default function HamburgerMenu({ handleClick, menuColor }) {
   const baseStyle = "w-10 h-1 block "
-  const hideSpan = handleClick ? "bg-transparent" : "bg-black"
+  const hideSpan = handleClick ? "bg-transparent" : "bg-" + menuColor
   const rotateTopSpan = handleClick
     ? "top-0 rotate-[135deg]"
     : "-top-[.75rem]"
@@ -13,7 +13,9 @@ export default function HamburgerMenu({ handleClick }) {
       <span
         className={
           baseStyle +
-          "bg-black absolute transition duration-200 " +
+          "bg-" +
+          menuColor +
+          " absolute transition duration-200 " +
           rotateTopSpan
         }>
         &nbsp;
@@ -24,7 +26,9 @@ export default function HamburgerMenu({ handleClick }) {
       <span
         className={
           baseStyle +
-          "bg-black absolute transition duration-200 " +
+          "bg-" +
+          menuColor +
+          " absolute transition duration-200 " +
           rotateBottomSpan
         }>
         &nbsp;
