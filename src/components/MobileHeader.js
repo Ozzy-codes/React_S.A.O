@@ -51,7 +51,7 @@ function MobileHeader({ header, navLinks }) {
       className={
         "absolute w-screen flex flex-col transition-all duration-1000 "
       }>
-      <div className="flex z-20 justify-between p-8 md:px-[4rem]">
+      <div className="flex z-20 justify-between p-8 md:p-[4rem] header_gradient">
         <Link
           to={"/"}
           onClick={handleBannerClick}>
