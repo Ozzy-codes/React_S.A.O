@@ -17,7 +17,10 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       <div
-        className={"relative " + (isLoaded ? "" : "h-[65vh] w-full")}>
+        className={
+          "relative header_gradient " +
+          (isLoaded ? "" : "h-[65vh] w-full")
+        }>
         <img
           className="w-full"
           src="https://picsum.photos/200/?blur=1"
