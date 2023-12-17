@@ -1,4 +1,5 @@
 // optimized for 375 px width screen
+import "../css/MobileHeader.css"
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import HamburgerMenu from "./HamburgerMenu"
