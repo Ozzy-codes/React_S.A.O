@@ -29,7 +29,7 @@ export default function HomePage() {
         />
         {loadingContent}
       </div>
-      <div className="grid md:grid-cols-2">
+      <div className="grid md:grid-cols-2 md:h-[600px]">
         <div className="flex flex-col">
           <h2 className="mx-4 mt-4 text-3xl">
             Luxury Cabin With Breath Taking Views
@@ -56,7 +56,9 @@ export default function HomePage() {
           </Link>
         </div>
         <FeatureAccordion
-          className={"md:col-[2_/_3] md:row-[1_/_3]"}
+          className={
+            "md:col-[2_/_3] md:row-[1_/_3] md:overflow-hidden"
+          }
         />
         <p className="m-4">
           Blending rustic and modern elements, you will surely feel
