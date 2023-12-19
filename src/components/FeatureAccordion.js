@@ -2,7 +2,7 @@ import { useState, useRef } from "react"
 import { GoChevronDown, GoChevronLeft } from "react-icons/go"
 import { items } from "../seeds/AccordionData"
 
-function FeatureAccordion() {
+function FeatureAccordion({ className }) {
   const [expandedIndex, setExpandedIndex] = useState(-1)
   const subjectRef = useRef([])
 
@@ -68,7 +68,7 @@ function FeatureAccordion() {
   })
 
   return (
-    <div className="border-x border-t rounded mt-6">
+    <div className={"border-x border-t rounded mt-6 " + className}>
       {renderedItems}
     </div>
   )
