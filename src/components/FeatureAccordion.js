@@ -36,7 +36,7 @@ function FeatureAccordion({ className }) {
     const content = (
       <div
         style={{ maxHeight: "0px" }}
-        className="border-b px-5 overflow-hidden [transition:max-height_0.5s_ease-out]">
+        className="border-b px-5 overflow-hidden [transition:max-height_0.5s_ease-out] md:h-[425px] md:overflow-y-scroll">
         <div className="my-5 list_spacing">
           {item.content.map((subSection) => (
             <div key={subSection.title}>
