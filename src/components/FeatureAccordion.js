@@ -3,7 +3,7 @@ import { GoChevronDown, GoChevronLeft } from "react-icons/go"
 import { items } from "../seeds/AccordionData"
 
 function FeatureAccordion({ className }) {
-  const [expandedIndex, setExpandedIndex] = useState(-1)
+  const [expandedIndex, setExpandedIndex] = useState(0)
   const subjectRef = useRef([])
 
   const handleClick = (nextIndex) => {
@@ -26,7 +26,7 @@ function FeatureAccordion({ className }) {
     const isExpanded = index === expandedIndex
     const refDrawer = subjectRef.current[index]
 
-    if (isExpanded) {
+    if (isExpanded && refDrawer) {
       refDrawer.nextSibling.style.maxHeight =
         refDrawer.nextSibling.scrollHeight + "px"
     } else if (refDrawer) {
@@ -36,7 +36,7 @@ function FeatureAccordion({ className }) {
     const content = (
       <div
         style={{ maxHeight: "0px" }}
-        className="border-b px-5 overflow-hidden [transition:max-height_0.5s_ease-out] md:h-[425px] md:overflow-y-scroll">
+        className="border-b px-5 overflow-hidden md:h-[425px] md:overflow-y-scroll">
         <div className="my-5 list_spacing">
           {item.content.map((subSection) => (
             <div key={subSection.title}>
