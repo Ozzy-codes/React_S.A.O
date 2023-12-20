@@ -7,17 +7,7 @@ function FeatureAccordion({ className }) {
   const subjectRef = useRef([])
 
   const handleClick = (nextIndex) => {
-    setExpandedIndex((currentExpandedIndex) => {
-      if (currentExpandedIndex === nextIndex) {
-        return -1
-      } else {
-        return nextIndex
-      }
-    })
-
-    if (expandedIndex === nextIndex) {
-      setExpandedIndex(-1)
-    } else {
+    if (expandedIndex !== nextIndex) {
       setExpandedIndex(nextIndex)
     }
   }
