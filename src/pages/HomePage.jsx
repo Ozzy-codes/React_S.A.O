@@ -1,12 +1,11 @@
 import FeatureAccordion from "../components/FeatureAccordion"
 import Button from "../components/Button"
-import useTopImgLoader from "../hooks/use-TopImgLoader"
+import TopImg from "../components/TopImg"
 import useWidgetLoader from "../hooks/use-WidgetLoader"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
 export default function HomePage() {
-  const { isLoaded, setLoadTrue, loadingContent } = useTopImgLoader()
   const { widgetLoaded, setWidgetLoadTrue, widgetLoadingContent } =
     useWidgetLoader()
 
@@ -16,19 +15,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
-      <div
-        className={
-          "relative header_gradient " +
-          (isLoaded ? "" : "h-[65vh] w-full")
-        }>
-        <img
-          className="w-full"
-          src="https://picsum.photos/200/?blur=1"
-          alt="random img"
-          onLoad={setLoadTrue}
-        />
-        {loadingContent}
-      </div>
+      <TopImg />
       <div className="grid md:grid-cols-2 md:h-[600px]">
         <div className="flex flex-col">
           <h2 className="mx-4 mt-4 text-3xl">

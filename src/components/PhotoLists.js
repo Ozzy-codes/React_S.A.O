@@ -1,7 +1,17 @@
 import useTopImgLoader from "../hooks/use-TopImgLoader"
+import Skeleton from "./Skeleton"
 
 export default function PhotoLists({ findImgIndex, listOfImgs }) {
-  const { isLoaded, setLoadTrue, loadingContent } = useTopImgLoader()
+  const { isLoaded, setLoadTrue } = useTopImgLoader()
+
+  const loadingContent = isLoaded ? (
+    ""
+  ) : (
+    <Skeleton
+      times={1}
+      className={"absolute inset-0"}
+    />
+  )
 
   const imgArray = listOfImgs
   const imgList1 = []
