@@ -1,9 +1,9 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { GoChevronDown, GoChevronLeft } from "react-icons/go"
 import { items } from "../seeds/AccordionData"
 
 function FeatureAccordion({ className }) {
-  const [expandedIndex, setExpandedIndex] = useState(0)
+  const [expandedIndex, setExpandedIndex] = useState(-1)
   const subjectRef = useRef([])
 
   const handleClick = (nextIndex) => {
@@ -11,6 +11,10 @@ function FeatureAccordion({ className }) {
       setExpandedIndex(nextIndex)
     }
   }
+
+  useEffect(() => {
+    setExpandedIndex(0)
+  }, [])
 
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex
