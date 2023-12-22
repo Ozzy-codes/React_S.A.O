@@ -23,18 +23,20 @@ export default function PhotoLists({ findImgIndex, listOfImgs }) {
   }
 
   for (let index = 0; index < imgArray.length; index++) {
+    const { imgWidth, imgHeight, imgUrl } = imgArray[index]
     if (index % 2 === 0) {
       imgList1.push(
         <div
-          className={
-            "relative " + (isLoaded ? "" : "h-[20vh] w-full")
-          }
+          className="relative "
           key={index}>
           <img
             onClick={() => handleClick(index)}
-            src={imgArray[index]}
+            src={imgUrl}
             alt="picsum test img"
             onLoad={setLoadTrue}
+            width={imgWidth}
+            height={imgHeight}
+            className="w-full"
           />
           {loadingContent}
         </div>
@@ -42,15 +44,16 @@ export default function PhotoLists({ findImgIndex, listOfImgs }) {
     } else {
       imgList2.push(
         <div
-          className={
-            "relative " + (isLoaded ? "" : "h-[20vh] w-full")
-          }
+          className="relative "
           key={index}>
           <img
             onClick={() => handleClick(index)}
-            src={imgArray[index]}
+            src={imgUrl}
             alt="picsum test img"
             onLoad={setLoadTrue}
+            width={imgWidth}
+            height={imgHeight}
+            className="w-full"
           />
           {loadingContent}
         </div>

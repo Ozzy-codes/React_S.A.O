@@ -54,8 +54,11 @@ function Modal({
             (disableNextBtn ? "" : "cursor-pointer")
           }>
           <img
-            src={listOfImgs[imgIndex]}
+            src={listOfImgs[imgIndex].imgUrl}
             alt="picsum test"
+            width={listOfImgs[imgIndex].imgWidth}
+            height={listOfImgs[imgIndex].imgHeight}
+            className="h-full"
           />
         </button>
         <div className="fixed z-40 right-0 bottom-0 text-gray-300 translate-y-full">

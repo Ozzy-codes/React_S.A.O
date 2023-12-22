@@ -5,7 +5,11 @@ export const getImgs = async () => {
     .get("https://picsum.photos/v2/list")
     .then((results) =>
       results.data.map((element) => {
-        return element.download_url
+        return {
+          imgWidth: element.width,
+          imgHeight: element.height,
+          imgUrl: element.download_url
+        }
       })
     )
     .catch((error) => console.error(error))
