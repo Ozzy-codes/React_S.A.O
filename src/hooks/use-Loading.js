@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react"
-import Skeleton from "../components/Skeleton"
 import "../components/widgetScript"
 
 function useLoading() {
@@ -44,18 +43,9 @@ function useLoading() {
     setIsLoaded(true)
   }
 
-  const widgetLoadingContent = isLoaded ? (
-    ""
-  ) : (
-    <Skeleton
-      times={1}
-      className={"absolute inset-0"}
-    />
-  )
   return {
     isLoaded,
     loadingRef,
-    widgetLoadingContent,
     setLoadTrue
   }
 }
