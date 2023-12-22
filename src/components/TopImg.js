@@ -1,8 +1,8 @@
-import useTopImgLoader from "../hooks/use-TopImgLoader"
+import useLoading from "../hooks/use-Loading"
 import Skeleton from "../components/Skeleton"
 
 function TopImg() {
-  const { isLoaded, setLoadTrue } = useTopImgLoader()
+  const { isLoaded, setLoadTrue } = useLoading()
 
   const loadingContent = isLoaded ? (
     ""

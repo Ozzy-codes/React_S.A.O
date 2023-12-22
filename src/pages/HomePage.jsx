@@ -1,13 +1,12 @@
 import FeatureAccordion from "../components/FeatureAccordion"
 import Button from "../components/Button"
 import TopImg from "../components/TopImg"
-import useWidgetLoader from "../hooks/use-WidgetLoader"
+import useLoading from "../hooks/use-Loading"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
 export default function HomePage() {
-  const { widgetLoaded, setWidgetLoadTrue, widgetLoadingContent } =
-    useWidgetLoader()
+  const { isLoaded, setLoadTrue, widgetLoadingContent } = useLoading()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -60,7 +59,7 @@ export default function HomePage() {
       <div className="p-4 bg-white">
         <div
           className={
-            "relative " + (widgetLoaded ? "" : "h-[90vh] w-full")
+            "relative " + (isLoaded ? "" : "h-[90vh] w-full")
           }>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.274167456993!2d-83.6046403246361!3d35.74406547256694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885eab89d3aaece9%3A0xc272ce6478e3f4dc!2sSage%20%2B%20Oak%20Cabin!5e0!3m2!1sen!2sid!4v1694040788912!5m2!1sen!2sid"
@@ -72,7 +71,7 @@ export default function HomePage() {
             loading="lazy"
             className="w-full"
             referrerPolicy="no-referrer-when-downgrade"
-            onLoad={setWidgetLoadTrue}></iframe>
+            onLoad={setLoadTrue}></iframe>
           {widgetLoadingContent}
         </div>
       </div>

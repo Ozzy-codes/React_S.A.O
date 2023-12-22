@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react"
 import Skeleton from "../components/Skeleton"
+import "../components/widgetScript"
 
-function useWidgetLoader() {
-  const [widgetLoaded, setWidgetLoaded] = useState(false)
-  const widgetRef = useRef(null)
+function useLoading() {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const loadingRef = useRef(null)
 
   useEffect(() => {
     const observer = new MutationObserver((mutationsList) => {
@@ -20,7 +21,7 @@ function useWidgetLoader() {
               node.onload = () => {
                 // we can perform actions here.
                 console.log("iframe content is loaded")
-                setWidgetLoadTrue()
+                setLoadTrue()
               }
             }
           })
@@ -28,20 +29,22 @@ function useWidgetLoader() {
       }
     })
     const config = { childList: true }
-    const widgetNode = widgetRef.current
+    const widgetNode = loadingRef.current
 
-    if (widgetNode) observer.observe(widgetNode, config)
-    //clean up of observer when compt unmounts
-    window.OwnerRez.loadDefaultWidgets()
+    if (widgetNode) {
+      observer.observe(widgetNode, config)
+      //clean up of observer when compt unmounts
+      window.OwnerRez.loadDefaultWidgets()
+    }
     return () => observer.disconnect()
   }, [])
 
-  function setWidgetLoadTrue() {
+  function setLoadTrue() {
     console.log("handle widget load triggered")
-    setWidgetLoaded(true)
+    setIsLoaded(true)
   }
 
-  const widgetLoadingContent = widgetLoaded ? (
+  const widgetLoadingContent = isLoaded ? (
     ""
   ) : (
     <Skeleton
@@ -50,10 +53,10 @@ function useWidgetLoader() {
     />
   )
   return {
-    widgetLoaded,
-    widgetRef,
+    isLoaded,
+    loadingRef,
     widgetLoadingContent,
-    setWidgetLoadTrue
+    setLoadTrue
   }
 }
-export default useWidgetLoader
+export default useLoading
