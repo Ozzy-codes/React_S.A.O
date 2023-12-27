@@ -1,50 +1,28 @@
-import Skeleton from "../components/Skeleton"
-import useLoading from "../hooks/use-Loading"
-import { useState } from "react"
+import SingleMonthView from "./SingleMonthView"
+import ThreeMonthView from "./ThreeMonthView"
+import { useState, useEffect } from "react"
 
 function CabinAvailability({ className }) {
-  const { isLoaded, loadingRef } = useLoading()
   const [screenMd, setScreenMd] = useState(false)
 
-  const widgetLoadingContent = isLoaded ? (
-    ""
-  ) : (
-    <Skeleton
-      times={1}
-      className={"absolute inset-0"}
-    />
-  )
+  useEffect(() => {
+    if (window.innerWidth >= 768) setScreenMd(true)
+    else setScreenMd(false)
+
+    const handleResize = () => {
+      if (window.innerWidth >= 768) setScreenMd(true)
+      else setScreenMd(false)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   const widgetOption = screenMd ? (
-    <div
-      className="ownerrez-widget"
-      data-property-id="ad27789d5c644113b84e38dea08436de"
-      data-widget-type="Display 3 months - Multiple Month Calendar"
-      data-widget-id="feafd37a5298462c88492b3d62cef241"
-      ref={loadingRef}></div>
+    <ThreeMonthView className={className} />
   ) : (
-    <div
-      className="ownerrez-widget"
-      data-property-id="ad27789d5c644113b84e38dea08436de"
-      data-widget-type="Multiple Month Calendar"
-      data-widget-id="cc1543b3f17d4a48bfbe78eeb50ead8b"
-      ref={loadingRef}></div>
+    <SingleMonthView className={className} />
   )
 
-  return (
-    <div
-      className={
-        "relative " + (isLoaded ? "" : "h-[90vh] w-full " + className)
-      }>
-      {/* <div
-        className="ownerrez-widget"
-        data-property-id="ad27789d5c644113b84e38dea08436de"
-        data-widget-type="Multiple Month Calendar"
-        data-widget-id="cc1543b3f17d4a48bfbe78eeb50ead8b"
-        ref={loadingRef}></div> */}
-      {widgetOption}
-      {widgetLoadingContent}
-    </div>
-  )
+  return <>{widgetOption}</>
 }
 export default CabinAvailability
