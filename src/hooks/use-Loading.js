@@ -32,14 +32,14 @@ function useLoading() {
 
     if (widgetNode) {
       observer.observe(widgetNode, config)
-      //clean up of observer when compt unmounts
       window.OwnerRez.loadDefaultWidgets()
     }
+    //clean up of observer when compt unmounts
     return () => observer.disconnect()
   }, [])
 
   function setLoadTrue() {
-    console.log("handle widget load triggered")
+    console.log("set load to true")
     setIsLoaded(true)
   }
 
