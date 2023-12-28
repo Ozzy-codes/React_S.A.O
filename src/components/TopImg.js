@@ -14,9 +14,9 @@ function TopImg() {
   )
 
   return (
-    <div className={"relative header_gradient "}>
+    <div className={"relative header_gradient  "}>
       <img
-        className="w-full"
+        className="w-full md:h-[100vw] "
         src="https://picsum.photos/200/?blur=1"
         alt="random img"
         width={200}
