@@ -20,7 +20,7 @@ function MobileHeader({ header, navLinks }) {
   }
 
   const default_Nav_styles =
-    "my-4 py-2 md:my-2 md:py-1 hover:underline active:decoration-sky-500 active:text-sky-500 text-4xl"
+    "my-4 py-2 md:my-2 md:py-1 md:text-[5vh] hover:underline active:decoration-sky-500 active:text-sky-500 text-4xl"
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
@@ -56,7 +56,7 @@ function MobileHeader({ header, navLinks }) {
         <Link
           to={"/"}
           onClick={handleBannerClick}>
-          <h1 className="text-6xl md:text-[15vh] font-['Whisper'] text-black">
+          <h1 className="text-6xl md:text-[10vh] font-['Whisper'] text-black">
             Sage + Oak
             {/* <img
               src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
@@ -67,7 +67,7 @@ function MobileHeader({ header, navLinks }) {
         </Link>
         <button
           onClick={handleClick}
-          className="text-4xl">
+          className="text-4xl  ">
           <HamburgerMenu
             handleClick={isOpen}
             menuColor={"black"}
@@ -92,7 +92,7 @@ function MobileHeader({ header, navLinks }) {
             onClick={handleClick}>
             <Button
               soft_corners
-              className="w-full text-3xl py-4">
+              className="w-full text-3xl md:text-[5vh] py-4 md:p-6 ">
               Book Now
             </Button>
           </Link>
