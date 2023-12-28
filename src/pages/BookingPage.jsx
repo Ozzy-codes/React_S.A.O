@@ -10,7 +10,7 @@ export default function BookingPage() {
   return (
     <div>
       <TopImg />
-      <div className="p-4">
+      <div className="p-4 bg-white ">
         <h2 className="text-3xl py-4 mb-4">Booking and Inquiry</h2>
         <BookAndInquiry />
       </div>
