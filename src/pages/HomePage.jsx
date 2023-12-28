@@ -53,7 +53,6 @@ export default function HomePage() {
           view!
         </p>
       </div>
-      <h2 className="text-3xl m-4">Map</h2>
       <GoogleMap />
     </div>
   )

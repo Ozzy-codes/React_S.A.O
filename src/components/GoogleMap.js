@@ -14,7 +14,8 @@ function GoogleMap({ className }) {
   )
 
   return (
-    <div className="p-4 bg-white">
+    <div className="p-4 my-[1rem] bg-white">
+      <h2 className="text-3xl mb-[1rem] ">Map</h2>
       <div
         className={"relative " + (isLoaded ? "" : "h-[90vh] w-full")}>
         <iframe
