@@ -29,19 +29,19 @@ export default function HomePage() {
             the woods, giving you all of the privacy you will need for
             a relaxing retreat.
           </p>
-          <Link
-            to={"booking"}
-            className="mx-4">
-            <Button
-              soft_corners
-              className="w-full text-3xl py-4">
-              Book Now
-            </Button>
-          </Link>
         </div>
+        <Link
+          to={"booking"}
+          className="mx-4">
+          <Button
+            soft_corners
+            className="w-full text-3xl py-4">
+            Book Now
+          </Button>
+        </Link>
         <FeatureAccordion
           className={
-            "md:col-[2_/_3] md:row-[1_/_3] md:overflow-hidden"
+            "md:col-[2_/_3] md:row-[1_/_4] md:overflow-hidden"
           }
         />
         <p className="m-4">
