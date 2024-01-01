@@ -1,23 +1,11 @@
 import SingleMonthView from "./SingleMonthView"
 import ThreeMonthView from "./ThreeMonthView"
-import { useState, useEffect } from "react"
+import useResize from "../hooks/use-Resize"
 
 function CabinAvailability({ className }) {
-  const [screenMd, setScreenMd] = useState(false)
+  const { nextViewPort } = useResize(768)
 
-  useEffect(() => {
-    if (window.innerWidth >= 768) setScreenMd(true)
-    else setScreenMd(false)
-
-    const handleResize = () => {
-      if (window.innerWidth >= 768) setScreenMd(true)
-      else setScreenMd(false)
-    }
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  const widgetOption = screenMd ? (
+  const widgetOption = nextViewPort ? (
     <ThreeMonthView className={className} />
   ) : (
     <SingleMonthView className={className} />
