@@ -39,11 +39,6 @@ export default function HomePage() {
             Book Now
           </Button>
         </Link>
-        <FeatureAccordion
-          className={
-            "md:col-[2_/_3] md:row-[1_/_4] md:overflow-hidden"
-          }
-        />
         <p className="m-4">
           Blending rustic and modern elements, you will surely feel
           that you have escaped from your everyday life. Clean and
@@ -52,6 +47,11 @@ export default function HomePage() {
           all of your senses. Most importantly, enjoy the spectacular
           view!
         </p>
+        <FeatureAccordion
+          className={
+            "md:col-[2_/_3] md:row-[1_/_4] md:overflow-hidden"
+          }
+        />
       </div>
       <GoogleMap />
     </div>
