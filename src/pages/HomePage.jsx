@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       <TopImg />
-      <div className="grid md:grid-cols-2 md:h-[600px]">
+      <div className="grid md:grid-cols-2 md:h-[600px] bg-[var(--stone-100)]">
         <div className="flex flex-col">
           <h2 className="mx-4 mt-4 text-3xl">
             Luxury Cabin With Breath Taking Views
