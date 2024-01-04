@@ -32,7 +32,8 @@ function TopImg() {
   )
 
   return (
-    <div className={"relative header_gradient h-[750px] z-[-5] "}>
+    <div
+      className={"relative header_gradient lg:h-[750px] lg:z-[-5] "}>
       <img
         className="w-full "
         src="https://picsum.photos/200/?blur=1"
