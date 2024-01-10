@@ -1,186 +1,5 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-unused-expressions */
 /* eslint-disable no-undef */
-typeof JSON != "object" && (JSON = {}),
-  (function () {
-    "use strict"
-    function i(n) {
-      return n < 10 ? "0" + n : n
-    }
-    function e() {
-      return this.valueOf()
-    }
-    function o(n) {
-      return (
-        (r.lastIndex = 0),
-        r.test(n)
-          ? '"' +
-            n.replace(r, function (n) {
-              var t = s[n]
-              return typeof t == "string"
-                ? t
-                : "\\u" +
-                    ("0000" + n.charCodeAt(0).toString(16)).slice(-4)
-            }) +
-            '"'
-          : '"' + n + '"'
-      )
-    }
-    function f(i, r) {
-      var s,
-        l,
-        h,
-        a,
-        v = n,
-        c,
-        e = r[i]
-      e &&
-        typeof e == "object" &&
-        typeof e.toJSON == "function" &&
-        (e = e.toJSON(i))
-      typeof t == "function" && (e = t.call(r, i, e))
-      switch (typeof e) {
-        case "string":
-          return o(e)
-        case "number":
-          return isFinite(e) ? String(e) : "null"
-        case "boolean":
-        case "null":
-          return String(e)
-        case "object":
-          if (!e) return "null"
-          if (
-            ((n += u),
-            (c = []),
-            Object.prototype.toString.apply(e) === "[object Array]")
-          ) {
-            for (a = e.length, s = 0; s < a; s += 1)
-              c[s] = f(s, e) || "null"
-            return (
-              (h =
-                c.length === 0
-                  ? "[]"
-                  : n
-                  ? "[\n" + n + c.join(",\n" + n) + "\n" + v + "]"
-                  : "[" + c.join(",") + "]"),
-              (n = v),
-              h
-            )
-          }
-          if (t && typeof t == "object")
-            for (a = t.length, s = 0; s < a; s += 1)
-              typeof t[s] == "string" &&
-                ((l = t[s]),
-                (h = f(l, e)),
-                h && c.push(o(l) + (n ? ": " : ":") + h))
-          else
-            for (l in e)
-              Object.prototype.hasOwnProperty.call(e, l) &&
-                ((h = f(l, e)),
-                h && c.push(o(l) + (n ? ": " : ":") + h))
-          return (
-            (h =
-              c.length === 0
-                ? "{}"
-                : n
-                ? "{\n" + n + c.join(",\n" + n) + "\n" + v + "}"
-                : "{" + c.join(",") + "}"),
-            (n = v),
-            h
-          )
-      }
-    }
-    typeof Date.prototype.toJSON != "function" &&
-      ((Date.prototype.toJSON = function () {
-        return isFinite(this.valueOf())
-          ? this.getUTCFullYear() +
-              "-" +
-              i(this.getUTCMonth() + 1) +
-              "-" +
-              i(this.getUTCDate()) +
-              "T" +
-              i(this.getUTCHours()) +
-              ":" +
-              i(this.getUTCMinutes()) +
-              ":" +
-              i(this.getUTCSeconds()) +
-              "Z"
-          : null
-      }),
-      (Boolean.prototype.toJSON = e),
-      (Number.prototype.toJSON = e),
-      (String.prototype.toJSON = e))
-    var cx, r, n, u, s, t
-    typeof JSON.stringify != "function" &&
-      ((r =
-        /[\\\"\u0000-\u001f\u007f-\u009f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g),
-      (s = {
-        "\b": "\\b",
-        "\t": "\\t",
-        "\n": "\\n",
-        "\f": "\\f",
-        "\r": "\\r",
-        '"': '\\"',
-        "\\": "\\\\"
-      }),
-      (JSON.stringify = function (i, r, e) {
-        var o
-        if (((n = ""), (u = ""), typeof e == "number"))
-          for (o = 0; o < e; o += 1) u += " "
-        else typeof e == "string" && (u = e)
-        if (
-          ((t = r),
-          r &&
-            typeof r != "function" &&
-            (typeof r != "object" || typeof r.length != "number"))
-        )
-          throw new Error("JSON.stringify")
-        return f("", { "": i })
-      }))
-    typeof JSON.parse != "function" &&
-      ((cx =
-        /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g),
-      (JSON.parse = function (text, reviver) {
-        function walk(n, t) {
-          var r,
-            u,
-            i = n[t]
-          if (i && typeof i == "object")
-            for (r in i)
-              Object.prototype.hasOwnProperty.call(i, r) &&
-                ((u = walk(i, r)),
-                u !== undefined ? (i[r] = u) : delete i[r])
-          return reviver.call(n, t, i)
-        }
-        var j
-        if (
-          ((text = String(text)),
-          (cx.lastIndex = 0),
-          cx.test(text) &&
-            (text = text.replace(cx, function (n) {
-              return (
-                "\\u" +
-                ("0000" + n.charCodeAt(0).toString(16)).slice(-4)
-              )
-            })),
-          /^[\],:{}\s]*$/.test(
-            text
-              .replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@")
-              .replace(
-                /"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
-                "]"
-              )
-              .replace(/(?:^|:|,)(?:\s*\[)+/g, "")
-          ))
-        )
-          return (
-            (j = eval("(" + text + ")")),
-            typeof reviver == "function" ? walk({ "": j }, "") : j
-          )
-        throw new SyntaxError("JSON.parse")
-      }))
-  })()
-//# sourceMappingURL=json2.min.js.map
+/* eslint-disable no-restricted-globals */
 if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
   ;(function () {
     // http://www.onlineaspect.com/2010/01/15/backwards-compatible-postmessage/
@@ -295,10 +114,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
       var frame = document.createElement("iframe")
 
       var url =
-        "https://secure.ownerreservations.com/widgets/" +
-        id +
-        "?seq=" +
-        seq
+        "https://secure.ownerrez.com/widgets/" + id + "?seq=" + seq
 
       if (propertyId) url += "&propertyKey=" + propertyId
 
@@ -314,17 +130,49 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
         return b
       })(window.location.search.substr(1).split("&"))
 
-      for (var key in qs) {
-        if (key != "seq" && key != "view")
-          url += "&" + key + "=" + qs[key]
+      const skipParams = ["seq", "view"].map((z) => z.toLowerCase())
+      let newParamsToUrl = {}
+      for (let key in qs) {
+        let checkUrlKey = key.toLowerCase()
+        let currentUrlParamValue = qs[key]
+        if (skipParams.indexOf(checkUrlKey) === -1) {
+          newParamsToUrl[checkUrlKey] = currentUrlParamValue
+        }
       }
 
-      url =
-        url +
-        "&referrer=" +
-        encodeURIComponent(document.location.href) +
-        "#" +
-        encodeURIComponent(document.location.href)
+      const persistParams = ["or_listingsite", "or_channel"].map(
+        (z) => z.toLowerCase()
+      )
+      for (let persistParam of persistParams) {
+        if (newParamsToUrl.hasOwnProperty(persistParam)) {
+          const paramFromUrl = newParamsToUrl[persistParam]
+          if (
+            paramFromUrl !== "" &&
+            paramFromUrl !== null &&
+            paramFromUrl !== undefined
+          ) {
+            sessionStorage.setItem(persistParam, paramFromUrl)
+          }
+          continue
+        }
+        let savedSessionParam = sessionStorage.getItem(persistParam)
+        if (
+          savedSessionParam !== "" &&
+          savedSessionParam !== null &&
+          savedSessionParam !== undefined
+        ) {
+          newParamsToUrl[persistParam] = savedSessionParam
+        }
+      }
+      for (let [newUrlParamKey, newUrlParamValue] of Object.entries(
+        newParamsToUrl
+      )) {
+        url += `&${newUrlParamKey}=${newUrlParamValue}`
+      }
+
+      url = `${url}&referrer=${encodeURIComponent(
+        document.location.href
+      )}#${encodeURIComponent(document.location.href)}`
 
       if (tracker) {
         var linker = new window.gaplugins.Linker(tracker)
@@ -358,17 +206,20 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
 
       /*var onload = function () { el.style.display = "block"; };
 
-            if (frame.attachEvent)
-                frame.attachEvent("onload", onload);
-            else
-                frame.onload = onload;*/
+          if (frame.attachEvent)
+              frame.attachEvent("onload", onload);
+          else
+              frame.onload = onload;*/
 
       var isDesignMode =
         document.body.className.indexOf("toplevel_page_revslider") !=
         -1
 
       XD.receiveMessage(function (message) {
-        var data = JSON.parse(message.data)
+        var data =
+          typeof message.data !== "object"
+            ? JSON.parse(message.data)
+            : message.data
 
         if (data.or_gatrackerid) {
           window.OwnerRez.sendGTagCrossDomain(data.or_gatrackerid)
@@ -434,21 +285,21 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
               window.jQuery(el).triggerHandler("resize.ownerrez")
 
               /*
-                            if (window.jQuery('.right-icon').hasClass("active"))
-                            {
-                                window.jQuery('.top-icon').click();
-                                window.jQuery('.right-icon').click();
-                            }
+                          if (window.jQuery('.right-icon').hasClass("active"))
+                          {
+                              window.jQuery('.top-icon').click();
+                              window.jQuery('.right-icon').click();
+                          }
 
-                            if (window.foundation && window.foundation.jQuery)
-                            {
-                                // Reflow foundation sites
-                                foundation.jQuery(document).foundation('reflow');
+                          if (window.foundation && window.foundation.jQuery)
+                          {
+                              // Reflow foundation sites
+                              foundation.jQuery(document).foundation('reflow');
 
-                                // Reflow phantom sites
-                                window.jQuery('.top-icon').click();
-                                window.jQuery('.right-icon').click();
-                            }*/
+                              // Reflow phantom sites
+                              window.jQuery('.top-icon').click();
+                              window.jQuery('.right-icon').click();
+                          }*/
             }
 
             if (data.action == "scrollTop") {
@@ -470,15 +321,15 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
 
           //frame.style.display = "block";
         }
-      }, "https://secure.ownerreservations.com")
+      }, "https://secure.ownerrez.com")
 
       el.appendChild(frame)
     }
 
     /*
-            Developed by Robert Nyman, http://www.robertnyman.com
-            Code/licensing: http://code.google.com/p/getelementsbyclassname/
-        */
+          Developed by Robert Nyman, http://www.robertnyman.com
+          Code/licensing: http://code.google.com/p/getelementsbyclassname/
+      */
     var getElementsByClassName = function (className, tag, elm) {
       if (document.getElementsByClassName) {
         getElementsByClassName = function (className, tag, elm) {
