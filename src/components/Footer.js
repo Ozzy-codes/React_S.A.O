@@ -3,7 +3,7 @@ import { SiInstagram } from "react-icons/si"
 
 export default function Footer() {
   return (
-    <div className="grid md:grid-cols-2 md:mx-[5rem] list_spacing text-center my-5 mx-1 text-lg">
+    <div className="grid md:grid-cols-2 md:px-[5rem] list_spacing text-center py-5 px-1 text-lg bg-[var(--stone-100)]">
       <img
         src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
         alt="Sage & Oak"
