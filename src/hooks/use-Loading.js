@@ -32,7 +32,9 @@ function useLoading() {
 
     if (widgetNode) {
       observer.observe(widgetNode, config)
+      console.log("loadDefaultWidget start")
       window.OwnerRez.loadDefaultWidgets()
+      console.log("loadDefaultWidget end")
     }
     //clean up of observer when compt unmounts
     return () => observer.disconnect()

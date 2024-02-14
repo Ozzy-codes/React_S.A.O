@@ -1,10 +1,12 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
+  console.log("OwnerRez or loadWidgets not on window")
   ;(function () {
     // http://www.onlineaspect.com/2010/01/15/backwards-compatible-postmessage/
     // everything is wrapped in the XD function to reduce namespace collisions
     var XD = (function () {
+      console.log("XD function called at script top")
       var interval_id,
         last_hash,
         cache_bust = 1,
@@ -13,6 +15,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
 
       return {
         postMessage: function (message, target_url, target) {
+          console.log("postMessage function called")
           if (!target_url) {
             return
           }
@@ -37,6 +40,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
         },
         receiveMessage: function (callback, source_origin) {
           // browser supports window.postMessage
+          console.log("receiveMessages function called")
           if (window["postMessage"]) {
             // bind the callback to the actual event associated with window.postMessage
             if (callback) {
@@ -57,6 +61,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
               window[
                 callback ? "addEventListener" : "removeEventListener"
               ]("message", attached_callback, !1)
+              console.log("listener for message added to: ", window)
             } else {
               window[callback ? "attachEvent" : "detachEvent"](
                 "onmessage",
@@ -98,6 +103,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
     }
 
     var loadWidget = function (el, id, propertyId, tracker) {
+      console.log("loadWidget called")
       if (!id) {
         if (window.console && window.console.log)
           (console.error || console.log)(
@@ -216,6 +222,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
         -1
 
       XD.receiveMessage(function (message) {
+        console.log("message: ", message)
         var data =
           typeof message.data !== "object"
             ? JSON.parse(message.data)
@@ -506,6 +513,8 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
                 )
 
                 el.contentWindow.postMessage(data, "*")
+                console.log("el contentwindow: ", el.contentWindow)
+                console.log("postMessage sent to the iframe Window")
               })
             }, 500)
           }
