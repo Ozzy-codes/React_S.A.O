@@ -328,7 +328,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
 
           //frame.style.display = "block";
         }
-      }, "https://secure.ownerrez.com")
+      }, "https://secure.ownerrez.com").bind(this)
 
       el.appendChild(frame)
     }
