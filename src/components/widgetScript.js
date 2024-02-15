@@ -328,7 +328,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
 
           //frame.style.display = "block";
         }
-      }, "https://secure.ownerrez.com").bind(this)
+      }, "https://secure.ownerrez.com")
 
       el.appendChild(frame)
     }
@@ -555,7 +555,7 @@ if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
     window.OwnerRez.loadDefaultWidgets = loadDefaultWidgets
     window.OwnerRez.sendGTagCrossDomain = sendGTagCrossDomain
     window.OwnerRez.widgetSeq = 0
-  })()
+  }).bind(this)()
 }
 
 if (window.OwnerRez.skipLoadDefaultWidgets != true)
