@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react"
-import "../components/widgetScript"
+const script = require("../components/widgetScript.cjs")
+console.log("script", script)
+script()
 
 function useLoading() {
   const [isLoaded, setIsLoaded] = useState(false)
