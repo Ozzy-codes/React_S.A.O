@@ -2,12 +2,10 @@
 /* eslint-disable no-restricted-globals */
 function script() {
   if (!window.OwnerRez || !window.OwnerRez.loadWidgets) {
-    console.log("OwnerRez or loadWidgets not on window")
     ;(function () {
       // http://www.onlineaspect.com/2010/01/15/backwards-compatible-postmessage/
       // everything is wrapped in the XD function to reduce namespace collisions
       var XD = (function () {
-        console.log("XD function called at script top")
         var interval_id,
           last_hash,
           cache_bust = 1,
@@ -16,7 +14,6 @@ function script() {
 
         return {
           postMessage: function (message, target_url, target) {
-            console.log("postMessage function called")
             if (!target_url) {
               return
             }
@@ -41,7 +38,6 @@ function script() {
           },
           receiveMessage: function (callback, source_origin) {
             // browser supports window.postMessage
-            console.log("receiveMessages function called")
             if (window["postMessage"]) {
               // bind the callback to the actual event associated with window.postMessage
               if (callback) {
@@ -64,7 +60,6 @@ function script() {
                     ? "addEventListener"
                     : "removeEventListener"
                 ]("message", attached_callback, !1)
-                console.log("listener for message added to: ", window)
               } else {
                 window[callback ? "attachEvent" : "detachEvent"](
                   "onmessage",
@@ -108,7 +103,6 @@ function script() {
       }
 
       var loadWidget = function (el, id, propertyId, tracker) {
-        console.log("loadWidget called")
         if (!id) {
           if (window.console && window.console.log)
             (console.error || console.log)(
@@ -125,7 +119,7 @@ function script() {
         var frame = document.createElement("iframe")
 
         var url =
-          "https://secure.ownerrez.com/widgets/" + id + "?seq=" + seq
+          "https://app.ownerrez.com/widgets/" + id + "?seq=" + seq
 
         if (propertyId) url += "&propertyKey=" + propertyId
 
@@ -218,10 +212,10 @@ function script() {
 
         /*var onload = function () { el.style.display = "block"; };
 
-          if (frame.attachEvent)
-              frame.attachEvent("onload", onload);
-          else
-              frame.onload = onload;*/
+            if (frame.attachEvent)
+                frame.attachEvent("onload", onload);
+            else
+                frame.onload = onload;*/
 
         var isDesignMode =
           document.body.className.indexOf(
@@ -229,7 +223,6 @@ function script() {
           ) != -1
 
         XD.receiveMessage(function (message) {
-          console.log("message: ", message)
           var data =
             typeof message.data !== "object"
               ? JSON.parse(message.data)
@@ -299,21 +292,21 @@ function script() {
                 window.jQuery(el).triggerHandler("resize.ownerrez")
 
                 /*
-                          if (window.jQuery('.right-icon').hasClass("active"))
-                          {
-                              window.jQuery('.top-icon').click();
-                              window.jQuery('.right-icon').click();
-                          }
+                            if (window.jQuery('.right-icon').hasClass("active"))
+                            {
+                                window.jQuery('.top-icon').click();
+                                window.jQuery('.right-icon').click();
+                            }
 
-                          if (window.foundation && window.foundation.jQuery)
-                          {
-                              // Reflow foundation sites
-                              foundation.jQuery(document).foundation('reflow');
+                            if (window.foundation && window.foundation.jQuery)
+                            {
+                                // Reflow foundation sites
+                                foundation.jQuery(document).foundation('reflow');
 
-                              // Reflow phantom sites
-                              window.jQuery('.top-icon').click();
-                              window.jQuery('.right-icon').click();
-                          }*/
+                                // Reflow phantom sites
+                                window.jQuery('.top-icon').click();
+                                window.jQuery('.right-icon').click();
+                            }*/
               }
 
               if (data.action == "scrollTop") {
@@ -335,15 +328,15 @@ function script() {
 
             //frame.style.display = "block";
           }
-        }, "https://secure.ownerrez.com")
+        }, "https://app.ownerrez.com")
 
         el.appendChild(frame)
       }
 
       /*
-          Developed by Robert Nyman, http://www.robertnyman.com
-          Code/licensing: http://code.google.com/p/getelementsbyclassname/
-      */
+            Developed by Robert Nyman, http://www.robertnyman.com
+            Code/licensing: http://code.google.com/p/getelementsbyclassname/
+        */
       var getElementsByClassName = function (className, tag, elm) {
         if (document.getElementsByClassName) {
           getElementsByClassName = function (className, tag, elm) {
@@ -521,8 +514,6 @@ function script() {
                   )
 
                   el.contentWindow.postMessage(data, "*")
-                  console.log("el contentwindow: ", el.contentWindow)
-                  console.log("postMessage sent to the iframe Window")
                 })
               }, 500)
             }
@@ -568,7 +559,7 @@ function script() {
       window.OwnerRez.loadDefaultWidgets = loadDefaultWidgets
       window.OwnerRez.sendGTagCrossDomain = sendGTagCrossDomain
       window.OwnerRez.widgetSeq = 0
-    }).bind(this)()
+    })()
   }
 
   if (window.OwnerRez.skipLoadDefaultWidgets != true)
