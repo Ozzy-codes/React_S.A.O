@@ -10,6 +10,7 @@
 
 # production
 /build
+/get_widget_script
 
 # misc
 .DS_Store
