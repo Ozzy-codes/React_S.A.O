@@ -1,6 +1,7 @@
 import useLoading from "../hooks/use-Loading"
 import Skeleton from "../components/Skeleton"
 import { useEffect, useRef } from "react"
+import photo from '../photos/kawe-rodrigues-qTEdqjUTtNY-unsplash.jpg'
 
 function TopImg() {
   const { isLoaded, setLoadTrue } = useLoading()
@@ -13,9 +14,8 @@ function TopImg() {
       const imgHeight = imgTag.current.height
       const imgHeightDiff = imgHeight - containerHeight
       if (window.scrollY <= imgHeightDiff) {
-        imgTag.current.style.transform = `translateY(${
-          -window.scrollY / 2
-        }px)`
+        imgTag.current.style.transform = `translateY(${-window.scrollY / 2
+          }px)`
       }
     }
     window.addEventListener("scroll", handleScroll)
@@ -36,7 +36,7 @@ function TopImg() {
       className={"relative header_gradient lg:h-[750px] lg:z-[-5] "}>
       <img
         className="w-full "
-        src="https://picsum.photos/200/?blur=1"
+        src={photo}
         alt="random img"
         width={200}
         height={200}
