@@ -2,7 +2,7 @@ import Modal from "../components/Modal"
 import PhotoLists from "../components/PhotoLists"
 import TopImg from "../components/TopImg"
 import { useLoaderData } from "react-router-dom"
-import { getImgs } from "../api/getImgs"
+// import { getPicsumImgs } from "../api/getPicsumImgs"
 import { useState, useEffect } from "react"
 
 export async function loader() {

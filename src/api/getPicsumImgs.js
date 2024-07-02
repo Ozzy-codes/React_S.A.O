@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const getImgs = async () => {
+export const getPicsumImgs = async () => {
   return await axios
     .get("https://picsum.photos/v2/list")
     .then((results) =>
