@@ -1,7 +1,7 @@
 import useLoading from "../hooks/use-Loading"
 import Skeleton from "../components/Skeleton"
 import { useEffect, useRef } from "react"
-import photo from '../photos/kawe-rodrigues-qTEdqjUTtNY-unsplash.jpg'
+import photo from '../photos/banner/1-web-or-mls-Sage+Oak-1.jpg'
 
 function TopImg() {
   const { isLoaded, setLoadTrue } = useLoading()
