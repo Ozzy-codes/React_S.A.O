@@ -27,16 +27,35 @@ function FeatureAccordion({ className }) {
       refDrawer.nextSibling.style.maxHeight = "0px"
     }
 
+    let list
+    if (item.bulletPointList === true) {
+      list = item.content.map((subSection) => (
+        <div key={subSection.title}>
+          <b>{subSection.title}:</b> {
+            subSection.description.map((item, idx) => (
+              <div key={idx}>{
+                item
+              }</div>
+            ))
+          }
+        </div>
+      ))
+    } else {
+      list = item.content.map((subSection) => (
+        <div key={subSection.title}>
+          <b>{subSection.title}:</b> {subSection.description}
+        </div>
+      ))
+    }
+
     const content = (
       <div
         style={{ maxHeight: "0px" }}
         className="border-b px-5 overflow-hidden h-[350px] md:h-[425px] overflow-y-scroll">
         <div className="my-5 list_spacing">
-          {item.content.map((subSection) => (
-            <div key={subSection.title}>
-              <b>{subSection.title}:</b> {subSection.description}
-            </div>
-          ))}
+          {
+            list
+          }
         </div>
       </div>
     )
