@@ -31,13 +31,16 @@ function FeatureAccordion({ className }) {
     if (item.bulletPointList === true) {
       list = item.content.map((subSection) => (
         <div key={subSection.title}>
-          <b>{subSection.title}:</b> {
-            subSection.description.map((item, idx) => (
-              <div key={idx}>{
-                item
-              }</div>
-            ))
-          }
+          <b>{subSection.title}:</b>
+          <ul className="flex flex-wrap list-disc">
+            {
+              subSection.description.map((item, idx) => (
+                <li className="mr-6" key={idx}>{
+                  item
+                }</li>
+              ))
+            }
+          </ul>
         </div>
       ))
     } else {
@@ -65,7 +68,7 @@ function FeatureAccordion({ className }) {
         {isExpanded ? <GoChevronDown /> : <GoChevronLeft />}
       </span>
     )
-
+    //  TODO: remove focus action when you open a drawer
     return (
       <div key={item.id}>
         <div
