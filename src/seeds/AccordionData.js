@@ -36,17 +36,6 @@ export const items = [
           'Whitewater Rafting',
         ]
       },
-      {
-        title: 'Sports & Adventure',
-        description: [
-          'Cycling',
-          'Hiking',
-          'Mountaineering',
-          'Skiing',
-          'Water Tubing',
-          'Whitewater Rafting',
-        ]
-      },
     ]
   },
   {
@@ -180,11 +169,6 @@ export const items = [
       {
         title: "Fireplace",
         description: "There are two gas fireplaces which are only turned on from October 1 - April 1. No outdoor fires are allowed except for charcoal BBQ grill. No unauthorized fires (including candles)."
-      },
-      {
-        title: "Weather",
-        description:
-          "No refunds for weather/natural disasters/power outages/other things that are beyond our control.  Please purchase travel insurance for coverage."
       },
       {
         title: "Weather",
