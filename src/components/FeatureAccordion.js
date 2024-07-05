@@ -51,6 +51,7 @@ function FeatureAccordion({ className }) {
       ))
     }
 
+    //  TODO: add hover effect on clickable items such as accordion and book now button. 
     const content = (
       <div
         style={{ maxHeight: "0px" }}
@@ -84,7 +85,7 @@ function FeatureAccordion({ className }) {
   })
 
   return (
-    <div className={"border-x border-t rounded mt-6 " + className}>
+    <div className={"border-x border-t rounded-[var(--border-radius)] mt-6 " + className}>
       {renderedItems}
     </div>
   )

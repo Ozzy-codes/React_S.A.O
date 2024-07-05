@@ -3,12 +3,15 @@ import { SiInstagram } from "react-icons/si"
 
 export default function Footer() {
   return (
-    <div className="grid md:grid-cols-2 md:px-[5rem] list_spacing text-center py-5 px-1 text-lg bg-[var(--stone-100)]">
+    <div className="grid md:grid-cols-2 md:px-[5rem] list_spacing text-center py-5 px-1 text-lg bg-[var(--light-wheat)]">
       <img
         src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
         alt="Sage & Oak"
-        className="w-[50vw] justify-self-center md:w-[20vw] md:row-[1_/_5] "
+        className="w-[50vw] justify-self-center md:w-[20vw] md:row-[1_/_5] rounded-[var(--border-radius)] "
       />
+      {
+        /*  TODO: Make text a tighter group*/
+      }
       <p>&copy; 2023 SAGE + OAK CABIN</p>
       <p>
         <a

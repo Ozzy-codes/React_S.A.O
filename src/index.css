@@ -4,6 +4,8 @@
 
 :root {
   --stone-100: rgb(245, 245, 244);
+  --light-wheat: #efd6ac85;
+  --border-radius: .5rem;
 }
 
 body {

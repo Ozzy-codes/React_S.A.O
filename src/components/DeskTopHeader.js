@@ -30,16 +30,11 @@ function DeskTopHeader({ header, navLinks }) {
   return (
     <div
       id="top_header_div"
-      className={"absolute w-screen flex flex-col items-center "}>
+      className={"absolute w-screen flex flex-col items-center bg-[var(--light-wheat)] "}>
       <div className="z-20 pt-[4rem] pb-0 px-[4rem]">
         <Link to={"/"}>
           <h1 className="leading-none text-[5rem] font-['Whisper'] text-black">
             Sage + Oak
-            {/* <img
-              src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
-              alt="Sage and Oak"
-              className="w-20 rounded-lg"
-            /> */}
           </h1>
         </Link>
       </div>
