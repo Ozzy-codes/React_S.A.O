@@ -43,6 +43,7 @@ import photo42 from '../photos/gallery/95-web-or-mls-Sage+Oak-95.jpg'
 import photo43 from '../photos/gallery/100-web-or-mls-Sage+Oak-100.jpg'
 
 
+//  TODO: Add alternative text to each img
 const getLocalImgs = () => {
   const photoListContainer = [
     {

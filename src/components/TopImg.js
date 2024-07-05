@@ -37,9 +37,9 @@ function TopImg() {
       <img
         className="w-full "
         src={photo}
-        alt="random img"
-        width={200}
-        height={200}
+        alt="Front Arial view of Cabin"
+        width={2048}
+        height={1364}
         onLoad={setLoadTrue}
         ref={imgTag}
       />
