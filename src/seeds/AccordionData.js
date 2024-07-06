@@ -1,5 +1,4 @@
 export const items = [
-  //  TODO: update seed data with obsidian notes -- see S&O Text Organization
   {
     id: "1",
     label: "Location Features",
@@ -154,12 +153,12 @@ export const items = [
       {
         title: "Occupancy",
         description:
-          '10 Person Maximum. Exceeding the maximum permitted occupancy can result in many issues, including a fine by local authorities for not adhering to sprinklers/fire safety, running out of well water, and overflowing the septic tank.'
+          "The cabin's maximum capacity is 10 people. Exceeding the maximum permitted occupancy can result in many issues, including a fine by local authorities for not adhering to sprinklers/fire safety, running out of well water, and overflowing the septic tank."
       },
       {
         title: "Security Camera",
         description:
-          "There are two security cameras, one on the front porch and one at the right deck facing the driveway, in place for your protection.  The cameras only turn on and record with motion.  If you touch or tamper with the cameras, you will be asked to leave the property immediately. This is for your protection."
+          "There are two security cameras, one on the front porch and one at the right deck facing the driveway, in place for your protection. The cameras only turn on and record with motion. If you touch or tamper with the cameras, you will be asked to leave the property immediately."
       },
       {
         title: "Smoking",
@@ -168,17 +167,17 @@ export const items = [
       },
       {
         title: "Fireplace",
-        description: "There are two gas fireplaces which are only turned on from October 1 - April 1. No outdoor fires are allowed except for charcoal BBQ grill. No unauthorized fires (including candles)."
+        description: "There are two gas fireplaces which are only turned on from October 1 - April 1. No outdoor fires are allowed except for the charcoal BBQ grill. No unauthorized fires (including candles)."
       },
       {
         title: "Weather",
         description:
-          "No refunds for weather/natural disasters/power outages/other things that are beyond our control.  Please purchase travel insurance for coverage."
+          "No refunds for weather/ natural disasters/ power outages/ other events that are beyond our control. Please purchase travel insurance for coverage."
       },
       {
         title: "Pets",
         description:
-          "Pets are NOT allowed. We love pets, however some of our family members and guests are very allergic to pet dander. Please be considerate and make alternate vacation arrangements for your furry family members.  There are many pet-friendly cabins in the area that would love to host your family."
+          "Pets are NOT allowed. We love pets, however some of our family members and guests are very allergic to pet dander. Please be considerate and make alternate vacation arrangements for your furry family members. There are many pet-friendly cabins in the area that would love to host your family."
       },
       {
         title: "Accessibility",
@@ -188,12 +187,12 @@ export const items = [
       {
         title: "Wild Life",
         description:
-          "Bears and copperhead snakes are native to the area."
+          "Please be aware, bears and copperhead snakes are native to the area."
       },
       {
-        title: "Kitchen",
+        title: "Kitchen/Bathroom Items",
         description:
-          "We provide a starter pack consisting of dishwasher tablets, paper towels, toilet paper, trash bags, kitchen sponge, and K-cup pods. Shampoo and other toiletries, condiments, ground coffee, creamer, sugar, zip lock bags, and charcoal are NOT provided."
+          "We provide a starter pack of items consisting of dishwasher tablets, paper towels, toilet paper, trash bags, kitchen sponge, and K-cup pods. Toiletries (including shampoo), condiments, ground coffee, creamer, sugar, zip lock bags, and charcoal are NOT provided."
       },
       {
         title: "Booking Requirements",
@@ -203,7 +202,7 @@ export const items = [
       {
         title: "No Third Party Booking",
         description:
-          "The individual that makes the reservation must be the person that checks-in.  If this is not the case, reservation will be cancelled with NO refund and the code to gain access to the house will be changed.  This is for our safety, our community's safety, as well as our guest's safety."
+          "The individual that makes the reservation must be the person that checks-in. If this is not the case, reservation will be cancelled with NO refund and the code to gain access to the house will be changed. This is for our safety, our community's safety, as well as our guest's safety."
       }
     ]
   }
