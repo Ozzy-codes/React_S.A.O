@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react"
-import "../components/widgetScript"
+const script = require("../components/widgetScript.cjs")
+console.log("script", script)
+script()
 
 function useLoading() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -32,7 +34,9 @@ function useLoading() {
 
     if (widgetNode) {
       observer.observe(widgetNode, config)
+      console.log("loadDefaultWidget start")
       window.OwnerRez.loadDefaultWidgets()
+      console.log("loadDefaultWidget end")
     }
     //clean up of observer when compt unmounts
     return () => observer.disconnect()

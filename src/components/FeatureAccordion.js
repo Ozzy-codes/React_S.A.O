@@ -27,16 +27,39 @@ function FeatureAccordion({ className }) {
       refDrawer.nextSibling.style.maxHeight = "0px"
     }
 
+    let list
+    if (item.bulletPointList === true) {
+      list = item.content.map((subSection) => (
+        <div key={subSection.title}>
+          <b>{subSection.title}:</b>
+          <ul className="flex flex-wrap list-disc">
+            {
+              subSection.description.map((item, idx) => (
+                <li className="mr-6" key={idx}>{
+                  item
+                }</li>
+              ))
+            }
+          </ul>
+        </div>
+      ))
+    } else {
+      list = item.content.map((subSection) => (
+        <div key={subSection.title}>
+          <b>{subSection.title}:</b> {subSection.description}
+        </div>
+      ))
+    }
+
+    //  TODO: add hover effect on clickable items such as accordion and book now button. 
     const content = (
       <div
         style={{ maxHeight: "0px" }}
         className="border-b px-5 overflow-hidden h-[350px] md:h-[425px] overflow-y-scroll">
         <div className="my-5 list_spacing">
-          {item.content.map((subSection) => (
-            <div key={subSection.title}>
-              <b>{subSection.title}:</b> {subSection.description}
-            </div>
-          ))}
+          {
+            list
+          }
         </div>
       </div>
     )
@@ -46,7 +69,7 @@ function FeatureAccordion({ className }) {
         {isExpanded ? <GoChevronDown /> : <GoChevronLeft />}
       </span>
     )
-
+    //  TODO: remove focus action when you open a drawer
     return (
       <div key={item.id}>
         <div
@@ -62,7 +85,7 @@ function FeatureAccordion({ className }) {
   })
 
   return (
-    <div className={"border-x border-t rounded mt-6 " + className}>
+    <div className={"border-x border-t rounded-[var(--border-radius)] mt-6 " + className}>
       {renderedItems}
     </div>
   )

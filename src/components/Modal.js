@@ -40,7 +40,7 @@ function Modal({
         onClick={previousImg}>
         <FaChevronLeft />
       </button>
-      <div className="flex z-30 fixed inset-2/4 -translate-x-2/4 -translate-y-2/4 bg-white w-fit h-fit max-w-[95vw] max-h-[85vh]">
+      <div className="flex z-30 fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 bg-white max-w-[95vw] max-h-[85vh]">
         <button
           className="fixed right-0 -translate-y-full text-gray-300 text-4xl"
           onClick={onClose}>
@@ -50,9 +50,10 @@ function Modal({
           disabled={disableNextBtn}
           onClick={nextImg}
           className={
-            "w-[95vw] max-h-[85vh] " +
+            "w-max max-h-[85vh] " +
             (disableNextBtn ? "" : "cursor-pointer")
           }>
+          {/*  TODO: img is currently stretching, considering to maintain aspect ratio of img. */}
           <img
             src={listOfImgs[imgIndex].imgUrl}
             alt="picsum test"

@@ -2,255 +2,207 @@ export const items = [
   {
     id: "1",
     label: "Location Features",
+    bulletPointList: true,
     content: [
       {
-        title: "Access",
-        description:
-          "The front door is equipped with an electronic keypad. You will get a personalized door code the day before check-in, no need to meet anyone for keys. Enjoy the entire place to yourself. The backyard is on a hill so please use at your own risk."
+        title: 'Attractions',
+        description: [
+          'Health/Beauty Spa',
+          'Winery Tours',
+          'Museums',
+          'Zoo',
+          'Theme Parks',
+          'Water Parks',
+        ]
       },
       {
-        title: "Roads",
-        description:
-          "The road is paved all the way from the main road to the cabin, including the private paved driveway. Although snow here is rare, in the winter, 4WD or AWD may be necessary. Cell service is spotty in the mountains, we highly recommend you download the maps of the area for offline use prior to travel, just in case service is lost."
+        title: 'Leisure',
+        description: [
+          'Bird Watching ',
+          'Horseback Riding',
+          'Outlet Shopping',
+          'Wildlife Viewing',
+        ]
       },
       {
-        title: "Age",
-        description:
-          "All guests must be 25+ with the exception of children with their parents."
+        title: 'Sports & Adventure',
+        description: [
+          'Cycling',
+          'Hiking',
+          'Mountaineering',
+          'Skiing',
+          'Water Tubing',
+          'Whitewater Rafting',
+        ]
       },
-      {
-        title: "Occupancy",
-        description:
-          "10 Person Maximum. Exceeding the maximum permitted occupancy can result in many issues, including a fine by local authorities for not adhering to sprinklers/fire safety, running out of well water, and overflowing the septic tank."
-      },
-      {
-        title: "Smoking",
-        description: "This is a NON-SMOKING/VAPING cabin."
-      },
-      {
-        title: "Weather",
-        description:
-          "No refunds for weather/natural disasters/power outages/other things that are beyond our control.  Please purchase travel insurance for coverage."
-      },
-      {
-        title: "Hot Tub",
-        description:
-          "The hot tub is for guests 25 and over only. Alcohol and glassware are NOT allowed near the hot tub. You are not allowed to use the hot tub if you have consumed alcohol or if you are pregnant. Do not dive headfirst into the hot tub. Use the hot tub AT YOUR OWN RISK! Please refer to the hot tub rules posted in the patio for further details."
-      },
-      {
-        title: "Well Water",
-        description:
-          "Water supply is solely from a private well.  It is safe to drink but we suggest bringing bottled water.  Although we have a large storage water tank installed, please be aware that during certain nonspecific times of the year, the well can yield less water than normal.  Please practice water conservation to avoid loss of water.  Timing of water usage is essential because high usage will deplete the well before it can replenish.  The washing machine and the hot tub are the most detrimental to the well supply and use of these items should only take place during times when water use throughout the rest of the cabin is minimal.  After use of these items, the well will need to be replenished so please allow adequate time before additional heavy water use."
-      },
-      {
-        title: "Trash",
-        description:
-          "Please dump liquids (not oil) into the sink and not into trash bags. Place all trash into trash bags and secure trash bags in the bearproof trash containers next to the driveway. We do not have regularly scheduled trash pick-ups. If needed, there are trash drop-off convenience centers, the closest location is at 943 Center View Rd, Sevierville, TN 37862."
-      },
-      {
-        title: "Garbage Disposal",
-        description:
-          "Please do not throw fibrous foods (ie. banana skins, broccoli, celery, corn husks, potato peels), bones, eggshells, nor coffee grounds into the garbage disposal. This will clog the blades and you will end up with an overflowing sink, which is no fun for anyone. Also, please don't stick body parts into the garbage disposal. Losing a finger is not going to be a pleasant vacation memory."
-      },
-      {
-        title: "Critters",
-        description:
-          "We subscribe to monthly pest control, however this cabin is in the wilderness, and with that comes bugs and other wild animals, including bears and snakes. Please practice bear safety (guidelines will be posted on the refrigerator). Remember to keep your doors locked, throw trash in the bear-proof containers, don't feed or try to approach a bear, and don't leave any food outdoors, including on the grill nor in your car."
-      },
-      {
-        title: "Pets",
-        description:
-          " Pets are NOT allowed. We love pets, however some of our family members and guests are very allergic to pet dander. Please be considerate and make alternate vacation arrangements for your furry family members.  There are many pet-friendly cabins in the area that would love to host your family."
-      },
-      {
-        title: "Fireplace",
-        description:
-          "There are two gas fireplaces which are only turned on from October 1 - April 1. No outdoor fires are allowed except for charcoal BBQ grill. No unauthorized fires (including candles)."
-      },
-      {
-        title: "Check In/Out",
-        description:
-          "Check-in at 4:00 PM. Check-out at 10:00 AM. We do not offer early check-in nor late check-out. We do not allow check-ins nor check-outs on holidays."
-      },
-      {
-        title: "Curtains",
-        description:
-          "Most of the rooms have curtains. The master bedroom currently does not have window treatments covering the floor-to-ceiling windows , please bring eye masks if light is bothersome in the morning."
-      },
-      {
-        title: "Other Safety",
-        description:
-          "Do not lean or hang on the railings. This is not the place to audition for Cirque du Soleil."
-      }
     ]
   },
   {
     id: "2",
-    label: "Site Amenities",
+    label: "Amenities",
+    bulletPointList: true,
     content: [
       {
-        title: "Access",
-        description:
-          "The front door is equipped with an electronic keypad. You will get a personalized door code the day before check-in, no need to meet anyone for keys. Enjoy the entire place to yourself. The backyard is on a hill so please use at your own risk."
+        title: "General",
+        description: [
+          'Wifi',
+          'Fireplaces',
+          'Main Living Room Ceiling Fans',
+          'A/C',
+          'Central Heating ',
+          'Linens ',
+          'Extra Pillows & Blankets',
+          'Hangers',
+          'Clothing Storage (Closet or Wardrobe)',
+          'Hot Water',
+          'Toilet Paper',
+          'Towels',
+          'Rain Shower',
+          'Hair Dryer',
+          'Washing Machine',
+          'Clothes Dryer',
+          ' Iron & Board',
+        ]
       },
       {
-        title: "Roads",
-        description:
-          "The road is paved all the way from the main road to the cabin, including the private paved driveway. Although snow here is rare, in the winter, 4WD or AWD may be necessary. Cell service is spotty in the mountains, we highly recommend you download the maps of the area for offline use prior to travel, just in case service is lost."
+        title: "Kitchen",
+        description: [
+          'Microwave',
+          'Keurig K-duo Coffee Maker',
+          'Kettle',
+          'Baking Sheet',
+          'Refrigerator',
+          'Dishwasher',
+          'Toaster',
+          'Pots & Pans',
+          'Barbecue/ Grill Utensils',
+          'Gas Stove',
+          'Dishes & Utensils',
+          'Paper Towels',
+          'Freezer',
+          'Kitchen Island',
+          'Wine Glass',
+          'Oven',
+          'Spices/ Pantry Items',
+          'Blender',
+        ]
       },
       {
-        title: "Age",
-        description:
-          "All guests must be 25+ with the exception of children with their parents."
+        title: "Bathrooms",
+        description: [
+          '3 Bathrooms',
+          'Master - Shower, Toilet, Tub',
+          'Main Floor Guest Bathroom - Combination Tub/Shower, Toilet',
+          'Lower Level Bathroom - Combination Tub/Shower, Toilet',
+        ]
       },
       {
-        title: "Occupancy",
-        description:
-          "10 Person Maximum. Exceeding the maximum permitted occupancy can result in many issues, including a fine by local authorities for not adhering to sprinklers/fire safety, running out of well water, and overflowing the septic tank."
+        title: "Seelping Arrangements",
+        description: [
+          '3 Bedrooms, sleeps 5-10',
+          'Master Bedroom - 1 king bed',
+          'Main floor Guest Bedroom - 1 King bed',
+          'Lower Level Living Room/ Game Room - 1 Sleeper Sofa/Futon ',
+          'Lower Level Bedroom - 2 Queen Beds',
+        ]
       },
       {
-        title: "Smoking",
-        description: "This is a NON-SMOKING/VAPING cabin."
+        title: "Entertainment",
+        description: [
+          'Television ',
+          'Smart TV',
+          'Games/Board Games',
+          'Foosball',
+          'Air Hockey',
+          'Video Arcade',
+        ]
       },
       {
-        title: "Weather",
-        description:
-          "No refunds for weather/natural disasters/power outages/other things that are beyond our control.  Please purchase travel insurance for coverage."
+        title: "Outdoor",
+        description: [
+          'Grill - bring your own charcoal',
+          'Deck/Patio',
+          'Balcony/Terrace',
+          'Outdoor Seating',
+          'Hot tub',
+          'Free parking',
+        ]
       },
       {
-        title: "Hot Tub",
-        description:
-          "The hot tub is for guests 25 and over only. Alcohol and glassware are NOT allowed near the hot tub. You are not allowed to use the hot tub if you have consumed alcohol or if you are pregnant. Do not dive headfirst into the hot tub. Use the hot tub AT YOUR OWN RISK! Please refer to the hot tub rules posted in the patio for further details."
+        title: "Safety",
+        description: [
+          'Carbon Monoxide Detector ',
+          'Exterior Lighting ',
+          'Fire Extinguisher',
+          'First Aid Kit',
+          'Smoke Detector',
+        ]
       },
-      {
-        title: "Well Water",
-        description:
-          "Water supply is solely from a private well.  It is safe to drink but we suggest bringing bottled water.  Although we have a large storage water tank installed, please be aware that during certain nonspecific times of the year, the well can yield less water than normal.  Please practice water conservation to avoid loss of water.  Timing of water usage is essential because high usage will deplete the well before it can replenish.  The washing machine and the hot tub are the most detrimental to the well supply and use of these items should only take place during times when water use throughout the rest of the cabin is minimal.  After use of these items, the well will need to be replenished so please allow adequate time before additional heavy water use."
-      },
-      {
-        title: "Trash",
-        description:
-          "Please dump liquids (not oil) into the sink and not into trash bags. Place all trash into trash bags and secure trash bags in the bearproof trash containers next to the driveway. We do not have regularly scheduled trash pick-ups. If needed, there are trash drop-off convenience centers, the closest location is at 943 Center View Rd, Sevierville, TN 37862."
-      },
-      {
-        title: "Garbage Disposal",
-        description:
-          "Please do not throw fibrous foods (ie. banana skins, broccoli, celery, corn husks, potato peels), bones, eggshells, nor coffee grounds into the garbage disposal. This will clog the blades and you will end up with an overflowing sink, which is no fun for anyone. Also, please don't stick body parts into the garbage disposal. Losing a finger is not going to be a pleasant vacation memory."
-      },
-      {
-        title: "Critters",
-        description:
-          "We subscribe to monthly pest control, however this cabin is in the wilderness, and with that comes bugs and other wild animals, including bears and snakes. Please practice bear safety (guidelines will be posted on the refrigerator). Remember to keep your doors locked, throw trash in the bear-proof containers, don't feed or try to approach a bear, and don't leave any food outdoors, including on the grill nor in your car."
-      },
-      {
-        title: "Pets",
-        description:
-          " Pets are NOT allowed. We love pets, however some of our family members and guests are very allergic to pet dander. Please be considerate and make alternate vacation arrangements for your furry family members.  There are many pet-friendly cabins in the area that would love to host your family."
-      },
-      {
-        title: "Fireplace",
-        description:
-          "There are two gas fireplaces which are only turned on from October 1 - April 1. No outdoor fires are allowed except for charcoal BBQ grill. No unauthorized fires (including candles)."
-      },
-      {
-        title: "Check In/Out",
-        description:
-          "Check-in at 4:00 PM. Check-out at 10:00 AM. We do not offer early check-in nor late check-out. We do not allow check-ins nor check-outs on holidays."
-      },
-      {
-        title: "Curtains",
-        description:
-          "Most of the rooms have curtains. The master bedroom currently does not have window treatments covering the floor-to-ceiling windows , please bring eye masks if light is bothersome in the morning."
-      },
-      {
-        title: "Other Safety",
-        description:
-          "Do not lean or hang on the railings. This is not the place to audition for Cirque du Soleil."
-      }
     ]
   },
   {
     id: "3",
     label: "Important Information",
+    bulletPointList: false,
     content: [
       {
-        title: "Access",
+        title: "Age Requirement",
         description:
-          "The front door is equipped with an electronic keypad. You will get a personalized door code the day before check-in, no need to meet anyone for keys. Enjoy the entire place to yourself. The backyard is on a hill so please use at your own risk."
-      },
-      {
-        title: "Roads",
-        description:
-          "The road is paved all the way from the main road to the cabin, including the private paved driveway. Although snow here is rare, in the winter, 4WD or AWD may be necessary. Cell service is spotty in the mountains, we highly recommend you download the maps of the area for offline use prior to travel, just in case service is lost."
-      },
-      {
-        title: "Age",
-        description:
-          "All guests must be 25+ with the exception of children with their parents."
+          'All guests must be 25+ with the exception of children with their parents.'
       },
       {
         title: "Occupancy",
         description:
-          "10 Person Maximum. Exceeding the maximum permitted occupancy can result in many issues, including a fine by local authorities for not adhering to sprinklers/fire safety, running out of well water, and overflowing the septic tank."
+          "The cabin's maximum capacity is 10 people. Exceeding the maximum permitted occupancy can result in many issues, including a fine by local authorities for not adhering to sprinklers/fire safety, running out of well water, and overflowing the septic tank."
+      },
+      {
+        title: "Security Camera",
+        description:
+          "There are two security cameras, one on the front porch and one at the right deck facing the driveway, in place for your protection. The cameras only turn on and record with motion. If you touch or tamper with the cameras, you will be asked to leave the property immediately."
       },
       {
         title: "Smoking",
-        description: "This is a NON-SMOKING/VAPING cabin."
+        description:
+          "This is a NON-SMOKING/VAPING cabin."
+      },
+      {
+        title: "Fireplace",
+        description: "There are two gas fireplaces which are only turned on from October 1 - April 1. No outdoor fires are allowed except for the charcoal BBQ grill. No unauthorized fires (including candles)."
       },
       {
         title: "Weather",
         description:
-          "No refunds for weather/natural disasters/power outages/other things that are beyond our control.  Please purchase travel insurance for coverage."
-      },
-      {
-        title: "Hot Tub",
-        description:
-          "The hot tub is for guests 25 and over only. Alcohol and glassware are NOT allowed near the hot tub. You are not allowed to use the hot tub if you have consumed alcohol or if you are pregnant. Do not dive headfirst into the hot tub. Use the hot tub AT YOUR OWN RISK! Please refer to the hot tub rules posted in the patio for further details."
-      },
-      {
-        title: "Well Water",
-        description:
-          "Water supply is solely from a private well.  It is safe to drink but we suggest bringing bottled water.  Although we have a large storage water tank installed, please be aware that during certain nonspecific times of the year, the well can yield less water than normal.  Please practice water conservation to avoid loss of water.  Timing of water usage is essential because high usage will deplete the well before it can replenish.  The washing machine and the hot tub are the most detrimental to the well supply and use of these items should only take place during times when water use throughout the rest of the cabin is minimal.  After use of these items, the well will need to be replenished so please allow adequate time before additional heavy water use."
-      },
-      {
-        title: "Trash",
-        description:
-          "Please dump liquids (not oil) into the sink and not into trash bags. Place all trash into trash bags and secure trash bags in the bearproof trash containers next to the driveway. We do not have regularly scheduled trash pick-ups. If needed, there are trash drop-off convenience centers, the closest location is at 943 Center View Rd, Sevierville, TN 37862."
-      },
-      {
-        title: "Garbage Disposal",
-        description:
-          "Please do not throw fibrous foods (ie. banana skins, broccoli, celery, corn husks, potato peels), bones, eggshells, nor coffee grounds into the garbage disposal. This will clog the blades and you will end up with an overflowing sink, which is no fun for anyone. Also, please don't stick body parts into the garbage disposal. Losing a finger is not going to be a pleasant vacation memory."
-      },
-      {
-        title: "Critters",
-        description:
-          "We subscribe to monthly pest control, however this cabin is in the wilderness, and with that comes bugs and other wild animals, including bears and snakes. Please practice bear safety (guidelines will be posted on the refrigerator). Remember to keep your doors locked, throw trash in the bear-proof containers, don't feed or try to approach a bear, and don't leave any food outdoors, including on the grill nor in your car."
+          "No refunds for weather/ natural disasters/ power outages/ other events that are beyond our control. Please purchase travel insurance for coverage."
       },
       {
         title: "Pets",
         description:
-          " Pets are NOT allowed. We love pets, however some of our family members and guests are very allergic to pet dander. Please be considerate and make alternate vacation arrangements for your furry family members.  There are many pet-friendly cabins in the area that would love to host your family."
+          "Pets are NOT allowed. We love pets, however some of our family members and guests are very allergic to pet dander. Please be considerate and make alternate vacation arrangements for your furry family members. There are many pet-friendly cabins in the area that would love to host your family."
       },
       {
-        title: "Fireplace",
+        title: "Accessibility",
         description:
-          "There are two gas fireplaces which are only turned on from October 1 - April 1. No outdoor fires are allowed except for charcoal BBQ grill. No unauthorized fires (including candles)."
+          "Property is NOT wheelchair accessible. The property is 2 stories and stairs are needed to go up or downstairs. A few stairs lead from the driveway to the front door."
       },
       {
-        title: "Check In/Out",
+        title: "Wild Life",
         description:
-          "Check-in at 4:00 PM. Check-out at 10:00 AM. We do not offer early check-in nor late check-out. We do not allow check-ins nor check-outs on holidays."
+          "Please be aware, bears and copperhead snakes are native to the area."
       },
       {
-        title: "Curtains",
+        title: "Kitchen/Bathroom Items",
         description:
-          "Most of the rooms have curtains. The master bedroom currently does not have window treatments covering the floor-to-ceiling windows , please bring eye masks if light is bothersome in the morning."
+          "We provide a starter pack of items consisting of dishwasher tablets, paper towels, toilet paper, trash bags, kitchen sponge, and K-cup pods. Toiletries (including shampoo), condiments, ground coffee, creamer, sugar, zip lock bags, and charcoal are NOT provided."
       },
       {
-        title: "Other Safety",
+        title: "Booking Requirements",
         description:
-          "Do not lean or hang on the railings. This is not the place to audition for Cirque du Soleil."
+          "Please note that all bookings require signing of the Rental Agreement, providing a valid photo ID, and providing a valid credit card for a $500 security deposit hold."
+      },
+      {
+        title: "No Third Party Booking",
+        description:
+          "The individual that makes the reservation must be the person that checks-in. If this is not the case, reservation will be cancelled with NO refund and the code to gain access to the house will be changed. This is for our safety, our community's safety, as well as our guest's safety."
       }
     ]
   }

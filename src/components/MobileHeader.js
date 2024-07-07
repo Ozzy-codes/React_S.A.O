@@ -52,17 +52,15 @@ function MobileHeader({ header, navLinks }) {
       className={
         "absolute w-screen flex flex-col transition-all duration-1000 "
       }>
-      <div className="flex z-20 justify-between p-8 md:pt-[4rem] md:pb-0 md:px-[4rem]">
+      {
+        /*  TODO: Consider increasing height on top img in mobile view background color is taking up a lot of space, may leverage useResize hook to update img size. */
+      }
+      <div className="flex z-20 justify-between p-8 md:p-12 bg-[var(--light-wheat)]">
         <Link
           to={"/"}
           onClick={handleBannerClick}>
           <h1 className="text-6xl md:text-[5rem] font-['Whisper'] text-black">
             Sage + Oak
-            {/* <img
-              src="https://uc.orez.io/f/6b76dd8c2b214f1db488cbc33ffd8eff"
-              alt="Sage and Oak"
-              className="w-20 rounded-lg"
-            /> */}
           </h1>
         </Link>
         <button
