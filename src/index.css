@@ -8,6 +8,10 @@
   --border-radius: .5rem;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   color: rgb(5, 46, 22);
   background-color: var(--stone-100);
