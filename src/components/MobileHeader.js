@@ -56,7 +56,7 @@ function MobileHeader({ header, navLinks }) {
         <Link
           to={"/"}
           onClick={handleBannerClick}>
-          <h1 className="text-6xl md:text-[5rem] font-['Whisper'] text-black">
+          <h1 className="text-6xl text-[var(--logo-color)] md:text-[5rem] font-['Whisper'] ">
             Sage + Oak
           </h1>
         </Link>

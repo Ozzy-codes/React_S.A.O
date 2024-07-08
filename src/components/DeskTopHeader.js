@@ -33,7 +33,7 @@ function DeskTopHeader({ navLinks }) {
       className={"absolute w-screen flex flex-col items-center bg-[var(--light-wheat)] "}>
       <div className="z-20 pt-[4rem] pb-0 px-[4rem]">
         <Link to={"/"}>
-          <h1 className="leading-none text-[5rem] font-['Whisper'] text-black">
+          <h1 className="leading-none text-[5rem] font-['Whisper'] text-[var(--logo-color)]">
             Sage + Oak
           </h1>
         </Link>
