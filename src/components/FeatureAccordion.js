@@ -75,7 +75,7 @@ function FeatureAccordion({ className }) {
       <div key={item.id}>
         <div
           ref={(element) => (subjectRef.current[index] = element)}
-          className="flex justify-between p-3 bg-gray-50 border-b items-center cursor-pointer"
+          className="flex justify-between p-3 bg-[var(--light-wheat)] font-bold border-b items-center cursor-pointer"
           onClick={() => handleClick(index)}>
           {item.label}
           {icon}
