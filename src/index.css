@@ -5,7 +5,9 @@
 :root {
   --stone-100: rgb(245, 245, 244);
   --light-wheat: #efd6ac85;
+  --wheat: #efd6ac;
   --border-radius: .5rem;
+  --header-shadow: black 0px 3px 12px 0px;
 }
 
 html {
@@ -18,6 +20,6 @@ body {
   overflow: hidden auto;
 }
 
-.list_spacing > * + * {
+.list_spacing>*+* {
   margin-top: 1rem;
 }

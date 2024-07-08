@@ -50,12 +50,12 @@ function MobileHeader({ header, navLinks }) {
     <div
       id="top_header_div"
       className={
-        "absolute w-screen flex flex-col transition-all duration-1000 "
+        "sticky z-10 top-0 shadow-header w-screen flex flex-col transition-all duration-1000 "
       }>
       {
         /*  TODO: Consider increasing height on top img in mobile view background color is taking up a lot of space, may leverage useResize hook to update img size. */
       }
-      <div className="flex z-20 justify-between p-8 md:p-12 bg-[var(--light-wheat)]">
+      <div className="flex z-20 justify-between p-8 md:p-12 bg-[var(--wheat)]">
         <Link
           to={"/"}
           onClick={handleBannerClick}>

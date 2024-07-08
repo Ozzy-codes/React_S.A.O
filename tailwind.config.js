@@ -15,6 +15,9 @@ module.exports = {
       animation: {
         translateLeft: "translateLeft .5s ease-out",
         shimmer: "shimmer 1.5s infinite"
+      },
+      boxShadow: {
+        'header': 'var(--header-shadow)'
       }
     }
   },
