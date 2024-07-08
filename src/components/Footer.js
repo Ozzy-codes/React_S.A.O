@@ -4,7 +4,7 @@ import logo from '../photos/logo/sage_and_oak_logo.png'
 
 export default function Footer() {
   return (
-    <div className="grid md:grid-cols-2 md:px-[5rem] text-center py-5 px-1 text-lg bg-[var(--logo-color)]">
+    <footer className="grid md:grid-cols-2 md:px-[5rem] text-center py-5 px-1 text-lg bg-[var(--logo-color)]">
       <img
         src={logo}
         alt="Sage & Oak"
@@ -38,6 +38,6 @@ export default function Footer() {
           </a>
         </p>
       </div>
-    </div>
+    </footer>
   )
 }

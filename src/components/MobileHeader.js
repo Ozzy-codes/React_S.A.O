@@ -77,7 +77,7 @@ function MobileHeader({ navLinks }) {
             ? "inset-0 opacity-100 visible"
             : "left-full opacity-0 invisible")
         }>
-        <div
+        <nav
           id="drawer_div"
           className="px-4 pt-[8rem] pb-[15%] md:pb-[1rem] md:pt-[9rem] h-[100dvh] bg-gray-100 flex flex-col justify-evenly text-center transition duration-1000 ">
           {renderedLinks}
@@ -91,7 +91,7 @@ function MobileHeader({ navLinks }) {
               Book Now
             </Button>
           </Link>
-        </div>
+        </nav>
       </div>
     </div>
   )
