@@ -29,11 +29,11 @@ export default function Footer() {
           </a>
         </p>
         <p>
-          <a href="https://www.facebook.com/sageandoakcabin">
+          <a href="https://www.facebook.com/sageandoakcabin" aria-label="Vist our facebook page">
             <SiFacebook className="inline-block text-3xl mx-3" />
           </a>{" "}
           &#xB7;{" "}
-          <a href="https://www.instagram.com/sageandoakcabin/">
+          <a href="https://www.instagram.com/sageandoakcabin/" aria-label="Visit our instagram page">
             <SiInstagram className="inline-block text-3xl mx-3" />
           </a>
         </p>
