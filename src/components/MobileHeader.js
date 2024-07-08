@@ -56,7 +56,7 @@ function MobileHeader({ navLinks }) {
         <Link
           to={"/"}
           onClick={handleBannerClick}>
-          <h1 className="text-6xl text-black md:text-[5rem] font-['Whisper'] ">
+          <h1 className="text-6xl text-white md:text-[5rem] font-['Whisper'] ">
             Sage + Oak
           </h1>
         </Link>
@@ -65,7 +65,7 @@ function MobileHeader({ navLinks }) {
           className="text-4xl  ">
           <HamburgerMenu
             handleClick={isOpen}
-            menuColor={"black"}
+            menuColor={"white"}
           />
         </button>
       </div>
