@@ -3,14 +3,14 @@ import { GoChevronDown, GoChevronLeft } from "react-icons/go"
 import { items } from "../seeds/AccordionData"
 
 function FeatureAccordion({ className }) {
-  /*  TODO: update state such that we can we can collapse all 
-   *  drawers (especially relevant for mobile view) */
   const [expandedIndex, setExpandedIndex] = useState(-1)
   const subjectRef = useRef([])
 
   const handleClick = (nextIndex) => {
     if (expandedIndex !== nextIndex) {
       setExpandedIndex(nextIndex)
+    } else if (expandedIndex === nextIndex) {
+      setExpandedIndex(-1)
     }
   }
 
