@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Button from "./Button"
 
-function DeskTopHeader({ header, navLinks }) {
+function DeskTopHeader({ navLinks }) {
   const default_Nav_styles =
     "my-2 py-1 text-[2rem] hover:underline active:decoration-sky-500 active:text-sky-500 "
 
