@@ -57,7 +57,7 @@ function FeatureAccordion({ className }) {
     const content = (
       <div
         style={{ maxHeight: "0px" }}
-        className="border-b px-5 overflow-hidden h-[350px] md:h-[425px] overflow-y-scroll">
+        className="border-b px-5 overflow-hidden h-[325px] overflow-y-scroll">
         <div className="my-5 list_spacing">
           {
             list

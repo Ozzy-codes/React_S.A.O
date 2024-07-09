@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       <TopImg />
-      <main className="flex flex-col md:flex-row md:h-[600px] bg-[var(--stone-100)]">
+      <main className="flex flex-col md:flex-row md:h-[500px] bg-[var(--stone-100)]">
         <div>
           <div className="flex flex-col">
             <h2 className="mx-4 mt-4 text-3xl">
