@@ -75,7 +75,7 @@ function FeatureAccordion({ className }) {
       <div key={item.id}>
         <div
           ref={(element) => (subjectRef.current[index] = element)}
-          className="flex justify-between p-3 bg-[var(--logo-color)] font-bold border-b items-center cursor-pointer"
+          className="flex justify-between rounded-[var(--border-radius)] p-3 bg-[var(--logo-color)] font-bold border-b items-center cursor-pointer"
           onClick={() => handleClick(index)}>
           {item.label}
           {icon}
@@ -86,7 +86,7 @@ function FeatureAccordion({ className }) {
   })
 
   return (
-    <div className={"border-x border-t rounded-[var(--border-radius)] mt-6 " + className}>
+    <div className={"border-x border-t mt-6 " + className}>
       {renderedItems}
     </div>
   )
