@@ -52,12 +52,17 @@ function MobileHeader({ navLinks }) {
       className={
         "sticky z-10 top-0 shadow-header w-screen flex flex-col transition-all duration-1000 "
       }>
-      <div className="flex z-20 justify-between p-8 md:p-12 bg-[var(--logo-color)]">
+      <div className="flex z-20 justify-around py-8 md:py-12 bg-[var(--logo-color)]">
         <Link
           to={"/"}
           onClick={handleBannerClick}>
-          <h1 className="text-6xl text-white md:text-[5rem] font-['Whisper'] ">
-            Sage + Oak
+          <h1 className="text-5xl text-white md:text-[5rem] font-['Whisper'] ">
+            <span>
+              Sage+Oak
+            </span>
+            <span className="pl-4 md:pl-8">
+              Cabin
+            </span>
           </h1>
         </Link>
         <button
