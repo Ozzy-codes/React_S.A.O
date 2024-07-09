@@ -13,7 +13,7 @@ export default function Footer() {
       {
       }
       <div className="flex flex-col list_spacing mt-12">
-        <p>&copy; 2023 SAGE + OAK CABIN</p>
+        <p>&copy; 2024 SAGE+OAK CABIN</p>
         <p>
           <a
             href="tel:+18654846066"
@@ -25,7 +25,7 @@ export default function Footer() {
           <a
             href="mailto:sageandoakcabin@gmail.com"
             className="underline">
-            SAGEANDOAKCABIN@GMAIL.COM
+            sageandoakcabin@gmail.com
           </a>
         </p>
         <p>
