@@ -35,7 +35,7 @@ export default function HomePage() {
           className="mx-4">
           <Button
             soft_corners
-            className="w-full text-3xl py-4">
+            className="w-full bg-[var(--dry-grass)] text-3xl py-4">
             Book Now
           </Button>
         </Link>
