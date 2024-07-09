@@ -53,15 +53,12 @@ function FeatureAccordion({ className }) {
       ))
     }
 
-    //  TODO: add hover effect on clickable items such as accordion and book now button. 
     const content = (
       <div
         style={{ maxHeight: "0px" }}
         className="border-b px-5 overflow-hidden h-[350px] md:h-[425px] overflow-y-scroll">
         <div className="my-5 list_spacing">
-          {
-            list
-          }
+          {list}
         </div>
       </div>
     )
