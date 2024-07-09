@@ -3,7 +3,7 @@ import Button from "./Button"
 
 function DeskTopHeader({ navLinks }) {
   const default_Nav_styles =
-    "my-2 py-1 text-[2rem] hover:underline active:decoration-sky-500 active:text-sky-500 "
+    "my-2 py-1 text-[2rem] text-white hover:underline active:decoration-sky-500 active:text-sky-500 "
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
@@ -33,8 +33,13 @@ function DeskTopHeader({ navLinks }) {
       className={"absolute w-screen flex flex-col items-center bg-[var(--logo-color)] "}>
       <div className="z-20 pt-[4rem] pb-0 px-[4rem]">
         <Link to={"/"}>
-          <h1 className="leading-none text-[5rem] font-['Whisper'] text-black">
-            Sage + Oak
+          <h1 className="leading-none text-[5rem] font-['Whisper'] text-white">
+            <span>
+              Sage+Oak
+            </span>
+            <span className="pl-4 md:pl-8">
+              Cabin
+            </span>
           </h1>
         </Link>
       </div>
@@ -46,8 +51,7 @@ function DeskTopHeader({ navLinks }) {
           to={"booking"}
           className="">
           <Button
-            soft_corners
-            className="w-full leading-[2.25rem] text-[2rem] p-4 bg-transparent border-0 underline text-[darkGreen] ">
+            className="w-full text-[2rem] bg-transparent border-0 underline">
             Book Now
           </Button>
         </Link>
