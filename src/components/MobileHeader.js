@@ -92,7 +92,7 @@ function MobileHeader({ navLinks }) {
             onClick={handleClick}>
             <Button
               soft_corners
-              className="w-full text-3xl md:text-[5vh] py-4 md:p-6 ">
+              className="w-full text-3xl bg-[var(--dry-grass)] md:text-[5vh] py-4 md:p-6 ">
               Book Now
             </Button>
           </Link>
