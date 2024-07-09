@@ -12,29 +12,29 @@ export default function Footer() {
       />
       {
       }
-      <div className="flex flex-col list_spacing mt-12">
+      <div className="flex flex-col list_spacing md:text-2xl">
         <p>&copy; 2024 SAGE+OAK CABIN</p>
         <p>
           <a
             href="tel:+18654846066"
-            className="underline">
+            className="underline md:text-2xl">
             865-484-6066
           </a>
         </p>
         <p>
           <a
             href="mailto:sageandoakcabin@gmail.com"
-            className="underline">
+            className="underline md:text-2xl">
             sageandoakcabin@gmail.com
           </a>
         </p>
         <p>
           <a href="https://www.facebook.com/sageandoakcabin" aria-label="Vist our facebook page">
-            <SiFacebook className="inline-block text-3xl mx-3" />
+            <SiFacebook className="inline-block text-3xl md:text-5xl mx-3" />
           </a>{" "}
           &#xB7;{" "}
           <a href="https://www.instagram.com/sageandoakcabin/" aria-label="Visit our instagram page">
-            <SiInstagram className="inline-block text-3xl mx-3" />
+            <SiInstagram className="inline-block text-3xl md:text-5xl mx-3" />
           </a>
         </p>
       </div>
