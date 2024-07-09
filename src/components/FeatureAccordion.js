@@ -53,7 +53,6 @@ function FeatureAccordion({ className }) {
       ))
     }
 
-    //  TODO: add hover effect on clickable items such as accordion and book now button. 
     const content = (
       <div
         style={{ maxHeight: "0px" }}

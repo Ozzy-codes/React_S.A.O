@@ -67,7 +67,7 @@ function MobileHeader({ navLinks }) {
         </Link>
         <button
           onClick={handleClick}
-          className="text-4xl  ">
+          className="text-4xl  " aria-label="Navigation Menu">
           <HamburgerMenu
             handleClick={isOpen}
             menuColor={"white"}
