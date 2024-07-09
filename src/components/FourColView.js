@@ -18,7 +18,6 @@ function FourColView({ findImgIndex, listOfImgs }) {
   let listToAdd = 0
 
   const handleClick = (index) => {
-    console.log("photoLists cmpnt is sending index up")
     findImgIndex(index)
   }
 
@@ -43,7 +42,6 @@ function FourColView({ findImgIndex, listOfImgs }) {
     )
     listToAdd++
   }
-  console.log("img list: ", imgList)
 
   return (
     <>

@@ -13,7 +13,6 @@ export function loader() {
 
 export default function PhotoPage() {
   const testImgs = useLoaderData()
-  console.log("testImgs in component: ", testImgs)
 
   const [showModal, setShowModal] = useState(false)
   const [imgIndex, setImgIndex] = useState("")
@@ -23,7 +22,6 @@ export default function PhotoPage() {
   }, [])
 
   const findImgIndex = (index) => {
-    console.log("PhotoPage has received index", index)
     setImgIndex(index)
     setShowModal(true)
   }
@@ -35,7 +33,6 @@ export default function PhotoPage() {
   }
   const handleClose = () => {
     setShowModal(false)
-    console.log("handleClose function fired")
   }
 
   const modal = (

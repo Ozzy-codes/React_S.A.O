@@ -17,7 +17,6 @@ function Modal({
     return () => document.body.classList.remove("overflow-hidden")
   }, [])
 
-  console.log("imgIndex passed into Modal component", imgIndex)
 
   const btnStyle =
     "z-40 text-4xl text-gray-300 fixed top-1/2 -translate-y-2/4 py-[1rem] "

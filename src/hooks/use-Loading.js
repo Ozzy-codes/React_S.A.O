@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react"
 const script = require("../components/widgetScript.cjs")
-console.log("script", script)
 script()
 
 function useLoading() {
@@ -13,7 +12,6 @@ function useLoading() {
         if (mutation.type === "childList") {
           //children of target have changed
           // you are now free to perform actions here
-          console.log("children have been added or removed")
           const addedNodes = mutation.addedNodes
           addedNodes.forEach((node) => {
             if (node instanceof HTMLIFrameElement) {
@@ -21,7 +19,6 @@ function useLoading() {
               // attach an onload event listener to it.
               node.onload = () => {
                 // we can perform actions here.
-                console.log("iframe content is loaded")
                 setLoadTrue()
               }
             }
@@ -34,16 +31,13 @@ function useLoading() {
 
     if (widgetNode) {
       observer.observe(widgetNode, config)
-      console.log("loadDefaultWidget start")
       window.OwnerRez.loadDefaultWidgets()
-      console.log("loadDefaultWidget end")
     }
     //clean up of observer when compt unmounts
     return () => observer.disconnect()
   }, [])
 
   function setLoadTrue() {
-    console.log("set load to true")
     setIsLoaded(true)
   }
 

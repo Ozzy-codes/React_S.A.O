@@ -18,7 +18,6 @@ function TwoColView({ findImgIndex, listOfImgs }) {
   const imgList2 = []
 
   const handleClick = (index) => {
-    console.log("photoLists cmpnt is sending index up")
     findImgIndex(index)
   }
 
