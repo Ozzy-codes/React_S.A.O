@@ -4,11 +4,11 @@ import logo from '../photos/logo/sage_and_oak_logo.png'
 
 export default function Footer() {
   return (
-    <footer className="grid md:grid-cols-2 md:px-[5rem] text-center py-5 px-1 text-lg bg-[var(--logo-color)] text-white">
+    <footer className="flex flex-col justify-around items-center md:flex-row md:px-[5rem] text-center py-5 px-1 text-lg bg-[var(--logo-color)] text-white">
       <img
         src={logo}
         alt="Sage & Oak"
-        className="w-[50vw] justify-self-center md:w-[20vw] md:row-[1_/_5] rounded-[var(--border-radius)] "
+        className="w-[50vw] justify-self-center md:w-[20vw] rounded-[var(--border-radius)] "
       />
       {
       }
