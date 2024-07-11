@@ -29,9 +29,6 @@ const GoogleMap: React.FC<GoolgeMapProps> = () => {
           width="600"
           height="450"
           style={{ border: "0" }}
-          // TODO: not sure if we can remove attribute below
-          // @ts-ignore
-          allowFullScreen=""
           loading="lazy"
           className="w-full"
           referrerPolicy="no-referrer-when-downgrade"
