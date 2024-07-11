@@ -25,13 +25,12 @@ const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedIndex
     const refDrawer = subjectRef.current[index] as HTMLDivElement
-    const sibling = refDrawer.nextSibling as HTMLDivElement
 
     if (isExpanded && refDrawer) {
-      sibling.style.maxHeight =
-        sibling.scrollHeight + "px"
+      (refDrawer.nextSibling as HTMLDivElement).style.maxHeight =
+        (refDrawer.nextSibling as HTMLDivElement).scrollHeight + "px"
     } else if (refDrawer) {
-      sibling.style.maxHeight = "0px"
+      (refDrawer.nextSibling as HTMLDivElement).style.maxHeight = "0px"
     }
 
     let list
