@@ -3,10 +3,11 @@ import { GoChevronDown, GoChevronLeft } from "react-icons/go"
 import { items } from "../seedsTS/AccordionData"
 
 interface FeatureAccordionProps {
-  className: string
+  className?: string
 }
 
 const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
+  //  BUG: important information section cut off when amenities drawer open
   const [expandedIndex, setExpandedIndex] = useState(-1)
   const subjectRef = useRef<HTMLDivElement[]>([])
 
