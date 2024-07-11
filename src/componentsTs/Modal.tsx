@@ -22,6 +22,7 @@ const Modal: React.FC<ModalProps> = (
     listOfImgs
   }) => {
   useEffect(() => {
+    //  TODO: add left and right keyboard event listeners to scroll imgs
     document.body.classList.add("overflow-hidden")
 
     return () => document.body.classList.remove("overflow-hidden")
