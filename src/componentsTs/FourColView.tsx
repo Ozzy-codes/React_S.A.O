@@ -24,7 +24,7 @@ const FourColView: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => 
   }
 
   for (let index = 0; index < imgArray.length; index++) {
-    const { imgWidth, imgHeight, imgUrl } = imgArray[index]
+    const { imgWidth, imgHeight, imgUrl, altText } = imgArray[index]
     if (listToAdd > 3) listToAdd = 0
     imgList[listToAdd].push(
       <div
@@ -33,7 +33,7 @@ const FourColView: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => 
         <img
           onClick={() => handleClick(index)}
           src={imgUrl}
-          alt="picsum test img"
+          alt={altText}
           onLoad={setLoadTrue}
           width={imgWidth}
           height={imgHeight}

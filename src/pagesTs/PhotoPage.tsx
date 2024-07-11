@@ -15,6 +15,7 @@ export type testImgType = {
     imgWidth: number;
     imgHeight: number;
     imgUrl: any;
+    altText:string;
 }[]
 
 const PhotoPage = () => {

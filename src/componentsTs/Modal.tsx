@@ -65,7 +65,7 @@ const Modal: React.FC<ModalProps> = (
           {/*  TODO: img is currently stretching, considering to maintain aspect ratio of img. */}
           <img
             src={listOfImgs[imgIndex].imgUrl}
-            alt="picsum test"
+            alt={listOfImgs[imgIndex].altText}
             width={listOfImgs[imgIndex].imgWidth}
             height={listOfImgs[imgIndex].imgHeight}
             className="h-full"
