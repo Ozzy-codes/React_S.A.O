@@ -1,3 +1,4 @@
+// @ts-ignore
 import useLoading from "../hooksTs/use-Loading"
 import Skeleton from "./Skeleton"
 import { PhotoListProps } from "./PhotoLists"

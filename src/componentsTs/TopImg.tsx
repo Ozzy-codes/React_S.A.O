@@ -1,3 +1,4 @@
+// @ts-ignore
 import useLoading from "../hooksTs/use-Loading"
 import Skeleton from "../componentsTs/Skeleton"
 import { useEffect, useRef } from "react"

@@ -1,4 +1,5 @@
 import Skeleton from "./Skeleton"
+// @ts-ignore
 import useLoading from "../hooksTs/use-Loading"
 
 interface GoolgeMapProps {

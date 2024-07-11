@@ -1,4 +1,5 @@
 import Skeleton from "../componentsTs/Skeleton"
+// @ts-ignore
 import useLoading from "../hooksTs/use-Loading"
 
 interface BookAndInquiryProps {
