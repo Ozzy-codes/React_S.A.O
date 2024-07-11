@@ -78,8 +78,7 @@ const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
     return (
       <div key={item.id}>
         <div
-         /* @ts-ignore TODO: isuues with subjectRef */  
-          ref={(element) => (subjectRef.current[index] = element)}
+          ref={(element:HTMLDivElement) => (subjectRef.current[index] = element)}
           className="flex justify-between rounded-[var(--border-radius)] p-3 bg-[var(--logo-color)] text-white text-xl font-bold border-b items-center cursor-pointer"
           onClick={() => handleClick(index)}>
           {item.label}
