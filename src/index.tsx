@@ -2,14 +2,13 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import ErrorPage from "./pages/ErrorPage"
+import ErrorPage from "./pagesTs/ErrorPage"
 import App from "./App"
-import LocationPage from "./pages/LocationPage"
-import PhotoPage, { loader as photoLoader } from "./pages/PhotoPage"
-import AvailabilityPage from "./pages/AvailabilityPage"
-import ReviewPage from "./pages/ReviewPage"
-import HomePage from "./pages/HomePage"
-import BookingPage from "./pages/BookingPage"
+import PhotoPage, { loader as photoLoader } from "./pagesTs/PhotoPage"
+import AvailabilityPage from "./pagesTs/AvailabilityPage"
+import ReviewPage from "./pagesTs/ReviewPage"
+import HomePage from "./pagesTs/HomePage"
+import BookingPage from "./pagesTs/BookingPage"
 
 const router = createBrowserRouter([
   {
@@ -20,10 +19,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />
-      },
-      {
-        path: "location",
-        element: <LocationPage />
       },
       {
         path: "photos",
@@ -46,7 +41,7 @@ const router = createBrowserRouter([
   }
 ])
 
-const el = document.getElementById("root")
+const el = document.getElementById("root") as HTMLDivElement
 const root = ReactDOM.createRoot(el)
 
 root.render(<RouterProvider router={router} />)
