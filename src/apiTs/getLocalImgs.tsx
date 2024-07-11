@@ -43,223 +43,265 @@ import photo42 from '../photos/gallery/95-web-or-mls-Sage+Oak-95.jpg'
 import photo43 from '../photos/gallery/100-web-or-mls-Sage+Oak-100.jpg'
 
 
-//  TODO: Add alternative text to each img
 const getLocalImgs = () => {
   const photoListContainer = [
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo1
+      imgUrl: photo1,
+      altText:'Sunlight entering the cabin foyer.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo2
+      imgUrl: photo2,
+      altText:'Afternoon sunshine entering the main living room through a window wall.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo3
+      imgUrl: photo3,
+      altText:'Main living room in sunset.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo4
+      imgUrl: photo4,
+      altText:'Main living room lounge area with wine and beer on the coffee table.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo5
+      imgUrl: photo5,
+      altText:'Main room with kitchen and guest bedroom in view.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo6
+      imgUrl: photo6,
+      altText:'Main room dining table.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo7
+      imgUrl: photo7,
+      altText:'Kitchen marble island set with plates.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo8
+      imgUrl: photo8,
+      altText:'Kitchen with main lounge and window wall in the background.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo9
+      imgUrl: photo9,
+      altText:'Keurig coffee maker on counter top next to donuts and fruit.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo10
+      imgUrl: photo10,
+      altText:'Master bedroom with a window wall opposite the bed.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo11
+      imgUrl: photo11,
+      altText:'Master bedroom chairs and coffee table. Window wall in the background.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo12
+      imgUrl: photo12,
+      altText:'Master bedroom bed with porch entrance.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo13
+      imgUrl: photo13,
+      altText:'Master bathroom with glass wall shower.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo14
+      imgUrl: photo14,
+      altText:'Master bathroom tub with flowers.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo15
+      imgUrl: photo15,
+      altText:'Master bathroom sink with flowers.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo16
+      imgUrl: photo16,
+      altText:'Master bathroom entrance with separate doors for toilet and shower.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo17
+      imgUrl: photo17,
+      altText:'Master bedroom porch overlooking valley.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo18
+      imgUrl: photo18,
+      altText:'Master bedroom porch overlooking valley durring sunset.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo19
+      imgUrl: photo19,
+      altText:'Inside master bedroom with porch doors open at sunset.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo20
+      imgUrl: photo20,
+      altText:'Guest bedroom with porch doors.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo21
+      imgUrl: photo21,
+      altText:'Guest bedroom with door to main living room.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo22
+      imgUrl: photo22,
+      altText:'Guest bedroom porch overlooking valley.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo23
+      imgUrl: photo23,
+      altText:'Guest bedroom porch with main living room entrance and valley.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo24
+      imgUrl: photo24,
+      altText:'Guest bathroom with sink and shower.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo25
+      imgUrl: photo25,
+      altText:'Lower level living room with fireplace and stairs.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo26
+      imgUrl: photo26,
+      altText:'Lower level living room with window wall in late afternoon.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo27
+      imgUrl: photo27,
+      altText:'Video arcade machine with pac man on.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo28
+      imgUrl: photo28,
+      altText:'Lower level living room air hockey and foosball table.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo29
+      imgUrl: photo29,
+      altText:'Board and card games with fireplace in the background.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo30
+      imgUrl: photo30,
+      altText:'Lower level coffee table with charcuterie board and wine.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo31
+      imgUrl: photo31,
+      altText:'Foosball with lower level window wall in the background.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo32
+      imgUrl: photo32,
+      altText:'Cabin laundry room with hanging iron board.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo33
+      imgUrl: photo33,
+      altText:'Lower level guest room with two beds and porch doors.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo34
+      imgUrl: photo34,
+      altText:'Lower level guest room with porch doors open overlooking valley.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo35
+      imgUrl: photo35,
+      altText:'Lower level bathroom with sink and shower.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo36
+      imgUrl: photo36,
+      altText:'Lower level porch with valley and private driveway.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo37
+      imgUrl: photo37,
+      altText:'Hot tub with towels overlooking valley.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo38
+      imgUrl: photo38,
+      altText:'Hot tub with lower level living room entrance.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo39
+      imgUrl: photo39,
+      altText:'Hot tub at night with guest bedroom entrance.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo40
+      imgUrl: photo40,
+      altText:'Valley from cabin porch.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo41
+      imgUrl: photo41,
+      altText:'Valley from upper level porch with wine.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo42
+      imgUrl: photo42,
+      altText:'Valley with cabin from Driveway.'
     },
     {
       imgWidth: 2048,
       imgHeight: 1368,
-      imgUrl: photo43
+      imgUrl: photo43,
+      altText:'Cabin on hill with lush trees at night.'
     },
   ]
   return photoListContainer
