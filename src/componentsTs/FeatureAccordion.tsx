@@ -7,7 +7,6 @@ interface FeatureAccordionProps {
 }
 
 const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
-  //  BUG: important information section cut off when amenities drawer open
   const [expandedIndex, setExpandedIndex] = useState(-1)
   const subjectRef = useRef<HTMLDivElement[]>([])
 
@@ -79,7 +78,7 @@ const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
     return (
       <div key={item.id}>
         <div
-          ref={(element:HTMLDivElement) => (subjectRef.current[index] = element)}
+          ref={(element: HTMLDivElement) => (subjectRef.current[index] = element)}
           className="flex justify-between rounded-[var(--border-radius)] p-3 bg-[var(--logo-color)] text-white text-xl font-bold border-b items-center cursor-pointer"
           onClick={() => handleClick(index)}>
           {item.label}
@@ -91,7 +90,7 @@ const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
   })
 
   return (
-    <div className={"border-x border-t mt-6 " + className}>
+    <div className={"border-x border-t mt-4 " + className}>
       {renderedItems}
     </div>
   )
