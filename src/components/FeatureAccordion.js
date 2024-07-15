@@ -83,7 +83,7 @@ function FeatureAccordion({ className }) {
   })
 
   return (
-    <div className={"border-x border-t mt-6 " + className}>
+    <div className={"border-x border-t " + className}>
       {renderedItems}
     </div>
   )
