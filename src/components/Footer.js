@@ -1,4 +1,4 @@
-import WhiteTrimContainer from "../pages/WhiteTrimContainer"
+import WhiteTrimContainer from "./WhiteTrimContainer"
 import { SiFacebook } from "react-icons/si"
 import { SiInstagram } from "react-icons/si"
 import logo from '../photos/logo/sage_and_oak_logo.png'

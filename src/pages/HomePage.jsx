@@ -2,7 +2,7 @@ import FeatureAccordion from "../components/FeatureAccordion"
 import Button from "../components/Button"
 import TopImg from "../components/TopImg"
 import GoogleMap from "../components/GoogleMap"
-import WhiteTrimContainer from "./WhiteTrimContainer"
+import WhiteTrimContainer from "../components/WhiteTrimContainer"
 import photo from '../photos/banner/1-web-or-mls-Sage+Oak-1.jpg'
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
@@ -14,9 +14,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
-      <WhiteTrimContainer lateralNTop>
-        <TopImg />
-      </WhiteTrimContainer>
+      <TopImg />
       <main className="flex flex-col ">
         <WhiteTrimContainer lateralNTop>
           <div className="flex flex-col-reverse bg-[var(--wheat)] items-center md:h-[600px] md:flex-row md:items-stretch">

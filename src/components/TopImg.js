@@ -1,3 +1,4 @@
+import WhiteTrimContainer from "../components/WhiteTrimContainer"
 import useLoading from "../hooks/use-Loading"
 import Skeleton from "../components/Skeleton"
 import { useEffect, useRef } from "react"
@@ -32,19 +33,21 @@ function TopImg() {
   )
 
   return (
-    <div
-      className="relative header_gradient ">
-      <img
-        className="w-full "
-        src={photo}
-        alt="Front Arial view of Cabin"
-        width={2048}
-        height={1364}
-        onLoad={setLoadTrue}
-        ref={imgTag}
-      />
-      {loadingContent}
-    </div>
+    <WhiteTrimContainer lateralNTop>
+      <div
+        className="relative header_gradient ">
+        <img
+          className="w-full "
+          src={photo}
+          alt="Front Arial view of Cabin"
+          width={2048}
+          height={1364}
+          onLoad={setLoadTrue}
+          ref={imgTag}
+        />
+        {loadingContent}
+      </div>
+    </WhiteTrimContainer>
   )
 }
 export default TopImg
