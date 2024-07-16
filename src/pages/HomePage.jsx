@@ -19,8 +19,8 @@ export default function HomePage() {
       </WhiteTrimContainer>
       <main className="flex flex-col ">
         <WhiteTrimContainer lateralNTop>
-          <div className="flex h-[600px]">
-            <div className="p-4 bg-[var(--wheat)] flex flex-col justify-evenly">
+          <div className="flex flex-col-reverse bg-[var(--wheat)] items-center md:h-[600px] md:flex-row md:items-stretch">
+            <div className="p-4 flex flex-col justify-evenly">
               <div className="flex flex-col">
                 <h2 className="mx-4 mt-4 text-3xl">
                   Luxury Cabin With Breath Taking Views
@@ -44,12 +44,12 @@ export default function HomePage() {
                 </Button>
               </Link>
             </div>
-            <img src={photo} alt="Testing Img" className="w-[60%]" />
+            <img src={photo} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
           </div>
         </WhiteTrimContainer>
         <WhiteTrimContainer lateralNTop>
-          <div className="flex h-[600px]">
-            <img src={photo} alt="Testing Img" className="w-[60%]" />
+          <div className="flex flex-col bg-[var(--stone)] items-center md:h-[600px] md:flex-row md:items-stretch">
+            <img src={photo} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
             <div className="p-4 bg-[var(--stone)]">
               <FeatureAccordion
                 className={
