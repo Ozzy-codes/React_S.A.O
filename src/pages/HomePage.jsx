@@ -20,14 +20,11 @@ export default function HomePage() {
       <main className="flex flex-col ">
         <WhiteTrimContainer lateralNTop>
           <div className="flex h-[600px]">
-            <div className="p-4 bg-[var(--wheat)]">
+            <div className="p-4 bg-[var(--wheat)] flex flex-col justify-evenly">
               <div className="flex flex-col">
                 <h2 className="mx-4 mt-4 text-3xl">
                   Luxury Cabin With Breath Taking Views
                 </h2>
-                <h3 className="mx-4 mt-4 text-xl">
-                  3 Bedrooms &#xB7; 3 Baths &#xB7; Sleeps 5-10
-                </h3>
                 <p className="m-4">
                   Welcome to Sage and Oak Cabin, your very own secluded
                   oasis with breathtaking views! This beautiful,
@@ -46,14 +43,6 @@ export default function HomePage() {
                   Book Now
                 </Button>
               </Link>
-              <p className="m-4">
-                Blending rustic and modern elements, you will surely feel
-                that you have escaped from your everyday life. Clean and
-                crisp sheets, cozy throw blankets, fresh mountain air, a
-                relaxing hot tub, and carefully curated decor will stimulate
-                all of your senses. Most importantly, enjoy the spectacular
-                view!
-              </p>
             </div>
             <img src={photo} alt="Testing Img" className="w-[60%]" />
           </div>
