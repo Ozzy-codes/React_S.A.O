@@ -17,7 +17,7 @@ export default function HomePage() {
       <TopImg />
       <main className="flex flex-col ">
         <WhiteTrimContainer lateralNTop>
-          <div className="flex flex-col-reverse bg-[var(--wheat)] items-center md:h-[600px] md:flex-row md:items-stretch">
+          <div className="flex flex-col-reverse items-center md:h-[600px] md:flex-row md:items-stretch">
             <div className="p-4 flex flex-col justify-evenly">
               <div className="flex flex-col">
                 <h2 className="mx-4 mt-4 text-3xl">
@@ -46,9 +46,9 @@ export default function HomePage() {
           </div>
         </WhiteTrimContainer>
         <WhiteTrimContainer lateralNTop>
-          <div className="flex flex-col bg-[var(--stone)] items-center md:h-[600px] md:flex-row md:items-stretch">
+          <div className="flex flex-col items-center md:h-[600px] md:flex-row md:items-stretch">
             <img src={photo} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
-            <div className="p-4 bg-[var(--stone)]">
+            <div className="p-4">
               <FeatureAccordion
                 className={
                   "md:col-[2_/_3] md:row-[1_/_4] md:overflow-hidden"
