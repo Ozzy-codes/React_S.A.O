@@ -3,7 +3,7 @@ import Button from "./Button"
 
 function DeskTopHeader({ navLinks }) {
   const default_Nav_styles =
-    "my-2 py-1 text-[2rem] text-white hover:underline active:decoration-sky-500 active:text-sky-500 "
+    "my-2 py-1 w-full text-[2rem] text-white font-thin hover:underline hover:font-normal active:decoration-sky-500 active:text-sky-500 "
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
@@ -45,13 +45,13 @@ function DeskTopHeader({ navLinks }) {
       </div>
       <div
         id="drawer_div"
-        className="z-20 w-full bg-transparent flex justify-evenly text-center ">
+        className="z-20 w-full bg-transparent flex justify-evenly items-center text-center ">
         {renderedLinks}
         <Link
           to={"booking"}
-          className="">
+          className="contents">
           <Button
-            className="w-full text-[2rem] bg-transparent border-0 underline">
+            className="w-full text-[2rem] bg-transparent border-0 hover:underline ">
             Book Now
           </Button>
         </Link>
