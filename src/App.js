@@ -6,7 +6,6 @@ import useResize from "./hooks/use-Resize"
 
 const pages = ["Home", "Photos", "Availability", "Reviews"]
 
-//  TODO: transfer to TS
 function App() {
   const { nextViewPort } = useResize(1024)
 
