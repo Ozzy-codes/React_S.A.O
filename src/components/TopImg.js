@@ -2,7 +2,7 @@ import WhiteTrimContainer from "../components/WhiteTrimContainer"
 import useLoading from "../hooks/use-Loading"
 import Skeleton from "../components/Skeleton"
 import { useEffect, useRef } from "react"
-import photo from '../photos/banner/1-web-or-mls-Sage+Oak-1.jpg'
+import photo from '../photos/banner/8-web-or-mls-Sage+Oak-8.jpg'
 
 function TopImg() {
   const { isLoaded, setLoadTrue } = useLoading()

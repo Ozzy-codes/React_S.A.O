@@ -24,7 +24,6 @@ function BookAndInquiry({ className }) {
         data-widget-type="Booking/Inquiry"
         data-widgetId="afd5ae158721478f8a231d1f1bf4124d"
         ref={loadingRef}></div>
-      <script src="https://app.ownerrez.com/widget.js" />
       {widgetLoadingContent}
     </div>
   )

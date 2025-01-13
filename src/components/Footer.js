@@ -14,7 +14,7 @@ export default function Footer() {
         />
         {
         }
-        <div className="flex flex-col list_spacing text-lg ">
+        <div className="flex flex-col list_spacing text-xl ">
           <p>&copy; 2024 SAGE+OAK CABIN</p>
           <p>
             <a

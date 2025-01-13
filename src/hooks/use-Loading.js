@@ -5,6 +5,10 @@ function useLoading() {
   const loadingRef = useRef(null)
 
   useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://app.ownerrez.com/widget.js"
+    document.body.appendChild(script);
+
     const observer = new MutationObserver((mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === "childList") {
@@ -31,7 +35,10 @@ function useLoading() {
       observer.observe(widgetNode, config)
     }
     //clean up of observer when compt unmounts
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      document.body.removeChild(script);
+    }
   }, [])
 
   function setLoadTrue() {

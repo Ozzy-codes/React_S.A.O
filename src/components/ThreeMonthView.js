@@ -24,7 +24,6 @@ function ThreeMonthView({ className }) {
         data-widget-type="Display 3 months - Multiple Month Calendar"
         data-widgetId="feafd37a5298462c88492b3d62cef241"
         ref={loadingRef}></div>
-      <script src="https://app.ownerrez.com/widget.js" />
       {widgetLoadingContent}
     </div>
   )

@@ -24,7 +24,6 @@ function SingleMonthView({ className }) {
         data-widget-type="Multiple Month Calendar"
         data-widgetId="cc1543b3f17d4a48bfbe78eeb50ead8b"
         ref={loadingRef}></div>
-      <script src="https://app.ownerrez.com/widget.js" />
       {widgetLoadingContent}
     </div>
   )

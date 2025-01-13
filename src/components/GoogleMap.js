@@ -13,6 +13,7 @@ function GoogleMap({ className }) {
     />
   )
 
+  // TODO: add img on desktop not on mobile - add to the right side of map
   return (
     <div className="bg-white">
       <div

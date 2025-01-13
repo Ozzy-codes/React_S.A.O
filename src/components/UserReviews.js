@@ -24,7 +24,6 @@ function UserReviews({ className }) {
         data-widget-type="Reviews"
         data-widgetId="8a125fd30fad44ef8ae744fa28121db2"
         ref={loadingRef}></div>
-      <script src="https://app.ownerrez.com/widget.js" />
       {widgetLoadingContent}
     </div>
   )

@@ -3,7 +3,8 @@ import Button from "../components/Button"
 import TopImg from "../components/TopImg"
 import GoogleMap from "../components/GoogleMap"
 import WhiteTrimContainer from "../components/WhiteTrimContainer"
-import photo from '../photos/banner/1-web-or-mls-Sage+Oak-1.jpg'
+import OutsideView from '../photos/banner/1-web-or-mls-Sage+Oak-1.jpg'
+import MasterWindowView from '../photos/gallery/33-web-or-mls-Sage+Oak-33.jpg'
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
@@ -12,6 +13,8 @@ export default function HomePage() {
     window.scrollTo(0, 0)
   }, [])
 
+  // BUG: inserting script on widget scripts is not working in production- why? 
+  // BUG: MasterWindowView is streched needs to be resized down - be mindful of what is happening to accordion
   return (
     <div className="flex flex-col">
       <TopImg />
@@ -42,12 +45,12 @@ export default function HomePage() {
                 </Button>
               </Link>
             </div>
-            <img src={photo} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
+            <img src={OutsideView} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
           </div>
         </WhiteTrimContainer>
         <WhiteTrimContainer lateralNTop>
           <div className="flex flex-col items-center md:h-[600px] md:flex-row md:items-stretch">
-            <img src={photo} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
+            <img src={MasterWindowView} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
             <div className="p-4">
               <FeatureAccordion
                 className={
