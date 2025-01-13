@@ -20,9 +20,11 @@ function UserReviews({ className }) {
       }>
       <div
         className="ownerrez-widget"
+        data-propertyId="ad27789d5c644113b84e38dea08436de"
         data-widget-type="Reviews"
-        data-widget-id="8a125fd30fad44ef8ae744fa28121db2"
+        data-widgetId="8a125fd30fad44ef8ae744fa28121db2"
         ref={loadingRef}></div>
+      <script src="https://app.ownerrez.com/widget.js" />
       {widgetLoadingContent}
     </div>
   )
