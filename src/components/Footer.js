@@ -15,19 +15,18 @@ export default function Footer() {
         {
         }
         <div className="flex flex-col list_spacing ">
-          <p>&copy; 2024 SAGE+OAK CABIN</p>
-          <p>
-            <a
-              href="tel:+18654846066"
-              className="underline">
-              865-484-6066
-            </a>
-          </p>
           <p>
             <a
               href="mailto:sageandoakcabin@gmail.com"
               className="underline">
               sageandoakcabin@gmail.com
+            </a>
+          </p>
+          <p>
+            <a
+              href="tel:+18654846066"
+              className="underline">
+              865-484-6066
             </a>
           </p>
           <p>
