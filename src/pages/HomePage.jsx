@@ -19,7 +19,7 @@ export default function HomePage() {
       <TopImg />
       <main className="flex flex-col ">
         <WhiteTrimContainer lateralNTop>
-          <div className="flex flex-col-reverse items-center md:h-[600px] md:flex-row md:items-stretch">
+          <div className="flex flex-col items-center md:h-[600px] md:flex-row md:items-stretch">
             <div className="p-4 flex flex-col justify-evenly">
               <div className="flex flex-col">
                 <h2 className="mx-4 mt-4 text-3xl">
@@ -44,12 +44,12 @@ export default function HomePage() {
                 </Button>
               </Link>
             </div>
-            <img src={OutsideView} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
+            <img src={OutsideView} alt="Testing Img" className="w-full md:w-[60%] pt-4 md:pt-0" />
           </div>
         </WhiteTrimContainer>
         <WhiteTrimContainer lateralNTop>
-          <div className="flex flex-col items-center md:h-[600px] md:flex-row md:items-stretch">
-            <img src={MasterWindowView} alt="Testing Img" className="w-[60%] pt-4 md:pt-0" />
+          <div className="flex flex-col-reverse items-center md:h-[600px] md:flex-row md:items-stretch">
+            <img src={MasterWindowView} alt="Testing Img" className="w-full md:w-[60%] pt-4 md:pt-0" />
             <div className="p-4">
               <FeatureAccordion
                 className={
