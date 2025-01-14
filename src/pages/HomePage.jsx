@@ -13,7 +13,6 @@ export default function HomePage() {
     window.scrollTo(0, 0)
   }, [])
 
-  // BUG: inserting script on widget scripts is not working in production- why? 
   // BUG: MasterWindowView is streched needs to be resized down - be mindful of what is happening to accordion
   return (
     <div className="flex flex-col">
@@ -40,7 +39,7 @@ export default function HomePage() {
                 className="mx-4">
                 <Button
                   soft_corners
-                  className="w-full font-bold py-4">
+                  className="w-full font-bold py-4 text-2xl ">
                   Book Now
                 </Button>
               </Link>
