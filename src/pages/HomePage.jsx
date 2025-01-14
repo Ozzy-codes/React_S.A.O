@@ -26,7 +26,7 @@ export default function HomePage() {
                   Luxury Cabin With Breath Taking Views
                 </h2>
                 <p className="m-4">
-                  Welcome to Sage and Oak Cabin, your very own secluded
+                  Welcome to Sage + Oak Cabin, your very own secluded
                   oasis with breathtaking views! This beautiful,
                   custom-built 3000 sq foot cabin is nestled atop its own
                   hill in the peaceful side of the Smokies, surrounded by
