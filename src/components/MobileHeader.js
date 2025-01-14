@@ -67,7 +67,8 @@ function MobileHeader({ navLinks }) {
         </Link>
         <button
           onClick={handleClick}
-          className="text-4xl  ">
+          className="text-[0px] text-[var(--logo-color)] ">
+          Toggle hamburger menu
           <HamburgerMenu
             handleClick={isOpen}
             menuColor={"white"}

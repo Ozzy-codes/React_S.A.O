@@ -9,7 +9,7 @@ export default function HamburgerMenu({ handleClick, menuColor }) {
     : "top-[.75rem] md:top-[1rem]"
 
   return (
-    <div className="flex flex-col justify-center items-center relative">
+    <div className="flex flex-col justify-center items-center relative text-4xl">
       <span
         className={
           baseStyle +
