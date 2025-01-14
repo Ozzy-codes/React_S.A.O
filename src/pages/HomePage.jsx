@@ -49,7 +49,7 @@ export default function HomePage() {
         </WhiteTrimContainer>
         <WhiteTrimContainer lateralNTop>
           <div className="flex flex-col-reverse items-center md:h-[600px] md:flex-row md:items-stretch">
-            <img src={MasterWindowView} alt="Testing Img" className="w-full md:w-[60%] pt-4 md:pt-0" />
+            <img src={MasterWindowView} alt="Testing Img" className="w-full object-contain md:w-[60%] pt-4 md:pt-0" />
             <div className="p-4">
               <FeatureAccordion
                 className={
