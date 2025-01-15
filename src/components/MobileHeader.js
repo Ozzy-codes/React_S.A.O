@@ -53,6 +53,15 @@ function MobileHeader({ navLinks }) {
         "sticky z-10 top-0 shadow-header w-screen flex flex-col transition-all duration-1000 "
       }>
       <div className="flex z-20 justify-around py-8 md:py-12 bg-[var(--logo-color)]">
+        <button
+          onClick={handleClick}
+          className="text-[0px] text-[var(--logo-color)] ">
+          Toggle hamburger menu
+          <HamburgerMenu
+            handleClick={isOpen}
+            menuColor={"white"}
+          />
+        </button>
         <Link
           to={"/"}
           onClick={handleBannerClick}>
@@ -65,23 +74,14 @@ function MobileHeader({ navLinks }) {
             </span>
           </h1>
         </Link>
-        <button
-          onClick={handleClick}
-          className="text-[0px] text-[var(--logo-color)] ">
-          Toggle hamburger menu
-          <HamburgerMenu
-            handleClick={isOpen}
-            menuColor={"white"}
-          />
-        </button>
       </div>
 
       <div
         className={
           "w-screen h-screen fixed z-10 transition-all duration-1000 " +
           (isOpen
-            ? "inset-0 opacity-100 visible"
-            : "left-full opacity-0 invisible")
+            ? "right-0 opacity-100 visible"
+            : "right-full opacity-0 invisible")
         }>
         <nav
           id="drawer_div"
