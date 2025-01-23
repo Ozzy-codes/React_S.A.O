@@ -35,7 +35,7 @@ function DeskTopHeader({ navLinks }) {
         <Link to={"/"}>
           <h1 className="leading-none text-[5rem] font-['Whisper'] text-white">
             <span>
-              Sage+Oak
+              Sage + Oak
             </span>
             <span className="pl-4 md:pl-8">
               Cabin

@@ -52,7 +52,7 @@ function Modal({
             "w-max max-h-[85vh] " +
             (disableNextBtn ? "" : "cursor-pointer")
           }>
-          {/*  TODO: img is currently stretching, considering to maintain aspect ratio of img. */}
+          {/*  TODO: img is currently stretching, considering to maintain aspect ratio of img. *take solution from homepage* */}
           <img
             src={listOfImgs[imgIndex].imgUrl}
             alt="picsum test"

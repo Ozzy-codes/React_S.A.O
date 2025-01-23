@@ -19,6 +19,7 @@ body {
   /* color: rgb(5, 46, 22); */
   /* background-color: var(--stone-100); */
   overflow: hidden auto;
+  font-family: "Open Sans", serif;
 }
 
 .list_spacing>*+* {

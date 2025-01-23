@@ -13,7 +13,6 @@ export default function HomePage() {
     window.scrollTo(0, 0)
   }, [])
 
-  // BUG: MasterWindowView is streched needs to be resized down - be mindful of what is happening to accordion
   return (
     <div className="flex flex-col">
       <TopImg />
