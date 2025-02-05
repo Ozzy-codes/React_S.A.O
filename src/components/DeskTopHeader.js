@@ -31,7 +31,7 @@ function DeskTopHeader({ navLinks }) {
     <div
       id="top_header_div"
       className={"bg-[var(--logo-color)] w-screen flex flex-col items-center "}>
-      <div className="z-20 pt-[4rem] pb-0 px-[4rem] md:p-[1rem]">
+      <div className="title z-20 pt-[4rem] pb-0 px-[4rem] md:p-[2rem]">
         <Link to={"/"}>
           <h1 className="leading-none text-[5rem] text-white">
             <span>

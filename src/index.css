@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: brittany;
+  src: url(../public/BrittanySignature.ttf);
+}
+
 :root {
   --stone: #d7d7d7;
   --light-wheat: #efd6ac85;
@@ -20,6 +25,11 @@ body {
   /* background-color: var(--stone-100); */
   overflow: hidden auto;
   font-family: "Playfair Display", serif;
+}
+
+/* utilities */
+.title {
+  font-family: brittany;
 }
 
 .list_spacing>*+* {
