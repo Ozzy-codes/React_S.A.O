@@ -1,6 +1,5 @@
 import Modal from "../components/Modal"
 import PhotoLists from "../components/PhotoLists"
-import TopImg from "../components/TopImg"
 import { useLoaderData } from "react-router-dom"
 // import { getPicsumImgs } from "../api/getPicsumImgs"
 import { getLocalImgs } from '../api/getLocalImgs'
@@ -46,7 +45,6 @@ export default function PhotoPage() {
   )
   return (
     <div>
-      <TopImg />
       <div className="p-4 bg-white ">
         <h2 className="text-3xl py-4 mb-4">Gallery</h2>
         <PhotoLists
