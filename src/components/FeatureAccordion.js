@@ -74,7 +74,7 @@ function FeatureAccordion({ className }) {
           ref={(element) => (subjectRef.current[index] = element)}
           className="flex justify-between rounded-[var(--border-radius)] p-3 bg-[var(--logo-color)] text-white text-2xl font-bold border-b items-center cursor-pointer"
           onClick={() => handleClick(index)}>
-          {item.label}
+          {item.label.toUpperCase()}
           {icon}
         </div>
         {content}

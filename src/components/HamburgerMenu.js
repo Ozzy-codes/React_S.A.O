@@ -1,5 +1,5 @@
 export default function HamburgerMenu({ handleClick, menuColor }) {
-  const baseStyle = "w-10 h-1 md:h-1.5 md:w-16 block "
+  const baseStyle = "w-10 h-[.15rem] md:h-1.5 md:w-16 block "
   const hideSpan = handleClick ? "bg-transparent" : "bg-" + menuColor
   const rotateTopSpan = handleClick
     ? "top-0 rotate-[135deg]"

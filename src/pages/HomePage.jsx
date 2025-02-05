@@ -39,7 +39,7 @@ export default function HomePage() {
                 <Button
                   soft_corners
                   className="w-full font-bold py-4 text-2xl ">
-                  Book Now
+                  BOOK NOW
                 </Button>
               </Link>
             </div>

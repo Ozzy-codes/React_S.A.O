@@ -5,6 +5,7 @@ import { useState } from "react"
 import HamburgerMenu from "./HamburgerMenu"
 import Button from "./Button"
 
+//  TODO: fix padding on ipad air view
 function MobileHeader({ navLinks }) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -65,7 +66,7 @@ function MobileHeader({ navLinks }) {
         <Link
           to={"/"}
           onClick={handleBannerClick}>
-          <h1 className="title text-5xl text-white md:text-[5rem] ">
+          <h1 className="title text-4xl text-white md:text-[5rem] ">
             <span>
               Sage+Oak
             </span>
