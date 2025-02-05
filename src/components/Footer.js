@@ -6,7 +6,7 @@ import logo from '../photos/logo/sage_and_oak_logo.png'
 export default function Footer() {
   return (
     <WhiteTrimContainer all>
-      <footer className="flex flex-col md:flex-row justify-around items-center md:px-[5rem] text-center py-5 px-1 text-2xl bg-[var(--logo-color)] text-white">
+      <footer className="flex flex-col md:flex-row justify-center items-center md:px-[5rem] text-center text-xl bg-[var(--logo-color)] text-white">
         <img
           src={logo}
           alt="Sage & Oak"

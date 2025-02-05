@@ -22,7 +22,7 @@ export default function HomePage() {
             <div className="p-4 flex flex-col justify-evenly">
               <div className="flex flex-col">
                 <h2 className="mx-4 mt-4 text-3xl">
-                  Luxury Cabin With Breath Taking Views
+                  Luxury Cabin With Breathtaking Views
                 </h2>
                 <p className="m-4">
                   Welcome to Sage + Oak Cabin, your very own secluded
