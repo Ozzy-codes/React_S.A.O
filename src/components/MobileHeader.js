@@ -5,7 +5,6 @@ import { useState } from "react"
 import HamburgerMenu from "./HamburgerMenu"
 import Button from "./Button"
 
-//  TODO: fix padding on ipad air view
 function MobileHeader({ navLinks }) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -53,7 +52,7 @@ function MobileHeader({ navLinks }) {
       className={
         "sticky z-10 top-0 shadow-header w-screen flex flex-col transition-all duration-1000 "
       }>
-      <div className="flex z-20 justify-around py-8 md:py-12 bg-[var(--logo-color)]">
+      <div className="flex z-20 justify-around py-8 md:py-[5rem] bg-[var(--logo-color)]">
         <button
           onClick={handleClick}
           className="text-[0px] text-[var(--logo-color)] ">
