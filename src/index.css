@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: brittany;
+  src: url(../public/BrittanySignature.ttf);
+}
+
 :root {
-  --stone-100: rgb(245, 245, 244);
+  --stone: #d7d7d7;
   --light-wheat: #efd6ac85;
   --wheat: #efd6ac;
   --border-radius: .5rem;
@@ -18,9 +23,20 @@ html {
 }
 
 body {
-  color: rgb(5, 46, 22);
-  background-color: var(--stone-100);
+  /* color: rgb(5, 46, 22); */
+  /* background-color: var(--stone-100); */
   overflow: hidden auto;
+  font-family: "Playfair Display", serif;
+}
+
+/*  TODO: contain all imgs so as not to stretch them. This means fixing consequences on the homepage and photos page in modal view.*/
+/* img { */
+/*   object-fit: contain; */
+/* } */
+
+/* utilities */
+.title {
+  font-family: brittany;
 }
 
 .list_spacing>*+* {

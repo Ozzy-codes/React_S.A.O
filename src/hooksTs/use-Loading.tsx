@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from "react"
-const script = require("../componentsTs/widgetScript.cjs")
-script()
 
 const useLoading = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const loadingRef = useRef(null)
 
   useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://app.ownerrez.com/widget.js"
+    document.body.appendChild(script);
+
     const observer = new MutationObserver((mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === "childList") {
@@ -31,10 +33,12 @@ const useLoading = () => {
 
     if (widgetNode) {
       observer.observe(widgetNode, config)
-        window.OwnerRez.loadDefaultWidgets()
     }
     //clean up of observer when compt unmounts
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      document.body.removeChild(script);
+    }
   }, [])
 
   function setLoadTrue() {

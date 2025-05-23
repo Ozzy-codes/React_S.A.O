@@ -1,6 +1,5 @@
 import Modal from "../componentsTs/Modal"
 import PhotoLists from "../componentsTs/PhotoLists"
-import TopImg from "../componentsTs/TopImg"
 import { useLoaderData } from "react-router-dom"
 // import { getPicsumImgs } from "../api/getPicsumImgs"
 import { getLocalImgs } from '../apiTs/getLocalImgs'
@@ -12,10 +11,10 @@ export function loader() {
 }
 
 export type testImgType = {
-    imgWidth: number;
-    imgHeight: number;
-    imgUrl: any;
-    altText:string;
+  imgWidth: number;
+  imgHeight: number;
+  imgUrl: any;
+  altText: string;
 }[]
 
 const PhotoPage = () => {
@@ -28,7 +27,7 @@ const PhotoPage = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const findImgIndex = (index:number) => {
+  const findImgIndex = (index: number) => {
     setImgIndex(index)
     setShowModal(true)
   }
@@ -53,7 +52,6 @@ const PhotoPage = () => {
   )
   return (
     <div>
-      <TopImg />
       <div className="p-4 bg-white ">
         <h2 className="text-3xl py-4 mb-4">Gallery</h2>
         <PhotoLists

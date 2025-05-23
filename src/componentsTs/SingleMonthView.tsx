@@ -24,10 +24,10 @@ const SingleMonthView: React.FC<SingleMonthViewProps> = ({ className }) => {
         "relative " + (isLoaded ? "" : "h-[90vh] w-full " + className)
       }>
       <div
-        className="ownerrez-widget "
-        data-property-id="ad27789d5c644113b84e38dea08436de"
+        className="ownerrez-widget"
+        data-propertyId="ad27789d5c644113b84e38dea08436de"
         data-widget-type="Multiple Month Calendar"
-        data-widget-id="cc1543b3f17d4a48bfbe78eeb50ead8b"
+        data-widgetId="cc1543b3f17d4a48bfbe78eeb50ead8b"
         ref={loadingRef}></div>
       {widgetLoadingContent}
     </div>

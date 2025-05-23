@@ -25,9 +25,9 @@ const BookAndInquiry: React.FC<BookAndInquiryProps> = ({className}) => {
       }>
       <div
         className="ownerrez-widget"
-        data-property-id="ad27789d5c644113b84e38dea08436de"
+        data-propertyId="ad27789d5c644113b84e38dea08436de"
         data-widget-type="Booking/Inquiry"
-        data-widget-id="afd5ae158721478f8a231d1f1bf4124d"
+        data-widgetId="afd5ae158721478f8a231d1f1bf4124d"
         ref={loadingRef}></div>
       {widgetLoadingContent}
     </div>

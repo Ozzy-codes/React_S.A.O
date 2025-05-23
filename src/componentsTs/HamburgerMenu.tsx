@@ -1,20 +1,19 @@
 interface HamburgerMenuProps {
-  isActive: boolean,
+  handleClick: boolean,
   menuColor: string
 }
-
-const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isActive, menuColor }) => {
-  const baseStyle = "w-10 h-1 md:h-1.5 md:w-16 block "
-  const hideSpan = isActive ? "bg-transparent" : "bg-" + menuColor
-  const rotateTopSpan = isActive
+const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ handleClick, menuColor }) => {
+  const baseStyle = "w-10 h-[.15rem] md:h-1.5 md:w-16 block "
+  const hideSpan = handleClick ? "bg-transparent" : "bg-" + menuColor
+  const rotateTopSpan = handleClick
     ? "top-0 rotate-[135deg]"
     : "-top-[.75rem] md:-top-[1rem]"
-  const rotateBottomSpan = isActive
+  const rotateBottomSpan = handleClick
     ? "top-0 -rotate-[135deg]"
     : "top-[.75rem] md:top-[1rem]"
 
   return (
-    <div className="flex flex-col justify-center items-center relative">
+    <div className="flex flex-col justify-center items-center relative text-4xl">
       <span
         className={
           baseStyle +

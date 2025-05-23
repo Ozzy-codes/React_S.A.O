@@ -62,9 +62,7 @@ const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
         style={{ maxHeight: "0px" }}
         className="border-b px-5 overflow-hidden h-[325px] overflow-y-scroll">
         <div className="my-5 list_spacing">
-          {
-            list
-          }
+          {list}
         </div>
       </div>
     )
@@ -79,9 +77,9 @@ const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
       <div key={item.id}>
         <div
           ref={(element: HTMLDivElement) => (subjectRef.current[index] = element)}
-          className="flex justify-between rounded-[var(--border-radius)] p-3 bg-[var(--logo-color)] text-white text-xl font-bold border-b items-center cursor-pointer"
+          className="flex justify-between rounded-[var(--border-radius)] p-3 bg-[var(--logo-color)] text-white text-2xl font-bold border-b items-center cursor-pointer"
           onClick={() => handleClick(index)}>
-          {item.label}
+          {item.label.toUpperCase()}
           {icon}
         </div>
         {content}
@@ -90,7 +88,7 @@ const FeatureAccordion: React.FC<FeatureAccordionProps> = ({ className }) => {
   })
 
   return (
-    <div className={"border-x border-t mt-4 " + className}>
+    <div className={"border-x border-t " + className}>
       {renderedItems}
     </div>
   )

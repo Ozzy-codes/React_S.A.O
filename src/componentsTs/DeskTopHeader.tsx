@@ -7,7 +7,7 @@ interface DeskTopHeaderProps {
 
 const DeskTopHeader: React.FC<DeskTopHeaderProps> = ({ navLinks }) => {
   const default_Nav_styles =
-    "my-2 py-1 text-[2rem] text-white hover:underline active:decoration-sky-500 active:text-sky-500 "
+    "my-2 py-1 w-full text-[1.5rem] text-white font-thin hover:underline hover:font-normal active:decoration-sky-500 active:text-sky-500 "
 
   const renderedLinks = navLinks.map((page, index) => {
     if (index === 0) {
@@ -34,12 +34,12 @@ const DeskTopHeader: React.FC<DeskTopHeaderProps> = ({ navLinks }) => {
   return (
     <div
       id="top_header_div"
-      className={"absolute w-screen flex flex-col items-center bg-[var(--light-logo)] "}>
-      <div className="z-20 pt-[4rem] pb-0 px-[4rem]">
+      className={"bg-[var(--logo-color)] w-screen flex flex-col items-center "}>
+      <div className="title z-20 pt-[4rem] pb-0 px-[4rem] md:p-[2rem]">
         <Link to={"/"}>
-          <h1 className="leading-none text-[5rem] font-['Whisper'] text-white">
+          <h1 className="leading-none text-[5rem] text-white">
             <span>
-              Sage+Oak
+              Sage + Oak
             </span>
             <span className="pl-4 md:pl-8">
               Cabin
@@ -49,13 +49,13 @@ const DeskTopHeader: React.FC<DeskTopHeaderProps> = ({ navLinks }) => {
       </div>
       <div
         id="drawer_div"
-        className="z-20 w-full bg-transparent flex justify-evenly text-center ">
+        className="z-20 w-full bg-transparent flex justify-evenly items-center text-center ">
         {renderedLinks}
         <Link
           to={"booking"}
-          className="">
+          className="contents">
           <Button
-            className="w-full text-[2rem] bg-transparent border-0 underline">
+            className="w-full text-[1.5rem] bg-transparent border-0 hover:underline ">
             Book Now
           </Button>
         </Link>

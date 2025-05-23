@@ -1,8 +1,9 @@
+import WhiteTrimContainer from "./WhiteTrimContainer"
 // @ts-ignore
 import useLoading from "../hooksTs/use-Loading"
 import Skeleton from "../componentsTs/Skeleton"
 import { useEffect, useRef } from "react"
-import photo from '../photos/banner/1-web-or-mls-Sage+Oak-1.jpg'
+import photo from '../photos/banner/8-web-or-mls-Sage+Oak-8.jpg'
 
 const TopImg = () => {
   const { isLoaded, setLoadTrue } = useLoading()
@@ -33,19 +34,21 @@ const TopImg = () => {
   )
 
   return (
-    <div
-      className="relative header_gradient lg:h-[750px] lg:z-[-5] ">
-      <img
-        className="w-full "
-        src={photo}
-        alt="Front Arial view of Cabin"
-        width={2048}
-        height={1364}
-        onLoad={setLoadTrue}
-        ref={imgTag}
-      />
-      {loadingContent}
-    </div>
+    <WhiteTrimContainer lateralNTop>
+      <div
+        className="relative header_gradient ">
+        <img
+          className="w-full "
+          src={photo}
+          alt="Front Arial view of Cabin"
+          width={2048}
+          height={1364}
+          onLoad={setLoadTrue}
+          ref={imgTag}
+        />
+        {loadingContent}
+      </div>
+    </WhiteTrimContainer>
   )
 }
 export default TopImg

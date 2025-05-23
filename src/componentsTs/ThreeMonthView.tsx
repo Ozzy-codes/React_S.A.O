@@ -25,9 +25,9 @@ const ThreeMonthView: React.FC<ThreeMonthViewProps> = ({ className }) => {
       }>
       <div
         className="ownerrez-widget"
-        data-property-id="ad27789d5c644113b84e38dea08436de"
+        data-propertyId="ad27789d5c644113b84e38dea08436de"
         data-widget-type="Display 3 months - Multiple Month Calendar"
-        data-widget-id="feafd37a5298462c88492b3d62cef241"
+        data-widgetId="feafd37a5298462c88492b3d62cef241"
         ref={loadingRef}></div>
       {widgetLoadingContent}
     </div>
