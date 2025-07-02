@@ -35,9 +35,9 @@ const DeskTopHeader: React.FC<DeskTopHeaderProps> = ({ navLinks }) => {
     <div
       id="top_header_div"
       className={"bg-[var(--logo-color)] w-screen flex flex-col items-center "}>
-      <div className="title z-20 pt-[4rem] pb-0 px-[4rem] md:p-[2rem]">
+      <div className="title z-20 pt-[4rem] pb-0 px-[4rem] md:p-[2rem] md:my-[.5rem]">
         <Link to={"/"}>
-          <h1 className="leading-none text-[5rem] text-white">
+          <h1 className="leading-none text-[4rem] text-white">
             <span>
               Sage + Oak
             </span>
