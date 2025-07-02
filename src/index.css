@@ -4,7 +4,9 @@
 
 @font-face {
   font-family: brittany;
-  src: url(../public/BrittanySignature.ttf);
+  src:
+    url(../public/fonts/BrittanySignature.woff) format("woff"),
+    url(../public/fonts/BrittanySignature.ttf) format("truetype");
 }
 
 :root {
