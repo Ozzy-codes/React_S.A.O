@@ -38,6 +38,7 @@ export default function HomePage() {
                 className="mx-4">
                 <Button
                   soft_corners
+                  primary
                   className="w-full font-bold py-4 text-2xl ">
                   BOOK NOW
                 </Button>

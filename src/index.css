@@ -42,3 +42,7 @@ body {
 .list_spacing>*+* {
   margin-top: 1rem;
 }
+
+.bg_primary {
+  background: var(--logo-color);
+}
