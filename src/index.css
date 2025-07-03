@@ -32,9 +32,9 @@ body {
 }
 
 /*  TODO: contain all imgs so as not to stretch them. This means fixing consequences on the homepage and photos page in modal view.*/
-/* img { */
-/*   object-fit: contain; */
-/* } */
+img {
+  object-fit: contain;
+}
 
 /* utilities */
 .title {

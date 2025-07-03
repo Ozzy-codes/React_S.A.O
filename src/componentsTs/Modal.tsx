@@ -50,7 +50,7 @@ const Modal: React.FC<ModalProps> = (
         onClick={previousImg}>
         <FaChevronLeft />
       </button>
-      <div className="flex z-30 fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 bg-white max-w-[95vw] max-h-[85vh]">
+      <div className="flex z-30 fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-[95vw] h-[85vh] justify-center bg-transparent">
         <button
           className="fixed right-0 -translate-y-full text-gray-300 text-4xl"
           onClick={onClose}>
@@ -60,7 +60,6 @@ const Modal: React.FC<ModalProps> = (
           disabled={disableNextBtn}
           onClick={nextImg}
           className={
-            "w-max max-h-[85vh] " +
             (disableNextBtn ? "" : "cursor-pointer")
           }>
           {/*  TODO: img is currently stretching, considering to maintain aspect ratio of img. *take solution from homepage* */}
