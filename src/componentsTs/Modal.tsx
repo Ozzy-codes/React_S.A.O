@@ -21,16 +21,15 @@ const Modal: React.FC<ModalProps> = (
     previousImg,
     listOfImgs
   }) => {
+
   useEffect(() => {
     //  TODO: add left and right keyboard event listeners to scroll imgs
     document.body.classList.add("overflow-hidden")
-
     return () => document.body.classList.remove("overflow-hidden")
   }, [])
 
-
   const btnStyle =
-    "z-40 text-4xl text-gray-300 fixed top-1/2 -translate-y-2/4 py-[1rem] "
+    "z-40 text-4xl text-gray-300 fixed top-1/2 -translate-y-2/4  "
   const disablePreviousBtn = imgIndex < 1 ? true : false
   const disableNextBtn =
     imgIndex === listOfImgs.length - 1 ? true : false
@@ -44,13 +43,16 @@ const Modal: React.FC<ModalProps> = (
         disabled={disablePreviousBtn}
         className={
           btnStyle +
-          " left-[.5rem] pr-[1rem] " +
+          " left-[.5rem] py-[25%] pr-[5%] " +
           (disablePreviousBtn ? "opacity-20" : "opacity-70")
         }
         onClick={previousImg}>
         <FaChevronLeft />
       </button>
-      <div className="flex z-30 fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-[95vw] h-[85vh] justify-center bg-transparent">
+      <div className="flex z-30 fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-[95vw] justify-center bg-transparent max-h-[75vh]">
+        <div className="fixed z-40 left-0 text-gray-300 -translate-y-[110%] text-2xl">
+          {imgIndex + 1} of {listOfImgs.length}
+        </div>
         <button
           className="fixed right-0 -translate-y-full text-gray-300 text-4xl"
           onClick={onClose}>
@@ -62,7 +64,6 @@ const Modal: React.FC<ModalProps> = (
           className={
             (disableNextBtn ? "" : "cursor-pointer")
           }>
-          {/*  TODO: img is currently stretching, considering to maintain aspect ratio of img. *take solution from homepage* */}
           <img
             src={listOfImgs[imgIndex].imgUrl}
             alt={listOfImgs[imgIndex].altText}
@@ -71,21 +72,18 @@ const Modal: React.FC<ModalProps> = (
             className="h-full"
           />
         </button>
-        <div className="fixed z-40 right-0 bottom-0 text-gray-300 translate-y-full">
-          {imgIndex + 1} of {listOfImgs.length}
-        </div>
       </div>
       <button
         disabled={disableNextBtn}
         className={
           btnStyle +
-          " right-[.5rem] pl-[1rem] " +
+          " right-[.5rem] py-[25%] pl-[5%] " +
           (disableNextBtn ? "opacity-20" : "opacity-70")
         }
         onClick={nextImg}>
         <FaChevronRight />
       </button>
-    </div>,
+    </div >,
     document.querySelector(".modal-container") as HTMLDivElement
   )
 }
