@@ -23,13 +23,39 @@ const Modal: React.FC<ModalProps> = (
   }) => {
 
   useEffect(() => {
-    //  TODO: add left and right keyboard event listeners to scroll imgs
     document.body.classList.add("overflow-hidden")
-    return () => document.body.classList.remove("overflow-hidden")
-  }, [])
+    const leftBtn = document.getElementById("previousButton")
+    const rightBtn = document.getElementById("nextButton")
+    let touchStart = 0
+    let touchEnd = 0
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") rightBtn?.click()
+      else if (event.key === "ArrowLeft") leftBtn?.click()
+    }
+    const handleTouchStart = (event: TouchEvent) => {
+      touchStart = event.touches[0].clientX
+    }
+    const handleTouchEnd = (event: TouchEvent) => {
+      touchEnd = event.changedTouches[0].clientX
+      if (Math.abs(touchEnd - touchStart) > 50) {
+        console.log("swipe meets width criteria")
+        if (touchEnd - touchStart < 0) rightBtn?.click()
+        if (touchEnd - touchStart > 0) leftBtn?.click()
+      }
+    }
+    document.addEventListener("keydown", handleKeyPress)
+    document.addEventListener("touchstart", handleTouchStart)
+    document.addEventListener("touchend", handleTouchEnd)
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress)
+      document.removeEventListener("touchstart", handleTouchStart)
+      document.removeEventListener("touchend", handleTouchEnd)
+      document.body.classList.remove("overflow-hidden")
+    }
+  }, [nextImg, previousImg])
 
   const btnStyle =
-    "z-40 text-4xl text-gray-300 fixed top-1/2 -translate-y-2/4  "
+    "z-40 text-4xl text-gray-300 fixed top-1/2 -translate-y-2/4 "
   const disablePreviousBtn = imgIndex < 1 ? true : false
   const disableNextBtn =
     imgIndex === listOfImgs.length - 1 ? true : false
@@ -40,10 +66,11 @@ const Modal: React.FC<ModalProps> = (
         onClick={onClose}
         className="z-20 fixed inset-0 bg-black opacity-80 cursor-zoom-out"></div>
       <button
+        id="previousButton"
         disabled={disablePreviousBtn}
         className={
           btnStyle +
-          " left-[.5rem] py-[25%] pr-[5%] " +
+          " left-[.5rem] VerticalBtnPadding py-[25%] pr-[5%] " +
           (disablePreviousBtn ? "opacity-20" : "opacity-70")
         }
         onClick={previousImg}>
@@ -59,6 +86,7 @@ const Modal: React.FC<ModalProps> = (
           <IoClose />
         </button>
         <button
+          id="nextButton"
           disabled={disableNextBtn}
           onClick={nextImg}
           className={
@@ -77,7 +105,7 @@ const Modal: React.FC<ModalProps> = (
         disabled={disableNextBtn}
         className={
           btnStyle +
-          " right-[.5rem] py-[25%] pl-[5%] " +
+          " right-[.5rem] VerticalBtnPadding py-[25%] pl-[5%] " +
           (disableNextBtn ? "opacity-20" : "opacity-70")
         }
         onClick={nextImg}>

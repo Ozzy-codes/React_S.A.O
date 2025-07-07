@@ -47,3 +47,11 @@ img {
 .bg_primary {
   background: var(--logo-color);
 }
+
+/* Responsive design */
+@media screen and (max-height: 600px) {
+  .VerticalBtnPadding {
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+}
