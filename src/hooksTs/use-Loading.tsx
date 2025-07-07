@@ -5,9 +5,13 @@ const useLoading = () => {
   const loadingRef = useRef(null)
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://app.ownerrez.com/widget.js"
-    document.body.appendChild(script);
+    const widgetScript = document.querySelector('script[src="https://app.ownerrez.com/widget.js"]')
+    let script: HTMLScriptElement
+    if (!widgetScript) {
+      script = document.createElement('script');
+      script.src = "https://app.ownerrez.com/widget.js"
+      document.body.appendChild(script);
+    }
 
     const observer = new MutationObserver((mutationsList) => {
       for (const mutation of mutationsList) {
@@ -37,7 +41,7 @@ const useLoading = () => {
     //clean up of observer when compt unmounts
     return () => {
       observer.disconnect()
-      document.body.removeChild(script);
+      if (script) document.body.removeChild(script);
     }
   }, [])
 
