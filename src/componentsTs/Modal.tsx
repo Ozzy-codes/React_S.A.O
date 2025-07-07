@@ -31,6 +31,7 @@ const Modal: React.FC<ModalProps> = (
     const handleKeyPress = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") rightBtn?.click()
       else if (event.key === "ArrowLeft") leftBtn?.click()
+      else if (event.key === "Escape") onClose()
     }
     const handleTouchStart = (event: TouchEvent) => {
       touchStart = event.touches[0].clientX
