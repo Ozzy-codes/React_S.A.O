@@ -8,6 +8,7 @@ export interface PhotoListProps {
   listOfImgs: testImgType
 }
 
+// TODO: consider how the Photolist is browsed by screen readers and for accessibility
 const PhotoList: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => {
   const { nextViewPort } = useResize(1024)
 
