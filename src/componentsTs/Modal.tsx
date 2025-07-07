@@ -70,7 +70,7 @@ const Modal: React.FC<ModalProps> = (
         disabled={disablePreviousBtn}
         className={
           btnStyle +
-          " left-[.5rem] VerticalBtnPadding py-[20%] pr-[5%] " +
+          " left-[.5rem] VerticalBtnPadding py-[17%] pr-[5%] " +
           (disablePreviousBtn ? "opacity-20" : "opacity-70")
         }
         onClick={previousImg}>
@@ -101,11 +101,12 @@ const Modal: React.FC<ModalProps> = (
           />
         </button>
       </div>
+      {/* adjust padding for */}
       <button
         disabled={disableNextBtn}
         className={
           btnStyle +
-          " right-[.5rem] VerticalBtnPadding py-[20%] pl-[5%] " +
+          " right-[.5rem] VerticalBtnPadding py-[17%] pl-[5%] " +
           (disableNextBtn ? "opacity-20" : "opacity-70")
         }
         onClick={nextImg}>

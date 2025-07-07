@@ -51,8 +51,8 @@ img {
 /* Responsive design */
 @media screen and (max-height: 600px) {
   .VerticalBtnPadding {
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding-top: 14%;
+    padding-bottom: 14%;
   }
 }
 
