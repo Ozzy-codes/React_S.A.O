@@ -55,3 +55,11 @@ img {
     padding-bottom: 15%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  #embeddabuddy-container {
+    width: 90vw !important;
+    height: 75vh !important;
+  }
+
+}
