@@ -19,7 +19,7 @@ const FourColView: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => 
   const imgList = [[], [], [], []] as any[][]
   let listToAdd = 0
 
-  const handleClick = (index:number) => {
+  const handleClick = (index: number) => {
     findImgIndex(index)
   }
 
@@ -27,11 +27,12 @@ const FourColView: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => 
     const { imgWidth, imgHeight, imgUrl, altText } = imgArray[index]
     if (listToAdd > 3) listToAdd = 0
     imgList[listToAdd].push(
-      <div
+      <button
         className="relative "
-        key={index}>
+        key={index}
+        onClick={() => handleClick(index)}
+      >
         <img
-          onClick={() => handleClick(index)}
           src={imgUrl}
           alt={altText}
           onLoad={setLoadTrue}
@@ -40,7 +41,7 @@ const FourColView: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => 
           className="w-full"
         />
         {loadingContent}
-      </div>
+      </button>
     )
     listToAdd++
   }

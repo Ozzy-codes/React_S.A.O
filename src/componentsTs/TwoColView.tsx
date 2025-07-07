@@ -27,11 +27,12 @@ const TwoColView: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => {
     const { imgWidth, imgHeight, imgUrl, altText } = imgArray[index]
     if (index % 2 === 0) {
       imgList1.push(
-        <div
+        <button
           className="relative "
-          key={index}>
+          key={index}
+          onClick={() => handleClick(index)}
+        >
           <img
-            onClick={() => handleClick(index)}
             src={imgUrl}
             alt={altText}
             onLoad={setLoadTrue}
@@ -40,15 +41,16 @@ const TwoColView: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => {
             className="w-full"
           />
           {loadingContent}
-        </div>
+        </button>
       )
     } else {
       imgList2.push(
-        <div
+        <button
           className="relative "
-          key={index}>
+          key={index}
+          onClick={() => handleClick(index)}
+        >
           <img
-            onClick={() => handleClick(index)}
             src={imgUrl}
             alt="picsum test img"
             onLoad={setLoadTrue}
@@ -57,7 +59,7 @@ const TwoColView: React.FC<PhotoListProps> = ({ findImgIndex, listOfImgs }) => {
             className="w-full"
           />
           {loadingContent}
-        </div>
+        </button>
       )
     }
   }
