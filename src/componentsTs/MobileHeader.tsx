@@ -82,7 +82,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ navLinks }) => {
 
       <div
         className={
-          "w-screen h-screen fixed z-10 transition-all duration-1000 " +
+          "w-screen h-screen fixed top-0 overflow-hidden z-10 transition-all duration-1000 " +
           (isOpen
             ? "right-0 opacity-100 visible"
             : "right-full opacity-0 invisible")
