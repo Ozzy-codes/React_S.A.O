@@ -35,6 +35,10 @@ img {
   object-fit: contain;
 }
 
+.hostBuddyTextRemove>span {
+  display: none;
+}
+
 /* utilities */
 .title {
   font-family: brittany;

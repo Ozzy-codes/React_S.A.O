@@ -17,10 +17,23 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <div class="modal-container"></div>
   <script>
+    document.addEventListener("scroll", function () {
+      const bodyHeight = document.body.scrollHeight;
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      const TwentyFivePercentScroll = bodyHeight * 0.25;
+      const hostbuddyMiniButton = document.querySelector("#embeddabuddy-widget-button")
+
+      if (scrollPosition >= TwentyFivePercentScroll) {
+        hostbuddyMiniButton.classList.add("hostBuddyTextRemove")
+      } else {
+        if (hostbuddyMiniButton.classList.contains("hostBuddyTextRemove")) {
+          hostbuddyMiniButton.classList.remove("hostBuddyTextRemove")
+        }
+      }
+    });
     window.chatWidgetOptions = {
       chatbot_key: '2e2cc503b2d8', // This is the chatbot key for your selected property
 

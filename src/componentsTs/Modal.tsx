@@ -39,7 +39,6 @@ const Modal: React.FC<ModalProps> = (
     const handleTouchEnd = (event: TouchEvent) => {
       touchEnd = event.changedTouches[0].clientX
       if (Math.abs(touchEnd - touchStart) > 50) {
-        console.log("swipe meets width criteria")
         if (touchEnd - touchStart < 0) rightBtn?.click()
         if (touchEnd - touchStart > 0) leftBtn?.click()
       }
