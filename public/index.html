@@ -23,10 +23,10 @@
     document.addEventListener("scroll", function () {
       const bodyHeight = document.body.scrollHeight;
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-      const TwentyFivePercentScroll = bodyHeight * 0.25;
+      const TenPercentScroll = bodyHeight * 0.10;
       const hostbuddyMiniButton = document.querySelector("#embeddabuddy-widget-button")
 
-      if (scrollPosition >= TwentyFivePercentScroll) {
+      if (scrollPosition >= TenPercentScroll) {
         hostbuddyMiniButton.classList.add("hostBuddyTextRemove")
       } else {
         if (hostbuddyMiniButton.classList.contains("hostBuddyTextRemove")) {
