@@ -226,7 +226,7 @@ export const items = [
       {
         title: "Pets",
         description:
-          "We’re happy to welcome up to 2 dogs per stay (with owner’s approval, $200 per pet). For insurance reasons, please note that the following breeds (including mixes) are not permitted: Akita, Alaskan Malamute, American Bull Terrier, American Staffordshire Terrier, Chow Chow, Doberman Pinscher, Mastiffs, Pit Bull, Presa Canario, Rottweiler, Staffordshire Bull Terrier, wolf hybrids. - Pets on Furniture and Beds - We kindly request that pets remain off all furniture and beds during your stay. To help us maintain the quality of our cabin, an additional $500 fine will be charged if evidence of pets being on furniture or bedding is found."
+          "We’re happy to welcome up to 2 dogs per stay (with owner’s approval, $200 per pet). For insurance reasons, please note that the following breeds (including mixes) are not permitted: Akita, Alaskan Malamute, American Bull Terrier, American Staffordshire Terrier, Chow Chow, Doberman Pinscher, Mastiffs, Pit Bull, Presa Canario, Rottweiler, Staffordshire Bull Terrier, wolf hybrids. We kindly request that pets remain off all furniture and beds during your stay. To help us maintain the quality of our cabin, an additional $500 fine will be charged if evidence of pets being on furniture or bedding is found."
       },
       {
         title: "Critters",
